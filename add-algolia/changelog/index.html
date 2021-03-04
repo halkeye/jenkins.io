@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+Changelog
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="description">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<!-- Favicons -->
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/site.webmanifest" rel="manifest">
+<link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon">
+<meta content="#2b5797" name="msapplication-TileColor">
+<meta content="#ffffff" name="theme-color">
+<meta content="Changelog" name="apple-mobile-web-app-title">
+<!-- Twitter Card data -->
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@JenkinsCI" name="twitter:site">
+<meta content="Changelog" name="twitter:title">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="twitter:description">
+<meta content="@JenkinsCI" name="twitter:creator">
+<!-- Twitter Summary card images must be at least 120x120px -->
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/logo-title-opengraph.png" name="twitter:image">
+<!-- Open Graph data -->
+<meta content="Changelog" property="og:title">
+<meta content="article" property="og:type">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/changelog/index.html" property="og:url">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="og:description">
+<meta content="Changelog" property="og:site_name">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/logo-title-opengraph.png" name="og:image">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/css/tether.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-icons.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/jenkins.css" media="screen" rel="stylesheet">
+<!-- Non-obtrusive CSS styles -->
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/ionicons/css/ionicons.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/footer.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-awesome.min.css" media="screen" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/jquery/jquery.min.js"></script>
+<!-- starting partial toptoolbar.html.haml -->
+<nav class="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top" id="ji-toolbar">
+<a class="navbar-brand" href="https://halkeye.github.io/jenkins.io/add-algolia">
+Jenkins
+</a>
+<button class="navbar-toggler" data-target="#CollapsingNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="CollapsingNavbar">
+<ul class="nav navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+<!-- starting partial cdf_logo.html.haml -->
+<svg width="36" height="18" xmlns="http://www.w3.org/2000/svg" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.23 44.77 362.70 271.95"><defs><linearGradient id="a" x1="359.765" x2="104.082" y1="134.295" y2="124.577" gradientTransform="matrix(1 0 0 -1 0 439.068)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ed1c24"/><stop offset="1" stop-color="#f7941d"/></linearGradient><linearGradient id="b" x1="355.202" x2="99.519" y1="254.467" y2="244.749" xlink:href="#a"/><linearGradient id="c" x1="183.903" x2="10.612" y1="227.598" y2="221.023" xlink:href="#a"/><linearGradient id="d" x1="367.119" x2="157.995" y1="265.311" y2="257.091" xlink:href="#a"/></defs><path fill="#c49a6c" d="M231.52 309.278c2.483-.332 4.895-.77 7.255-1.329s4.649-1.206 6.991-1.957c13.494-4.58 25.187-12.952 36.374-24.593l-.14-.175c-14.944 15.486-30.693 25.344-50.48 28.054z"/><path fill="url(#a)" d="M224.232 309.96h.332c1.084 0 2.15-.14 3.216-.228a93.844 93.844 0 0 1-3.233.227z"/><path fill="url(#b)" d="M284.692 187.187l-.122.192.122-.192z"/><path fill="url(#c)" d="M146.145 231.847a150.844 150.844 0 0 1-12.97 15.862c-7.582 7.889-15.507 13.563-24.652 16.667a47.832 47.832 0 0 1-4.738 1.326 56.959 56.959 0 0 1-4.916.9 38.32 38.32 0 0 1-1.682.214l-.912.083c-.723.059-1.445.118-2.18.154h-3.068a42.325 42.325 0 0 1-9.192-1.043 49.977 49.977 0 0 1-6.764-2.002 43.097 43.097 0 0 1-4.525-1.954c-1.493-.77-2.961-1.516-4.407-2.37a59.5 59.5 0 0 1-17.105-15.399 59.714 59.714 0 0 1-2.914-4.311 53.09 53.09 0 0 1-1.291-2.263 51.985 51.985 0 0 1-2.263-4.738 46.72 46.72 0 0 1 0-36.426 51.986 51.986 0 0 1 2.263-4.738 54.14 54.14 0 0 1 1.291-2.263 59.742 59.742 0 0 1 2.914-4.311 59.714 59.714 0 0 1 17.105-15.4 60.828 60.828 0 0 1 4.407-2.369q2.217-1 4.525-1.777a49.976 49.976 0 0 1 6.906-2.073 42.325 42.325 0 0 1 9.192-1.042h3.128c.722 0 1.445.094 2.155.154l1.043.106 1.019.119c1.8.237 3.553.557 5.271.96.853.2 1.694.426 2.523.663a51.186 51.186 0 0 1 11.846 5.176 59.645 59.645 0 0 1 4.395 2.89 74.485 74.485 0 0 1 8.386 7.108q2.038 1.99 4.063 4.193l.083-.13a159.395 159.395 0 0 1 11.064 13.942c5.437-8.576 13.658-21.464 16.584-25.74 1.185-1.718 2.37-3.46 3.66-5.212-13.54-16.513-29.827-30.23-51.587-36.082h-.154a89.397 89.397 0 0 0-3.187-.794l-.45-.107a92.565 92.565 0 0 0-3.151-.627l-.628-.119a80.578 80.578 0 0 0-3.743-.569h-.142a58.29 58.29 0 0 0-2.073-.236h-.391l-1.872-.166h-.568l-1.754-.119h-.675l-1.777-.07h-3.115c-46.447-.25-87.125 40.476-87.125 86.911s40.725 87.173 87.172 87.173h3.14l1.729-.071h.734l1.67-.095h.676l1.706-.154h.568l1.813-.213.414-.06 1.967-.272h.213a125.91 125.91 0 0 0 3.553-.628l.652-.142c.96-.201 1.907-.415 2.855-.64l.58-.142a86.66 86.66 0 0 0 3.009-.817l.237-.071c20.73-6.077 36.425-19.392 49.55-35.277-2.037-3.068-3.4-5.366-4.039-6.48z"/><path fill="url(#d)" d="M318.05 51.733v94.66a85.514 85.514 0 0 0-52.595-18.729h-3.115l-1.777.072-.7.047-1.752.118h-.569l-1.871.166h-.391c-.7.071-1.386.142-2.073.237h-.154c-1.256.154-2.5.355-3.732.569l-.628.118c-1.066.19-2.108.403-3.15.628l-.45.107c-30.35 6.858-50.333 28.808-66.822 52.82-.7 1.018-1.35 2.049-2.038 3.068-2.25 3.423-5.46 8.422-8.635 13.397-4.17 6.527-8.292 13.03-9.939 15.66l20.624 32.137s21.997 40.465 61.68 51.482l.237.07c.995.297 2.002.558 3.009.818l.58.142c.936.237 1.896.439 2.855.64l.652.142c1.184.225 2.369.439 3.553.628h.214l1.966.273.415.059 1.812.213h.569l1.705.154h.676l1.67.095h.734l1.73.07h3.139c54.703 0 86.355-30.964 87.149-85.063V51.733zm-52.595 215.403h-3.068c-.734 0-1.457-.095-2.18-.154l-.912-.083c-.568-.06-1.125-.13-1.682-.213a49.077 49.077 0 0 1-9.571-2.275 49.612 49.612 0 0 1-6.634-2.83 55.792 55.792 0 0 1-6.254-3.768 63.068 63.068 0 0 1-3.009-2.215 82.399 82.399 0 0 1-8.683-7.925l-.095.119c-1.255-1.303-2.487-2.69-3.731-4.11-.154-.167-.296-.356-.45-.534-.628-.722-1.256-1.445-1.884-2.215s-1.125-1.398-1.682-2.097-.888-1.101-1.338-1.682a184.467 184.467 0 0 1-6.053-8.292c-.7-.995-1.398-2.025-2.109-3.056-.379-.569-.77-1.184-1.185-1.73-.675-1.018-1.362-2.013-2.049-3.056l-.355-.545c-1.185-1.812-2.37-3.684-3.649-5.603q2.95-4.608 5.817-8.86c1.907-2.831 3.79-5.556 5.662-8.138s3.72-5.046 5.591-7.38 3.72-4.525 5.603-6.586q2.026-2.203 4.063-4.194c1.374-1.338 2.748-2.594 4.158-3.778s2.807-2.287 4.252-3.329a57.594 57.594 0 0 1 7.748-4.62c.331-.166.663-.367 1.006-.533l.226-.118c1.41-.652 2.843-1.185 4.3-1.73l.485-.201c.273-.083.557-.142.83-.237a44.943 44.943 0 0 1 3.34-.948l1.374-.343a60.798 60.798 0 0 1 4.738-.841l1.019-.119 1.042-.106c.711 0 1.434-.119 2.156-.154h3.128a42.431 42.431 0 0 1 4.572.26 48.011 48.011 0 0 1 6.93 1.35c1.54.427 3.08.925 4.596 1.505a48.724 48.724 0 0 1 4.525 1.955c1.493.722 2.961 1.516 4.407 2.369s2.866 1.8 4.24 2.784 2.725 2.049 4.028 3.174a58.459 58.459 0 0 1 8.837 9.477 59.73 59.73 0 0 1 2.914 4.312 51.067 51.067 0 0 1 5.318 11.916 47.38 47.38 0 0 1 1.185 5.165 45.567 45.567 0 0 1 .71 8.09c.072 35.964-16.062 52.122-52.227 52.122z"/></svg>
+
+<!-- ending partial cdf_logo.html.haml -->
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://cd.foundation/">
+What is CDF?
+</a>
+<a class="dropdown-item feature" href="https://jenkins-x.io/">
+Jenkins X
+</a>
+<a class="dropdown-item feature" href="https://cloud.google.com/tekton/">
+Tekton
+</a>
+<a class="dropdown-item feature" href="https://www.spinnaker.io/">
+Spinnaker
+</a>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Documentation
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book">
+<strong>
+User Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/installing/">
+&nbsp;-&nbsp;Installing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline">
+&nbsp;-&nbsp;Jenkins Pipeline
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/managing/">
+&nbsp;-&nbsp;Managing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/system-administration">
+&nbsp;-&nbsp;System Administration
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/glossary/">
+&nbsp;-&nbsp;Terms and Definitions
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/solutions">
+<strong>
+Solution Pages
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+<strong>
+Tutorials
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/tour/getting-started/">
+&nbsp;-&nbsp;Guided Tour
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+&nbsp;-&nbsp;More Tutorials
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/developer">
+<strong>
+Developer Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+<strong>
+Contributor Guide
+</strong>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Community
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/chat" title="Chat with the rest of the Jenkins community on IRC">
+Chat
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam">
+Meet
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+<a class="dropdown-item feature" href="https://issues.jenkins.io/">
+Issue Tracker
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists" title="Browse Jenkins mailing list archives and/or subscribe to lists">
+Mailing Lists
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item feature" href="https://accounts.jenkins.io/" title="Create/manage your account for accessing wiki, issue tracker, etc">
+Account Management
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/">
+<strong>
+Special Interest Groups
+</strong>
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/advocacy-and-outreach/">
+&nbsp;-&nbsp;Advocacy and Outreach
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/chinese-localization/">
+&nbsp;-&nbsp;Chinese Localization
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/cloud-native/">
+&nbsp;-&nbsp;Cloud Native
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/">
+&nbsp;-&nbsp;Documentation
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/gsoc/">
+&nbsp;-&nbsp;Google Summer of Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/hw-and-eda/">
+&nbsp;-&nbsp;Hardware and EDA
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/pipeline-authoring/">
+&nbsp;-&nbsp;Pipeline Authoring
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/platform/">
+&nbsp;-&nbsp;Platform
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/ux/">
+&nbsp;-&nbsp;User Experience
+</a>
+</div>
+</li>
+<li class="dropdown nav-item">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Subprojects
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/evergreen/">
+Evergreen
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/">
+Google Summer of Code in Jenkins
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/infrastructure/">
+Infrastructure
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam/">
+CI/CD and Jenkins Area Meetups
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jcasc/">
+Jenkins Configuration as Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/remoting/">
+Jenkins Remoting
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/">
+Document Jenkins on Kubernetes
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+About
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/conduct">
+Conduct
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+English
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/zh">
+中文 Chinese
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link btn btn-outline-secondary" href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Download
+</a>
+</li>
+<li class="nav-item searchbox">
+<input aria-label="Search" class="form-control searchbox" placeholder="Search" type="search">
+</li>
+</ul>
+</div>
+</nav>
+<!-- Spacing to make the fixed-top sticky navbar not occlude any content below it -->
+<div class="pt-4">
+&nbsp;
+</div>
+
+<!-- ending partial toptoolbar.html.haml -->
+<style>
+  .toc {
+      float: right;
+  }
+</style>
+<!-- starting partial anchors.html.haml -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    for (var i = 1 ; i <= 6 ; i ++) {
+      anchors.add('.container .row.body h' + i);
+    }
+  })
+</script>
+
+<!-- ending partial anchors.html.haml -->
+<div class="container">
+<div class="row body">
+<div class="col-md-12">
+<h1>
+Changelog
+</h1>
+<link href="/css/changelog.css" rel="stylesheet" type="text/css">
+<div id="head"></div>
+<script src="/files/rate.js" type="text/javascript"></script>
+<div id="ratings"></div>
+<div class="w-100 text-right">
+<div class="iconlegend">
+Legend:
+<ul class="image">
+<li class="security">security fix</li>
+<li class="major bug">major bug fix</li>
+<li class="bug">bug fix</li>
+<li class="major rfe">major enhancement</li>
+<li class="rfe">enhancement</li>
+</ul>
+</div>
+</div>
+<div class="w-100 text-right" style="margin: 10px 0;">
+<div class="iconlegend">
+Community feedback:
+<ul class="feedback">
+<li class="sunny">no major issues</li>
+<li class="cloudy">notable issues</li>
+<li class="storm">required rollback</li>
+</ul>
+</div>
+</div>
+<div class="w-100 text-right" style="margin: 10px 0;">
+<a href="rss.xml">
+<img src="/images/changelog/feed-icon.png">
+RSS
+</a>
+</div>
+<script>
+  $(document).ready(function() {
+      loaddata(this);
+  });
+</script>
+<div class="ratings">
+<h3 id="v2.282">
+What's new in 2.282
+(2021-03-02)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Update Eclipse Jetty from 9.4.35.v20201120 to 9.4.38.v20210224 for bug fixes and enhancements.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5317">pull 5317</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.38.v20210224">Jetty 9.4.38 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.37.v20210219">Jetty 9.4.37 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.36.v20210114">Jetty 9.4.36 changelog</a>)
+</li>
+<li class="major rfe">
+SSHD module is no longer bundled in Jenkins core.
+Provide SSHD as a plugin.
+(<a href="https://issues.jenkins.io/browse/JENKINS-55582">issue 55582</a><a></a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-64107">issue 64107</a><a></a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5049">pull 5049</a>,&nbsp;<a href="https://github.com/jenkinsci/sshd-module">SSHD module repository</a>)
+</li>
+<li class="rfe">
+Do not force plugin upgrades of recently detached plugins.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5311">pull 5311</a>)
+</li>
+<li class="rfe">
+Upgrade from Remoting 4.6 to Remoting 4.7 with bugfixes and dependency updates.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5292">pull 5292</a>,&nbsp;<a href="https://github.com/jenkinsci/remoting/releases/tag/remoting-4.7">Remoting 4.7 changelog</a>)
+</li>
+<li class="rfe">
+Remove the hardcoded JKS key store so that other key stores can be used, like BCFKS from the FIPS version of Bouncy Castle.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5266">pull 5266</a>)
+</li>
+<li class="bug">
+Improve reconnection behavior for inbound TCP agents.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64510">issue 64510</a>)
+</li>
+<li class="bug">
+Internal: Ensure that <code>Jenkins#setViews()</code> updates the configuration only when all views are successfully set.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5301">pull 5301</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.281">
+What's new in 2.281
+(2021-02-23)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="rfe">
+Improve button focus states.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5291">pull 5291</a>)
+</li>
+<li class="rfe">
+Remove some workarounds for IE &lt; 11.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5280">pull 5280</a>)
+</li>
+<li class="major bug">
+Developer: Revert symbol-annotation bump (regression in 2.280).
+(<a href="https://github.com/jenkinsci/jenkins/pull/5293">pull 5293</a>)
+</li>
+<li class="rfe">
+Developer: Relax <code>ParameterDefinition</code> and subclass constructor signatures to allow optional attributes like <code>description</code> to be defined in setters.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5275">pull 5275</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.280">
+What's new in 2.280
+(2021-02-16)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="security">
+Important security fix.
+(<a href="/security/advisory/2021-02-19/">security advisory</a>)
+</li>
+<li class="major bug">
+Fix plugin search over multiple update sites (regression in 2.270).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64840">issue 64840</a>)
+</li>
+<li class="bug">
+Show available plugin updates by reloading update center data on upgrade/downgrade.
+(<a href="https://issues.jenkins.io/browse/JENKINS-41727">issue 41727</a>)
+</li>
+<li class="rfe">
+Update JNA from 5.6.0 to 5.7.0.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5273">pull 5273</a>,&nbsp;<a href="https://github.com/java-native-access/jna/blob/master/CHANGES.md#release-570">JNA 5.7.0 changelog</a>)
+</li>
+<li class="rfe">
+Provide new translations for Polish language.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5271">pull 5271</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.279">
+What's new in 2.279
+(2021-02-09)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Fix Internet Explorer 11 rendering of the <em>Available</em> plugins tab (regression in 2.270).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64805">issue 64805</a>)
+</li>
+<li class="major bug">
+Include 'plugin-id' and 'plugin-version' data attributes in the <em>Available</em> plugins tab (regression in 2.270).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64775">issue 64775</a>)
+</li>
+<li class="rfe">
+Upgrade LDAP plugin from 1.26 minimum to 2.3.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5244">pull 5244</a>,&nbsp;<a href="https://github.com/jenkinsci/ldap-plugin/releases/tag/ldap-2.3">LDAP 2.3 changelog</a>,&nbsp;<a href="https://github.com/jenkinsci/ldap-plugin/releases/tag/ldap-2.2">LDAP 2.2 changelog</a>,&nbsp;<a href="https://github.com/jenkinsci/ldap-plugin/releases/tag/ldap-2.1">LDAP 2.1 changelog</a>,&nbsp;<a href="https://github.com/jenkinsci/ldap-plugin/releases/tag/ldap-2.0">LDAP 2.0 changelog</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.278">
+What's new in 2.278
+(2021-02-02)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="rfe">
+Use an updated version of the Commons FileUpload library 1.4 without custom patches.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5174">pull 5174</a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-64650">issue 64650</a><a></a>,&nbsp;<a href="https://commons.apache.org/proper/commons-fileupload">Apache Commons FileUpload project</a>)
+</li>
+<li class="rfe">
+Library dependency updates: reflections, javassist, annotation-indexer, commons-compress, bridge-method-annotation, bridge-method-injector, access-modifier-annotation, jaxen.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5197">pull 5197</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5204">pull 5204</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5208">pull 5208</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5209">pull 5209</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5210">pull 5210</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5228">pull 5228</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5231">pull 5231</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5232">pull 5232</a>)
+</li>
+<li class="bug">
+Restore, as deprecated, the old constructor based on acegisecurity <code>Authentication</code> parameter in order to keep backward compatibility.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64746">issue 64746</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.277">
+What's new in 2.277
+(2021-01-26)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="rfe">
+Use a more accessible color palette in configuration form tabs.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5176">pull 5176</a>)
+</li>
+<li class="rfe">
+Improve fingerprint save performance.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5190">pull 5190</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5198">pull 5198</a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-64670">issue 64670</a><a></a>)
+</li>
+<li class="bug">
+Fix drag & drop for form changes (regression in 2.264).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64291">issue 64291</a>)
+</li>
+<li class="bug">
+Fix server-side form validation that broke client-side form validation (regression in 2.270).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64429">issue 64429</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.276">
+What's new in 2.276
+(2021-01-19)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="security">
+Security fix.
+(<a href="/security/advisory/2021-01-26/">2021-01-26 security advisory</a>)
+</li>
+<li class="major bug">
+Provide a default implementation of the "all files in zip" download link.
+This is especially important for external storage plugin (regression in 2.275).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64655">issue 64655</a>)
+</li>
+<li class="major bug">
+Fix the file handle leak inside DirectoryBrowserSupport (regression in 2.275).
+(<a href="https://github.com/jenkinsci/jenkins/pull/5188">pull 5188</a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-64632">issue 64632</a><a></a>,&nbsp;<a href="https://www.jenkins.io/security/advisory/2021-01-13/#SECURITY-1452">SECURITY-1452</a>)
+</li>
+<li class="major bug">
+Include root folder in downloaded zip files (regression in 2.275).
+Resolve an additional related zip archive root folder issue.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5187">pull 5187</a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-64621">issue 64621</a><a></a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-61473">issue 61473</a><a></a>,&nbsp;<a href="https://www.jenkins.io/security/advisory/2021-01-13/#SECURITY-1452">SECURITY-1452</a>)
+</li>
+<li class="rfe">
+Allow job descriptions to be copied without zero-width spaces.
+(<a href="https://issues.jenkins.io/browse/JENKINS-28022">issue 28022</a>)
+</li>
+<li class="rfe">
+Update spring-security from 5.4.1 to 5.4.2.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5166">pull 5166</a>,&nbsp;<a href="https://github.com/spring-projects/spring-security/releases/tag/5.4.2">Spring project spring-security 5.4.2 release notes</a>)
+</li>
+<li class="rfe">
+Update commons-codec from 1.14 to 1.15.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5165">pull 5165</a>,&nbsp;<a href="https://github.com/apache/commons-codec/blob/rel/commons-codec-1.15/RELEASE-NOTES.txt">Apache commons-codec 1.15 release notes</a>)
+</li>
+<li class="rfe">
+Add a system property <code>jenkins.agent.inboundUrl</code> to provide an alternate URL for inbound TCP agents.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63222">issue 63222</a>)
+</li>
+<li class="bug">
+Restricted methods FilePath#zip(OutputStream, DirScanner, String, boolean) and VirtualFile#zip(OutputStream, String, String, boolean, boolean) have a new parameter <code>String prefix</code>.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5187">pull 5187</a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-64621">issue 64621</a><a></a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-61473">issue 61473</a><a></a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.275">
+What's new in 2.275
+(2021-01-13)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="security">
+Important security fixes.
+(<a href="/security/advisory/2021-01-13/">security advisory</a>)
+</li>
+<li class="rfe">
+Security hardening related to XML processing using <code>Digester2</code>.
+(<a href="/doc/upgrade-guide/2.263/#digester2">related LTS upgrade guide entry</a>)
+</li>
+<li class="rfe">
+Security hardening related to form validation responses.
+(<a href="/doc/upgrade-guide/2.263/#formvalidation">related LTS upgrade guide entry</a>)
+</li>
+<li class="rfe">
+Security hardening restricting label names.
+(<a href="/doc/upgrade-guide/2.263/#labelatom">related LTS upgrade guide entry</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.274">
+What's new in 2.274
+(2021-01-05)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="rfe">
+Reduce lock contention around jenkins queue.
+(<a href="https://issues.jenkins.io/browse/JENKINS-58101">issue 58101</a>)
+</li>
+<li class="bug">
+Prevent user input of 'e' or 'E' as 'positive-number', 'non-negative-number', or 'number'.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64439">issue 64439</a>)
+</li>
+<li class="rfe">
+Update jnr-posix library from 3.0.45 to 3.1.4.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5129">pull 5129</a>,&nbsp;<a href="https://github.com/jnr/jnr-posix/compare/jnr-posix-3.0.45...jnr-posix-3.1.4">Commits from jnr-posix 3.0.45 to 3.1.4</a>)
+</li>
+<li class="rfe">
+Update Java native access (jna) library from 5.3.1 to 5.6.0 for most recent platform library fixes and enhancements.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5125">pull 5125</a>,&nbsp;<a href="https://github.com/java-native-access/jna/blob/master/CHANGES.md#release-560">JNA 5.6.0 changelog</a>,&nbsp;<a href="https://github.com/java-native-access/jna/blob/master/CHANGES.md#release-550">JNA 5.5.0 changelog</a>,&nbsp;<a href="https://github.com/java-native-access/jna/blob/master/CHANGES.md#release-540">JNA 5.4.0 changelog</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.273">
+What's new in 2.273
+(2020-12-29)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Fix plugin manager buttons to correctly reposition themselves instead of being stuck under certain conditions (regression in 2.270).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64504">issue 64504</a>)
+</li>
+<li class="rfe">
+Make the root source paths of GroovyHookScript customizable with <code>jenkins.util.groovy.GroovyHookScript.ROOT_PATH</code>.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63833">issue 63833</a>)
+</li>
+<li class="rfe">
+Hide collapse icon in sidepanel widgets if they cannot be collapsed.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64483">issue 64483</a>)
+</li>
+<li class="rfe">
+Update stapler to 1.262 to fix a number of IllegalReflectiveAccessWarnings when running on Java 11.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5111">pull 5111</a>,&nbsp;<a href="https://github.com/stapler/stapler/releases/tag/stapler-parent-1.262">Stapler 1.262 changelog</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.272">
+What's new in 2.272
+(2020-12-22)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Prevent NullPointerException in Plugin Manager when using an update center without support for plugin categories (regression in 2.270).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64445">issue 64445</a>)
+</li>
+<li class="bug">
+Fix race condition on authentication filters registration.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64465">issue 64465</a>)
+</li>
+<li class="rfe">
+Dropped support for deprecated system properties: <code>hudson.model.Hudson.logStartupPerformance</code>, <code>hudson.model.Hudson.initLogLevel</code>, <code>hudson.model.Hudson.parallelLoad</code>, <code>hudson.model.Hudson.killAfterLoad</code> and <code>hudson.model.Hudson.workspaceDirName</code>.
+Please use <code>jenkins.model.Jenkins.</code>-prefixed SystemProperties.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4962">pull 4962</a>)
+</li>
+<li class="rfe">
+Remove support for queue.txt format (replaced by XML in 2009).
+(<a href="https://github.com/jenkinsci/jenkins/pull/5123">pull 5123</a>)
+</li>
+<li class="rfe">
+Update Eclipse Jetty from 9.4.33.v20201020 to 9.4.35.v20201120 for bug fixes and enhancements.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5122">pull 5122</a>,&nbsp;<a href="https://github.com/jenkinsci/winstone/releases/tag/winstone-5.13">Winstone 5.13 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.34.v20201102">Jetty 9.4.34 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.35.v20201120">Jetty 9.4.35 changelog</a>)
+</li>
+<li class="rfe">
+Remove administrative monitor offering to migrate <code>$JENKINS_HOME</code> on a ZFS filesystem.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5047">pull 5047</a>)
+</li>
+<li class="rfe">
+Update the bundled XStream library from 1.4.14 to 1.4.15.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5115">pull 5115</a>,&nbsp;<a href="https://x-stream.github.io/changes.html#1.4.15">XStream 1.4.15 changelog</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.271">
+What's new in 2.271
+(2020-12-15)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="rfe">
+Stop bundling CVS plugin.
+Jenkins will no longer automatically install CVS plugin on startup if a plugin depending on Jenkins (then Hudson) 1.340 or earlier is discovered.
+If you use a plugin that relies on the functionality provided by CVS plugin and manage plugins outside the Jenkins plugin manager, you will now need to ensure yourself that a recent release of CVS plugin is installed.
+Jenkins will attempt to load such plugins but may fail at any time during startup or afterwards with <code>ClassNotFoundException</code> or similar.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5102">pull 5102</a>)
+</li>
+<li class="bug">
+Don't tell users to signup if they can't.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64426">issue 64426</a>)
+</li>
+<li class="bug">
+Correct Freestyle font-size for descriptions.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64332">issue 64332</a>)
+</li>
+<li class="bug">
+<code>FieldUtils</code> now silently fails to set <code>public final</code> fields again.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64390">issue 64390</a>)
+</li>
+<li class="rfe">
+The page variable <code>divBasedFormLayout</code> is globally available, not only within <code><f:form></code>.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64403">issue 64403</a>)
+</li>
+<li class="rfe">
+Remove unused jquery dependencies.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5107">pull 5107</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.270">
+What's new in 2.270
+(2020-12-08)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major rfe">
+Massive performance enhancement to available plugins page of Plugin Manager.
+Exact matches of plugin name are moved to the top.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64196">issue 64196</a>)
+</li>
+<li class="bug">
+Fix incorrect striping of rows on available page of Plugin Manager.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63684">issue 63684</a>)
+</li>
+<li class="bug">
+Ensure that help text expands correctly for GitHub organization folders (regression in 2.264).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64373">issue 64373</a>)
+</li>
+<li class="bug">
+Replace slave with agent in Brazilian and Turkish localization of Agent to Controller security.
+(<a href="https://issues.jenkins.io/browse/JENKINS-62347">issue 62347</a>)
+</li>
+<li class="rfe">
+Add Traditional Chinese translation for description of built-in environment variables that are available to shell scripts.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64329">issue 64329</a>)
+</li>
+<li class="rfe">
+Use correct unicode in Spanish translation and other fixes.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64330">issue 64330</a>)
+</li>
+<li class="rfe">
+Developer: Update localizer plugin to allow threaded builds and localization from XML as well as properties.
+(<a href="https://issues.jenkins.io/browse/JENKINS-41729">issue 41729</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.269">
+What's new in 2.269
+(2020-12-01)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="bug">
+Populate select fields with default values even when pre-populated select tags are used (regression in 2.244).
+(<a href="https://github.com/jenkinsci/jenkins/pull/5081">pull 5081</a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-64071">issue 64071</a><a></a>,&nbsp;<a href="https://issues.jenkins.io/browse/JENKINS-64125">issue 64125</a><a></a>)
+</li>
+<li class="rfe">
+Reduce page load time by loading the administrative monitors popup on demand.
+Allow keyboard navigation even when there are active administrative monitors.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5063">pull 5063</a>)
+</li>
+<li class="rfe">
+Improve pipeline startup performance with faster comparison method.
+Add equals and hashCode to ParameterDefinition implementations.
+Equals works strictly for the same classes to preventing issues with extended classes.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5014">pull 5014</a>)
+</li>
+<li class="rfe">
+Remove an unused <code>FileSystemProvisioner</code> framework.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5048">pull 5048</a>)
+</li>
+<li class="rfe">
+Developer: Update Node.js version to latest LTS (14.15.1).
+(<a href="https://github.com/jenkinsci/jenkins/pull/5087">pull 5087</a>)
+</li>
+<li class="rfe">
+Internal: iconset library inlined into Jenkins core, developers using this should remove the dependency.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5072">pull 5072</a>)
+</li>
+<li class="rfe">
+Internal: Remove JOnAS application server support.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5076">pull 5076</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.268">
+What's new in 2.268
+(2020-11-24)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Fix drag and drop with environment filter (regression in 2.264).
+(<a href="https://issues.jenkins.io/browse/JENKINS-64252">issue 64252</a>)
+</li>
+<li class="rfe">
+Update the bundled XStream library from 1.4.13 to 1.4.14.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5074">pull 5074</a>,&nbsp;<a href="https://x-stream.github.io/changes.html#1.4.14">XStream 1.4.14 changelog</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.267">
+What's new in 2.267
+(2020-11-17)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="rfe">
+Add the ability to specify a reason for quieting down Jenkins ("Prepare for shutdown").
+(<a href="https://issues.jenkins.io/browse/JENKINS-1877">issue 1877</a>)
+</li>
+<li class="rfe">
+Show security and non-security notifications in separate categories with their associated icons.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63977">issue 63977</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.266">
+What's new in 2.266
+(2020-11-10)
+</h3>
+<div style="margin: 10px; padding: 10px; background-color: #FFFFCE;">
+This release replaces several key components. The Acegi security library used for authentication has been replaced by Spring Security (<a href="https://github.com/jenkinsci/jep/blob/master/jep/227/README.adoc">JEP-227</a>). A fork of the XStream library used to read and write XML files has been replaced by the upstream version of XStream (<a href="https://github.com/jenkinsci/jep/blob/master/jep/228/README.adoc">JEP-228</a>). Refer to the <a href="/blog/2020/11/10/spring-xstream/">Spring and XStream updates (breaking changes!)</a> blog post for more details.
+
+</div>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Fix hidden page elements from radio blocks appearing when they should not.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64040">issue 64040</a>)
+</li>
+<li class="bug">
+Upgrade from Remoting 4.5 to Remoting 4.6 with bugfixes and dependency updates.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5043">pull 5043</a>,&nbsp;<a href="https://github.com/jenkinsci/remoting/releases/tag/remoting-4.6">Remoting 4.6 changelog</a>)
+</li>
+<li class="rfe">
+Make the Maven Configuration of Global Tools compatible with configuration as code plugin.
+(<a href="https://issues.jenkins.io/browse/JENKINS-62446">issue 62446</a>)
+</li>
+<li class="rfe">
+Minor English cleanup for resource root URL setting.
+(<a href="https://issues.jenkins.io/browse/JENKINS-41891">issue 41891</a>)
+</li>
+<li class="major rfe">
+Developer: Jenkins now uses an updated version of the XStream serialization library without custom patches.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4944">pull 4944</a>,&nbsp;<a href="https://github.com/jenkinsci/jep/blob/master/jep/227/README.adoc">JEP-227</a>,&nbsp;<a href="/blog/2020/11/10/spring-xstream/">Spring and XStream updates (breaking changes!) blog post</a>)
+</li>
+<li class="major rfe">
+Developer: Jenkins now uses Spring Security rather than its predecessor, Acegi Security.
+Other bundled Spring libraries are also updated.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4948">pull 4948</a>,&nbsp;<a href="https://github.com/jenkinsci/jep/blob/master/jep/228/README.adoc">JEP-228</a>,&nbsp;<a href="/blog/2020/11/10/spring-xstream/">Spring and XStream updates (breaking changes!) blog post</a>)
+</li>
+<li class="major rfe">
+Developer: Upgrade jQuery from 2.1.4 to 3.5.1.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4929">pull 4929</a>,&nbsp;<a href="https://blog.jquery.com/">jQuery older release notes (3.1.1, 3.2.1, 3.3.0, 3.3.1, 3.4.0, 3.4.1)</a>,&nbsp;<a href="https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/">jQuery 3.5.0 release notes</a>,&nbsp;<a href="https://blog.jquery.com/2020/05/04/jquery-3-5-1-released-fixing-a-regression/">jQuery 3.5.1 release notes</a>)
+</li>
+<li class="rfe">
+Developer: Remove the deprecated <code>zeroclipboard</code> UI component and the unused dependency on ZeroClipboard.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5042">pull 5042</a>)
+</li>
+<li class="rfe">
+Developer: Remove obsolete support for live class reloading with JRebel.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64037">issue 64037</a>)
+</li>
+<li class="rfe">
+Internal: Modernize the hashing function of ConsistentHash.
+(<a href="https://issues.jenkins.io/browse/JENKINS-60563">issue 60563</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.265">
+What's new in 2.265
+(2020-11-03)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="rfe">
+Improve performance of authorisation strategies when the authentication realm is case insensitive.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64039">issue 64039</a>)
+</li>
+<li class="rfe">
+French translation for the token paragraph in user configuration and the root breadcrumb ("Dashboard").
+(<a href="https://github.com/jenkinsci/jenkins/pull/5009">pull 5009</a>)
+</li>
+<li class="bug">
+Fix file handle leak when viewing corrupted build logs.
+(<a href="https://issues.jenkins.io/browse/JENKINS-62985">issue 62985</a>)
+</li>
+<li class="bug">
+Fix redirects when renaming jobs with spaces or non-latin characters.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63899">issue 63899</a>)
+</li>
+<li class="rfe">
+Developer: Deprecate <code>UnbufferedBase64InputStream</code>.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5039">pull 5039</a>)
+</li>
+<li class="rfe">
+Developer: Added better parsing overloads to <code>XMLUtils</code>.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5026">pull 5026</a>)
+</li>
+<li class="rfe">
+Internal: Remove inline resources for LoadStatistics.
+(<a href="https://issues.jenkins.io/browse/JENKINS-60866">issue 60866</a>)
+</li>
+<li class="bug">
+Internal: Correct the scope of the restriction on <code>TokenUuidAndPlainValue</code>.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5041">pull 5041</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.264">
+What's new in 2.264
+(2020-10-27)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major rfe">
+Change Jenkins configuration UI from tables to divs for layout in forms.
+(<a href="https://issues.jenkins.io/browse/JENKINS-56109">issue 56109</a>)
+</li>
+<li class="rfe">
+Winstone 5.12: Update Jetty from 9.4.30.v20200611 to 9.4.33.v20201020.
+(<a href="https://issues.jenkins.io/browse/JENKINS-64035">issue 64035</a><a></a>,&nbsp;<a href="https://github.com/jenkinsci/winstone/releases/tag/winstone-5.12">Winstone 5.12 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.31.v20200723">Jetty 9.4.31.v20200723 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.32.v20200930">Jetty 9.4.32.v20200930 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.33.v20201020">Jetty 9.4.33.v20201020 changelog</a>)
+</li>
+<li class="bug">
+Cleanup "esclave" references and fix terminology for jobs in the French localization.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4985">pull 4985</a>)
+</li>
+<li class="bug">
+Change the standard URL for obtaining the Inbound Agent configuration file from <code>${agent_url}/slave-agent.jnlp</code> to <code>${agent_url}/jenkins-agent.jnlp</code>.
+The old name is obsolete and will be removed at a future time.
+(<a href="https://issues.jenkins.io/browse/JENKINS-35452">issue 35452</a>)
+</li>
+<li class="bug">
+Prevent the Build History Widget from crashing when users have Discover permissions without Read for folders.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63868">issue 63868</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.263">
+What's new in 2.263
+(2020-10-20)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Downgrade Jetty to 9.4.30.v20200611 to prevent a wrong port from appearing in URLs (regression in 2.261).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63958">issue 63958</a><a></a>,&nbsp;<a href="https://github.com/jenkinsci/winstone/releases/tag/winstone-5.11.1">Winstone 5.11.1 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/issues/5417">Root cause in Jetty</a>)
+</li>
+<li class="rfe">
+Remove TFS Plugin suggestion from Setup Wizard.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5016">pull 5016</a>)
+</li>
+<li class="rfe">
+Optimize memory allocations in <code>TcpAgentListener</code>, <code>LogRotator</code> and <code>RunList</code>.
+(<a href="https://github.com/jenkinsci/jenkins/pull/5011">pull 5011</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/5012">pull 5012</a>)
+</li>
+<li class="rfe">
+Add missing French localization for the login page, setup wizard and the main page.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4995">pull 4995</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/4996">pull 4996</a>,&nbsp;<a href="https://github.com/jenkinsci/jenkins/pull/4997">pull 4997</a>)
+</li>
+<li class="rfe">
+Clarify the list separator in file excludes fields.
+(<a href="https://issues.jenkins.io/browse/JENKINS-49523">issue 49523</a>)
+</li>
+<li class="bug">
+Do not use null value for aria-hidden HTML attributes.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4919">pull 4919</a>)
+</li>
+<li class="bug">
+Prevent resource leak in the File Fingerprint Storage implementation.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4992">pull 4992</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.262">
+What's new in 2.262
+(2020-10-15)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Stop showing JavaScript in the footer (regression in 2.261).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63798">issue 63798</a>)
+</li>
+<li class="major bug">
+Restore reporting of ClassNotFoundException stacktraces in AntClassLoader and ClassicPluginStrategy due to the regressions for some agent types (regression in 2.261).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63937">issue 63937</a>)
+</li>
+<li class="rfe">
+Developer: Update <code>ArtifactArchiver</code> to no longer consult with environment variables injected by <code>EnvironmentContributingAction</code> added during the build, including <code>ArtifactManager</code> ones.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4933">pull 4933</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.261">
+What's new in 2.261
+(2020-10-13)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Fix docker build agent provisioning (regression in 2.259-260).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63828">issue 63828</a>)
+</li>
+<li class="major bug">
+Fix extensions footer location (regression in 2.230).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63798">issue 63798</a>)
+</li>
+<li class="rfe">
+Introduce LowResourceMonitor from Jetty by upgrading to Winstone 5.11.
+Bump jetty.version from 9.4.30.v20200611 to 9.4.32.v20200930.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4975">pull 4975</a>,&nbsp;<a href="https://github.com/jenkinsci/winstone/releases/tag/winstone-5.11">Winstone 5.11 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.31.v20200723">Jetty 9.4.31.v20200723 changelog</a>,&nbsp;<a href="https://github.com/eclipse/jetty.project/releases/tag/jetty-9.4.32.v20200930">Jetty 9.4.32.v20200930 changelog</a>)
+</li>
+<li class="major rfe">
+SSHD module 2.7: Remove deprecated key exchange and MAC algorithms.
+
+(<a href="https://github.com/jenkinsci/jenkins/pull/4951">pull 4951</a>,&nbsp;<a href="https://github.com/jenkinsci/sshd-module/blob/master/CHANGELOG.md#27">SSHD module 2.7 changelog</a>)
+</li>
+<li class="rfe">
+SSHD module 2.7: Allow configuring disabled key exchange and MAC algorithms through system properties.
+
+(<a href="https://github.com/jenkinsci/jenkins/pull/4951">pull 4951</a>,&nbsp;<a href="https://github.com/jenkinsci/sshd-module/blob/master/CHANGELOG.md#27">SSHD module 2.7 changelog</a>)
+</li>
+<li class="rfe">
+Reduce memory consumption when loading classes from plugins.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4957">pull 4957</a>)
+</li>
+<li class="rfe">
+Do not render parts of a serialized <code>ConsoleNote</code> in truncated log output.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4905">pull 4905</a>)
+</li>
+<li class="bug">
+Replace "slave" reference with "agent" in Traditional Chinese translation.
+(<a href="https://issues.jenkins.io/browse/JENKINS-62347">issue 62347</a>)
+</li>
+<li class="bug">
+Use 'Agent to controller' to describe agent access control system rather than 'agent to master'.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63905">issue 63905</a>)
+</li>
+<li class="bug">
+Hide description panel in sidebar if historyWidget.descriptionLimit is 0.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4978">pull 4978</a>)
+</li>
+<li class="rfe">
+Developer: Pluggable Artifact Storage: Make the <code>VirtualFile</code> API generally available to plugin developers.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4974">pull 4974</a>,&nbsp;<a href="https://github.com/jenkinsci/jep/tree/master/jep/202">JEP-202</a>)
+</li>
+<li class="rfe">
+Developer: Allow omitting <code>ClassNotFoundException</code> in <code>AntClassLoader</code> and <code>ClassicPluginStrategy</code>.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4957">pull 4957</a>)
+</li>
+<li class="rfe">
+Internal: Update slf4j-api from 1.7.26 to 1.7.30.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4988">pull 4988</a>,&nbsp;<a href="http://www.slf4j.org/news.html">SLF4J changelog</a>)
+</li>
+<li class="rfe">
+Internal: Update parent pom.
+Updates various maven plugins and developer tools.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4982">pull 4982</a>,&nbsp;<a href="https://github.com/jenkinsci/pom/releases/tag/jenkins-1.58">Parent pom 1.58 changelog</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.260">
+What's new in 2.260
+(2020-10-06)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Fix docker build agent provisioning (regression in 2.259).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63828">issue 63828</a>)
+</li>
+<li class="rfe">
+Improve the scripting capacity related to the API Token system.
+Provide a way to configure a fixed/default API Token for admin during installation phase.
+(<a href="https://issues.jenkins.io/browse/JENKINS-57484">issue 57484</a>)
+</li>
+<li class="rfe">
+Allow users with the <code>Jenkins.MANAGE</code> permission to restart and safe restart Jenkins.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63795">issue 63795</a>)
+</li>
+<li class="rfe">
+Disable autocomplete of username on login form.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4952">pull 4952</a>)
+</li>
+<li class="rfe">
+Internal: Update bundled version of Apache Ant from 1.10.8 to 1.10.9.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4958">pull 4958</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.259">
+What's new in 2.259
+(2020-09-29)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Show display names in change list again (regression in 2.243).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63712">issue 63712</a>)
+</li>
+<li class="rfe">
+Update the bundled version of Script Security Plugin from 1.73 to 1.75.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4947">pull 4947</a>)
+</li>
+<li class="rfe">
+Update the bundled version of Display URL API plugin from 2.0 to 2.3.1.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4948">pull 4948</a>)
+</li>
+<li class="rfe">
+Developer: Cloud implementations are given more context about ongoing planned nodes.
+Add <code>CloudState</code> to be passed to <code>Cloud#provision</code> and <code>Cloud#canProvision</code> methods.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4922">pull 4922</a>)
+</li>
+<li class="rfe">
+Developer: Provide <code>WebAppMain#getDefaultRingBufferSize</code> method for use by telemetry.
+(<a href="https://issues.jenkins.io/browse/JENKINS-50669">issue 50669</a>)
+</li>
+<li class="rfe">
+Developer: Improve the combobox component to support default value and readonly mode.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4939">pull 4939</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.258">
+What's new in 2.258
+(2020-09-22)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Migrate the view status filter from views in previous Jenkins releases (regression in 2.240).
+(<a href="https://issues.jenkins.io/browse/JENKINS-62661">issue 62661</a>)
+</li>
+<li class="rfe">
+Improve the layout and clarity of the page displayed when jobs are not yet created.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63592">issue 63592</a>)
+</li>
+<li class="rfe">
+Update the bundled Mailer plugin from 1.21 to 1.32.1.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4938">pull 4938</a>)
+</li>
+<li class="bug">
+Prevent radio buttons from moving when they are clicked.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63332">issue 63332</a>)
+</li>
+<li class="rfe">
+Developer: A <code>SimpleBuildStep</code> or <code>SimpleBuildWrapper</code> can now choose not to require a workspace context (working directory and launcher).
+(<a href="https://issues.jenkins.io/browse/JENKINS-46175">issue 46175</a>)
+</li>
+<li class="rfe">
+Developer: PluginServletFilter is now final, making it impossible for plugins to mistakenly define their own.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63682">issue 63682</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.257">
+What's new in 2.257
+(2020-09-15)
+</h3>
+<div style="margin: 10px; padding: 10px; background-color: #FFFFCE;">
+The Windows MSI package has not been released due to limitations in Windows product version numbers. As a workaround, please download <a href="https://updates.jenkins.io/latest/jenkins.war">jenkins.war</a> manually and replace it in JENKINS_HOME.
+
+</div>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="rfe">
+Name the first breadcrumb "Dashboard" for clarity.
+(<a href="https://issues.jenkins.io/browse/JENKINS-60972">issue 60972</a>)
+</li>
+<li class="bug">
+Make sure <code>Environment</code>s are always torn down in <code>AbstractBuild</code>.
+(<a href="https://issues.jenkins.io/browse/JENKINS-43889">issue 43889</a>)
+</li>
+<li class="rfe">
+Developer: New static utility method <code>Result#combine(Result,Result)</code> to get the worst of two (nullable) build results.
+(<a href="https://issues.jenkins.io/browse/JENKINS-43889">issue 43889</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.256">
+What's new in 2.256
+(2020-09-08)
+</h3>
+<div style="margin: 10px; padding: 10px; background-color: #FFFFCE;">
+The Windows MSI package has not been released due to limitations in Windows product version numbers. As a workaround, please download <a href="https://updates.jenkins.io/latest/jenkins.war">jenkins.war</a> manually and replace it in JENKINS_HOME.
+
+</div>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="bug">
+Avoid warning on logs about Anonymous Class in hudson.FilePath.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63563">issue 63563</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.255">
+What's new in 2.255
+(2020-08-31)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="bug">
+Developer: Ignore flaky <code>UpdateCenter2Test.install</code> test.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4916">pull 4916</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.254">
+What's new in 2.254
+(2020-08-25)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major bug">
+Stop pre-formatting agent logs to prevent deadlocks (regression in 2.231).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63458">issue 63458</a>)
+</li>
+<li class="major rfe">
+Graduate Overall/SystemRead permission to general availability (GA) status.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4909">pull 4909</a>,&nbsp;<a href="https://github.com/jenkinsci/jep/blob/master/jep/224/README.adoc">JEP-224</a>)
+</li>
+<li class="rfe">
+Set <code>Cross-Origin-Opener-Policy</code> to <code>same-origin</code>.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4910">pull 4910</a>)
+</li>
+<li class="rfe">
+Avoid losing work in progress by using a new browser tab to open the plugin link in a configuration screen’s inline help.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63429">issue 63429</a>)
+</li>
+<li class="rfe">
+Developer: Remove the unused <code>description</code> attribute from <code>f:dropdownList</code>.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63220">issue 63220</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+<h3 id="v2.253">
+What's new in 2.253
+(2020-08-18)
+</h3>
+<ul class="image">
+<!-- starting partial changelog-changes.html.haml -->
+<li class="major rfe">
+Major update of the Alpine-based Jenkins Docker image.
+Jenkins Docker image for Alpine now uses Alpine 3.12 and AdoptOpenJDK 8u262.
+(<a href="/doc/upgrade-guide/2.235/#docker-alpine-image-overhaul">LTS upgrade guide</a>)
+</li>
+<li class="major bug">
+Fix button that copies API token to clipboard (regression in 2.238).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63274">issue 63274</a>)
+</li>
+<li class="major bug">
+Fix a deadlock in agent logging.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63082">issue 63082</a>)
+</li>
+<li class="bug">
+Fix Cmd + Enter not running the script in the Script Console on a Mac (regression in 2.248).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63342">issue 63342</a>)
+</li>
+<li class="bug">
+Fix backspace key sometimes did not delete text from the Script Console on a Mac (regression in 2.248).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63342">issue 63342</a>)
+</li>
+<li class="bug">
+Fix regular expression validator UI location (regression in 2.244).
+(<a href="https://issues.jenkins.io/browse/JENKINS-63308">issue 63308</a>)
+</li>
+<li class="bug">
+Make alert colors consistent with 'Manage Jenkins' alert colors.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63330">issue 63330</a>)
+</li>
+<li class="rfe">
+Add Japanese translations for user configuration screen.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4904">pull 4904</a>)
+</li>
+<li class="rfe">
+Prevent concurrent build deletion.
+(<a href="https://issues.jenkins.io/browse/JENKINS-61687">issue 61687</a>)
+</li>
+<li class="bug">
+Developer: Make unavailable plugin background themeable.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63331">issue 63331</a>)
+</li>
+<li class="rfe">
+Developer: Expose fingerprint range set serialization methods for plugins.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4888">pull 4888</a>)
+</li>
+<li class="bug">
+Internal: Remove some text messages from Jenkins core which had already been moved to the LDAP and PAM Authentication plugins.
+Be sure to upgrade to LDAP 1.22 or newer and PAM Authentication 1.5 or newer.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4866">pull 4866</a>)
+</li>
+<li class="rfe">
+Internal: Remove deprecated and unused <code>ProcessTreeKiller</code> class.
+(<a href="https://github.com/jenkinsci/jenkins/pull/4874">pull 4874</a>)
+</li>
+<li class="rfe">
+Internal: Exclude JUnit and Hamcrest libraries from the jenkins.war bundle.
+(<a href="https://issues.jenkins.io/browse/JENKINS-63269">issue 63269</a>)
+</li>
+
+<!-- ending partial changelog-changes.html.haml -->
+</ul>
+</div>
+<p>
+<b>
+Changelogs of historical releases can be found
+<a href="/changelog-old/">
+in the changelog archive.
+</a>
+</b>
+</p>
+
+
+</div>
+</div>
+</div>
+
+
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/anchor-js/anchor.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/js/tether.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/js/bootstrap.min.js"></script>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<p class="box">
+<a href="https://github.com/jenkins-infra/jenkins.io/edit/master/content//changelog/index.html.haml" title="Edit /changelog/index.html.haml on GitHub">Improve this page</a>
+|
+<a href="https://github.com/jenkins-infra/jenkins.io/issues/new?labels=bug&amp;template=4-bug.md&amp;title=Changelog page - TODO: Put a summary here&amp;body=Problem with the [Changelog](https://www.jenkins.io/changelog/) page, [source file](https://github.com/jenkins-infra/jenkins.io/blob/master/content/changelog/index.html.haml)%0A%0ATODO: Describe the expected and actual behavior here %0A%0A%23%23 Screenshots %0A%0A TODO: Add screenshots if possible %0A%0A%23%23 Possible Solution %0A%0A%3C!-- If you have suggestions on a fix for the bug, please describe it here. --%3E %0A%0AN/A" title="Report a problem with /changelog/index.html.haml">Report a problem</a>
+</p>
+<div class="license-box">
+<div id="creativecommons">
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+<p>
+<img alt="Creative Commons Attribution-ShareAlike license" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+</p>
+</a>
+<p>
+The content driving this site is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 license.
+</p>
+</div>
+</div>
+</div>
+<div class="links col-md-8">
+<div class="container">
+<div class="row">
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Resources</h5>
+<ul class="resources">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Downloads
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc">
+Documentation
+</a>
+</li>
+<li>
+<a href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Contributing
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Project</h5>
+<ul class="project">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project">
+Structure and governance
+</a>
+</li>
+<li>
+<a href="https://issues.jenkins.io">
+Issue tracker
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://ci.jenkins.io">
+Jenkins on Jenkins
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Community</h5>
+<ul class="community">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists">
+Mailing lists
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/chat">
+Chats
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/sigs">
+Special Interest Groups
+</a>
+</li>
+<li>
+<a href="https://twitter.com/jenkinsci">
+Twitter
+</a>
+</li>
+<li>
+<a href="https://reddit.com/r/jenkinsci">
+Reddit
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Other</h5>
+<ul class="other">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/conduct">
+Code of Conduct
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press information
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/merchandise">
+Merchandise
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-000000-0', 'auto');
+ga('send', 'pageview');
+ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+  !function(d,s,id) {
+    var js, fjs=d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id=id;
+      js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,"script","twitter-wjs");
+  
+  $(function(){
+    var $body = $(document.body);
+    $(".nav-link.dropdown-toggle").on("mousedown", function(){
+      $body.addClass("no-outline");
+    })
+    $body.on("keydown", function(){
+      $body.removeClass("no-outline");
+    })
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+docsearch({
+  apiKey: '9df657b854f8c42d9887b34bc275db4d',
+  indexName: 'jenkins',
+  inputSelector: 'input.searchbox',
+  algoliaOptions: { 'facetFilters': ["tags:en"] },
+  debug: false
+});
+</script>
+</body>
+</html>

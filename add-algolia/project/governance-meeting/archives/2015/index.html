@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+Jenkins Governance Meeting Archive 2015
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="description">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<!-- Favicons -->
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/site.webmanifest" rel="manifest">
+<link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon">
+<meta content="#2b5797" name="msapplication-TileColor">
+<meta content="#ffffff" name="theme-color">
+<meta content="Jenkins Governance Meeting Archive 2015" name="apple-mobile-web-app-title">
+<!-- Twitter Card data -->
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@JenkinsCI" name="twitter:site">
+<meta content="Jenkins Governance Meeting Archive 2015" name="twitter:title">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="twitter:description">
+<meta content="@JenkinsCI" name="twitter:creator">
+<!-- Twitter Summary card images must be at least 120x120px -->
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/logo-title-opengraph.png" name="twitter:image">
+<!-- Open Graph data -->
+<meta content="Jenkins Governance Meeting Archive 2015" property="og:title">
+<meta content="article" property="og:type">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/project/governance-meeting/archives/2015/index.html" property="og:url">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="og:description">
+<meta content="Jenkins Governance Meeting Archive 2015" property="og:site_name">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/logo-title-opengraph.png" name="og:image">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/css/tether.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-icons.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/jenkins.css" media="screen" rel="stylesheet">
+<!-- Non-obtrusive CSS styles -->
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/ionicons/css/ionicons.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/footer.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-awesome.min.css" media="screen" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/jquery/jquery.min.js"></script>
+<!-- starting partial toptoolbar.html.haml -->
+<nav class="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top" id="ji-toolbar">
+<a class="navbar-brand" href="https://halkeye.github.io/jenkins.io/add-algolia">
+Jenkins
+</a>
+<button class="navbar-toggler" data-target="#CollapsingNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="CollapsingNavbar">
+<ul class="nav navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+<!-- starting partial cdf_logo.html.haml -->
+<svg width="36" height="18" xmlns="http://www.w3.org/2000/svg" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.23 44.77 362.70 271.95"><defs><linearGradient id="a" x1="359.765" x2="104.082" y1="134.295" y2="124.577" gradientTransform="matrix(1 0 0 -1 0 439.068)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ed1c24"/><stop offset="1" stop-color="#f7941d"/></linearGradient><linearGradient id="b" x1="355.202" x2="99.519" y1="254.467" y2="244.749" xlink:href="#a"/><linearGradient id="c" x1="183.903" x2="10.612" y1="227.598" y2="221.023" xlink:href="#a"/><linearGradient id="d" x1="367.119" x2="157.995" y1="265.311" y2="257.091" xlink:href="#a"/></defs><path fill="#c49a6c" d="M231.52 309.278c2.483-.332 4.895-.77 7.255-1.329s4.649-1.206 6.991-1.957c13.494-4.58 25.187-12.952 36.374-24.593l-.14-.175c-14.944 15.486-30.693 25.344-50.48 28.054z"/><path fill="url(#a)" d="M224.232 309.96h.332c1.084 0 2.15-.14 3.216-.228a93.844 93.844 0 0 1-3.233.227z"/><path fill="url(#b)" d="M284.692 187.187l-.122.192.122-.192z"/><path fill="url(#c)" d="M146.145 231.847a150.844 150.844 0 0 1-12.97 15.862c-7.582 7.889-15.507 13.563-24.652 16.667a47.832 47.832 0 0 1-4.738 1.326 56.959 56.959 0 0 1-4.916.9 38.32 38.32 0 0 1-1.682.214l-.912.083c-.723.059-1.445.118-2.18.154h-3.068a42.325 42.325 0 0 1-9.192-1.043 49.977 49.977 0 0 1-6.764-2.002 43.097 43.097 0 0 1-4.525-1.954c-1.493-.77-2.961-1.516-4.407-2.37a59.5 59.5 0 0 1-17.105-15.399 59.714 59.714 0 0 1-2.914-4.311 53.09 53.09 0 0 1-1.291-2.263 51.985 51.985 0 0 1-2.263-4.738 46.72 46.72 0 0 1 0-36.426 51.986 51.986 0 0 1 2.263-4.738 54.14 54.14 0 0 1 1.291-2.263 59.742 59.742 0 0 1 2.914-4.311 59.714 59.714 0 0 1 17.105-15.4 60.828 60.828 0 0 1 4.407-2.369q2.217-1 4.525-1.777a49.976 49.976 0 0 1 6.906-2.073 42.325 42.325 0 0 1 9.192-1.042h3.128c.722 0 1.445.094 2.155.154l1.043.106 1.019.119c1.8.237 3.553.557 5.271.96.853.2 1.694.426 2.523.663a51.186 51.186 0 0 1 11.846 5.176 59.645 59.645 0 0 1 4.395 2.89 74.485 74.485 0 0 1 8.386 7.108q2.038 1.99 4.063 4.193l.083-.13a159.395 159.395 0 0 1 11.064 13.942c5.437-8.576 13.658-21.464 16.584-25.74 1.185-1.718 2.37-3.46 3.66-5.212-13.54-16.513-29.827-30.23-51.587-36.082h-.154a89.397 89.397 0 0 0-3.187-.794l-.45-.107a92.565 92.565 0 0 0-3.151-.627l-.628-.119a80.578 80.578 0 0 0-3.743-.569h-.142a58.29 58.29 0 0 0-2.073-.236h-.391l-1.872-.166h-.568l-1.754-.119h-.675l-1.777-.07h-3.115c-46.447-.25-87.125 40.476-87.125 86.911s40.725 87.173 87.172 87.173h3.14l1.729-.071h.734l1.67-.095h.676l1.706-.154h.568l1.813-.213.414-.06 1.967-.272h.213a125.91 125.91 0 0 0 3.553-.628l.652-.142c.96-.201 1.907-.415 2.855-.64l.58-.142a86.66 86.66 0 0 0 3.009-.817l.237-.071c20.73-6.077 36.425-19.392 49.55-35.277-2.037-3.068-3.4-5.366-4.039-6.48z"/><path fill="url(#d)" d="M318.05 51.733v94.66a85.514 85.514 0 0 0-52.595-18.729h-3.115l-1.777.072-.7.047-1.752.118h-.569l-1.871.166h-.391c-.7.071-1.386.142-2.073.237h-.154c-1.256.154-2.5.355-3.732.569l-.628.118c-1.066.19-2.108.403-3.15.628l-.45.107c-30.35 6.858-50.333 28.808-66.822 52.82-.7 1.018-1.35 2.049-2.038 3.068-2.25 3.423-5.46 8.422-8.635 13.397-4.17 6.527-8.292 13.03-9.939 15.66l20.624 32.137s21.997 40.465 61.68 51.482l.237.07c.995.297 2.002.558 3.009.818l.58.142c.936.237 1.896.439 2.855.64l.652.142c1.184.225 2.369.439 3.553.628h.214l1.966.273.415.059 1.812.213h.569l1.705.154h.676l1.67.095h.734l1.73.07h3.139c54.703 0 86.355-30.964 87.149-85.063V51.733zm-52.595 215.403h-3.068c-.734 0-1.457-.095-2.18-.154l-.912-.083c-.568-.06-1.125-.13-1.682-.213a49.077 49.077 0 0 1-9.571-2.275 49.612 49.612 0 0 1-6.634-2.83 55.792 55.792 0 0 1-6.254-3.768 63.068 63.068 0 0 1-3.009-2.215 82.399 82.399 0 0 1-8.683-7.925l-.095.119c-1.255-1.303-2.487-2.69-3.731-4.11-.154-.167-.296-.356-.45-.534-.628-.722-1.256-1.445-1.884-2.215s-1.125-1.398-1.682-2.097-.888-1.101-1.338-1.682a184.467 184.467 0 0 1-6.053-8.292c-.7-.995-1.398-2.025-2.109-3.056-.379-.569-.77-1.184-1.185-1.73-.675-1.018-1.362-2.013-2.049-3.056l-.355-.545c-1.185-1.812-2.37-3.684-3.649-5.603q2.95-4.608 5.817-8.86c1.907-2.831 3.79-5.556 5.662-8.138s3.72-5.046 5.591-7.38 3.72-4.525 5.603-6.586q2.026-2.203 4.063-4.194c1.374-1.338 2.748-2.594 4.158-3.778s2.807-2.287 4.252-3.329a57.594 57.594 0 0 1 7.748-4.62c.331-.166.663-.367 1.006-.533l.226-.118c1.41-.652 2.843-1.185 4.3-1.73l.485-.201c.273-.083.557-.142.83-.237a44.943 44.943 0 0 1 3.34-.948l1.374-.343a60.798 60.798 0 0 1 4.738-.841l1.019-.119 1.042-.106c.711 0 1.434-.119 2.156-.154h3.128a42.431 42.431 0 0 1 4.572.26 48.011 48.011 0 0 1 6.93 1.35c1.54.427 3.08.925 4.596 1.505a48.724 48.724 0 0 1 4.525 1.955c1.493.722 2.961 1.516 4.407 2.369s2.866 1.8 4.24 2.784 2.725 2.049 4.028 3.174a58.459 58.459 0 0 1 8.837 9.477 59.73 59.73 0 0 1 2.914 4.312 51.067 51.067 0 0 1 5.318 11.916 47.38 47.38 0 0 1 1.185 5.165 45.567 45.567 0 0 1 .71 8.09c.072 35.964-16.062 52.122-52.227 52.122z"/></svg>
+
+<!-- ending partial cdf_logo.html.haml -->
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://cd.foundation/">
+What is CDF?
+</a>
+<a class="dropdown-item feature" href="https://jenkins-x.io/">
+Jenkins X
+</a>
+<a class="dropdown-item feature" href="https://cloud.google.com/tekton/">
+Tekton
+</a>
+<a class="dropdown-item feature" href="https://www.spinnaker.io/">
+Spinnaker
+</a>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Documentation
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book">
+<strong>
+User Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/installing/">
+&nbsp;-&nbsp;Installing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline">
+&nbsp;-&nbsp;Jenkins Pipeline
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/managing/">
+&nbsp;-&nbsp;Managing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/system-administration">
+&nbsp;-&nbsp;System Administration
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/glossary/">
+&nbsp;-&nbsp;Terms and Definitions
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/solutions">
+<strong>
+Solution Pages
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+<strong>
+Tutorials
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/tour/getting-started/">
+&nbsp;-&nbsp;Guided Tour
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+&nbsp;-&nbsp;More Tutorials
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/developer">
+<strong>
+Developer Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+<strong>
+Contributor Guide
+</strong>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Community
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/chat" title="Chat with the rest of the Jenkins community on IRC">
+Chat
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam">
+Meet
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+<a class="dropdown-item feature" href="https://issues.jenkins.io/">
+Issue Tracker
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists" title="Browse Jenkins mailing list archives and/or subscribe to lists">
+Mailing Lists
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item feature" href="https://accounts.jenkins.io/" title="Create/manage your account for accessing wiki, issue tracker, etc">
+Account Management
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/">
+<strong>
+Special Interest Groups
+</strong>
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/advocacy-and-outreach/">
+&nbsp;-&nbsp;Advocacy and Outreach
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/chinese-localization/">
+&nbsp;-&nbsp;Chinese Localization
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/cloud-native/">
+&nbsp;-&nbsp;Cloud Native
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/">
+&nbsp;-&nbsp;Documentation
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/gsoc/">
+&nbsp;-&nbsp;Google Summer of Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/hw-and-eda/">
+&nbsp;-&nbsp;Hardware and EDA
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/pipeline-authoring/">
+&nbsp;-&nbsp;Pipeline Authoring
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/platform/">
+&nbsp;-&nbsp;Platform
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/ux/">
+&nbsp;-&nbsp;User Experience
+</a>
+</div>
+</li>
+<li class="dropdown nav-item">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Subprojects
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/evergreen/">
+Evergreen
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/">
+Google Summer of Code in Jenkins
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/infrastructure/">
+Infrastructure
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam/">
+CI/CD and Jenkins Area Meetups
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jcasc/">
+Jenkins Configuration as Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/remoting/">
+Jenkins Remoting
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/">
+Document Jenkins on Kubernetes
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+About
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/conduct">
+Conduct
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+English
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/zh">
+中文 Chinese
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link btn btn-outline-secondary" href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Download
+</a>
+</li>
+<li class="nav-item searchbox">
+<input aria-label="Search" class="form-control searchbox" placeholder="Search" type="search">
+</li>
+</ul>
+</div>
+</nav>
+<!-- Spacing to make the fixed-top sticky navbar not occlude any content below it -->
+<div class="pt-4">
+&nbsp;
+</div>
+
+<!-- ending partial toptoolbar.html.haml -->
+<style>
+  .toc {
+      float: right;
+  }
+</style>
+<!-- starting partial anchors.html.haml -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    for (var i = 1 ; i <= 6 ; i ++) {
+      anchors.add('.container .row.body h' + i);
+    }
+  })
+</script>
+
+<!-- ending partial anchors.html.haml -->
+<div class="container">
+<div class="row body">
+<div class="col-md-12">
+<h1>
+Jenkins Governance Meeting Archive 2015
+</h1>
+<div class="paragraph">
+<p>This page is an archive of past meeting agendas, their minutes and IRC logs, for the year shown above.
+For current information, see the <a href="/project/governance-meeting">Governance Meeting</a> page.</p>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Dec23meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Dec23meeting"></a>Dec 23 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>This meeting will be skipped.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Dec9meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Dec9meeting"></a>Dec 9 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151209T11&amp;p1=224&amp;ah=1&amp;sort=1">Dec
+9 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check</p>
+</li>
+<li>
+<p>Next LTS baseline selection</p>
+</li>
+<li>
+<p>(<strong>hopefully</strong>) Final review/adoption of
+<a href="https://wiki.jenkins.io/display/JENKINS/Board+Election+Process">Board
+Election Process</a> (<a href="https://wiki.jenkins.io/display/~rtyler">Unknown User
+(rtyler)</a>)</p>
+</li>
+<li>
+<p>Review/adopt a
+<a href="https://wiki.jenkins.io/display/JENKINS/Code+of+Conduct">Code of Conduct</a>
+(<a href="https://wiki.jenkins.io/display/~rtyler">Unknown User (rtyler)</a>)</p>
+</li>
+<li>
+<p><strong>NOT</strong> tweet anymore plugins w/o a wiki page
+(<a href="https://wiki.jenkins.io/display/~batmat">Unknown User (batmat)</a>) (for
+<a href="https://groups.google.com/forum/?utm_medium=email&amp;utm_source=footer#!msg/jenkinsci-dev/qR8WqJZmNZs/1a9Zd3F0DAAJ">reference</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-12-09-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-12-09-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Nov25meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Nov25meeting"></a>Nov 25 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151125T11&amp;p1=224&amp;ah=1&amp;sort=1">Nov
+25 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS RC status check</p>
+</li>
+<li>
+<p>Announce Security Officer
+(<a href="https://wiki.jenkins.io/display/~rtyler">Unknown User (rtyler)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-11-25-19.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-11-25-19.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Nov11meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Nov11meeting"></a>Nov 11 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151111T11&amp;p1=224&amp;ah=1&amp;sort=1">Nov
+11 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Review proposed www site change from Drupal to static site generation
+(current <a href="https://github.com/rtyler/jenkins.io">repo</a> and
+<a href="http://jenkins.lasagna.io/">generated version of site</a>)
+(<a href="https://wiki.jenkins.io/display/~rtyler">Unknown User (rtyler)</a>)</p>
+</li>
+<li>
+<p>CERT membership requests from
+<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a><mark>!msg/jenkinsci-dev/TachZG6zw44/UMBz91HMAgAJ[Ivan
+Meredith] and
+<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a></mark>!msg/jenkinsci-dev/TachZG6zw44/v2sG6UvPAgAJ[Ben
+Walding] (<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User
+(danielbeck)</a>)</p>
+</li>
+<li>
+<p>Review
+<a href="https://wiki.jenkins.io/display/JENKINS/Board+Election+Process">Board
+Election Process</a> and either move forward with the proposal or take
+feedback so we can have elections next year
+(<a href="https://wiki.jenkins.io/display/~rtyler">Unknown User (rtyler)</a>)</p>
+</li>
+<li>
+<p>Jenkins 2.0 proposal recap
+(<a href="https://wiki.jenkins.io/display/~rtyler">Unknown User (rtyler)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-11-11-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-11-11-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Oct28meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Oct28meeting"></a>Oct 28 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151028T11&amp;p1=224&amp;ah=1&amp;sort=1">Oct
+28 11:00 Pacific</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.aui-icon .aui-icon-small .aui-iconfont-warning .confluence-information-macro-icon]#
+#</p>
+</div>
+<div class="paragraph">
+<p><strong>It is the end of daylight savings time season. The meeting will be held
+at 11 am Pacific time, adjust accordingly.</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Rewards+for+reporting+security+issues">Rewards
+for reporting security issues</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LTS status check</p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Proposal+-+Revisiting+JUC+in+2016" class="bare">https://wiki.jenkins.io/display/JENKINS/Proposal+-+Revisiting+JUC+in+2016</a>[Proposal</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Revisiting JUC in 2016]
+(<a href="https://wiki.jenkins.io/display/~kohsuke">Unknown User (kohsuke)</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sticker purchase approval
+(<a href="https://wiki.jenkins.io/display/~kohsuke">Unknown User (kohsuke)</a>)</p>
+</li>
+<li>
+<p>Voting: Should we require squashing commits in the core?
+(<a href="https://wiki.jenkins.io/display/~oleg_nenashev">Unknown User
+(oleg_nenashev)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Related discussion:
+<a href="https://groups.google.com/forum/#\!searchin/jenkinsci-dev/squash/jenkinsci-dev/kqvuDqXwPZw/oF-KMdNbCwAJ" class="bare">https://groups.google.com/forum/#\!searchin/jenkinsci-dev/squash/jenkinsci-dev/kqvuDqXwPZw/oF-KMdNbCwAJ</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-10-28-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-10-28-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Oct14meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Oct14meeting"></a>Oct 14 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151014T11&amp;p1=224&amp;ah=1&amp;sort=1">Oct
+14th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Approved+Trademark+Usage">Approved
+Trademark Usage</a> has been updated.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Quick announcement of <code>#jenkins-community</code>
+(<a href="https://wiki.jenkins.io/display/~rtyler">Unknown User (rtyler)</a>)</p>
+</li>
+<li>
+<p>LTS status check</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/1812/files#diff-600376dffeb79835ede4a0b285078036R850">Link
+to changelog-stable when building</a>?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>New Website JIRA project to organize website efforts under
+(<a href="https://wiki.jenkins.io/display/~rtyler">Unknown User (rtyler)</a>)</p>
+</li>
+<li>
+<p>Approval of new Q4 patron messages by CloudBees
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Proposal+-+Project+sub-teams" class="bare">https://wiki.jenkins.io/display/JENKINS/Proposal+-+Project+sub-teams</a>[Proposal</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project sub-teams] (<a href="https://wiki.jenkins.io/display/~rtyler">Unknown
+User (rtyler)</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Governance+Meeting+Archive+2015#">Permission
+request</a> - Admin access to jenkinsci org
+(<a href="https://wiki.jenkins.io/display/~oleg_nenashev">Unknown User
+(oleg_nenashev)</a>)</p>
+</li>
+<li>
+<p>JIRA project for plugin hosting (and possibly similar) requests
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-10-14-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-10-14-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Sep30meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Sep30meeting"></a>Sep 30 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[.aui-icon .aui-icon-small .aui-iconfont-warning .confluence-information-macro-icon]#
+#</p>
+</div>
+<div class="paragraph">
+<p><strong>This is the first meeting to be held in #jenkins-meeting.</strong></p>
+</div>
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150930T11&amp;p1=224&amp;ah=1&amp;sort=1">Sep
+30th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check</p>
+<div class="ulist">
+<ul>
+<li>
+<p>No RC posted two weeks ago?</p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/JENKINS-29876">JENKINS-29876</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Q4
+<a href="https://wiki.jenkins.io/display/JENKINS/Patron+of+Jenkins+program">patron
+program</a> messages (<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown
+User (danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Same as for Q3, with same pre-approved message pending:
+<a href="https://github.com/jenkinsci/patron/pull/4" class="bare">https://github.com/jenkinsci/patron/pull/4</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Time to think about Jenkins board elections?
+<a href="https://wiki.jenkins.io/display/~orrc">Unknown User (orrc)</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This was vaguely discussed in the 100k podcast in February, and soon
+2/3 of the board will be CloudBees employees</p>
+</li>
+<li>
+<p>The most recent proposal seems to be
+<a href="https://wiki.jenkins.io/display/JENKINS/Board+Election+Process">proposal
+from April 2013</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Time to move to Java 8 and servlet 3.1?
+<a href="https://wiki.jenkins.io/display/~teilo">Unknown User (teilo)</a> for core?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-09-30-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-09-30-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Sep16meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Sep16meeting"></a>Sep 16 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150916T11&amp;p1=224&amp;ah=1&amp;sort=1">Sep
+16th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS backporting status check
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>Protect master branches of repositories
+(<a href="https://wiki.jenkins.io/display/~olivergondza">Unknown User
+(olivergondza)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a><mark>!topic/jenkinsci-dev/0ciUju7raOA[<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a></mark>!topic/jenkinsci-dev/0ciUju7raOA|https://groups.google.com/forum/#!topic/jenkinsci-dev/0ciUju7raOA]</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-09-16-18.02.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-09-16-18.02.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Sep2meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Sep2meeting"></a>Sep 2 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150902T11&amp;p1=224&amp;ah=1&amp;sort=1">Sep
+2nd 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Travel grant blog post:
+<a href="http://jenkins-ci.org/content/announcing-travel-grant-program" class="bare">http://jenkins-ci.org/content/announcing-travel-grant-program</a></p>
+</li>
+<li>
+<p>Botbot.me logging for #jenkins: <a href="https://botbot.me/freenode/jenkins/" class="bare">https://botbot.me/freenode/jenkins/</a></p>
+</li>
+<li>
+<p>#jenkins-meeting: Waiting for
+<a href="https://github.com/jenkins-infra/jenkins-infra/pull/152" class="bare">https://github.com/jenkins-infra/jenkins-infra/pull/152</a> to be merged
+into prod</p>
+</li>
+<li>
+<p>Infra access list:
+<a href="https://wiki.jenkins.io/display/JENKINS/Infrastructure+Admins">Infrastructure
+Admins</a> (still missing Artifactory)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LTS RC status check
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>LTS baseline selection
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins-ci.org/display/JENKINS/Travel+Grant+Program">Travel
+grant program</a> blessing
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>Process for merging PRs with multiple commits
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>
+but it was really <a href="https://wiki.jenkins.io/display/~integer">Unknown User
+(integer)</a> and <a href="https://wiki.jenkins.io/display/~tfennelly">Unknown User
+(tfennelly)</a> who brought it up)</p>
+</li>
+<li>
+<p>Clarification what requires a CLA and what does not
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>CERT Team membership request for
+<a href="https://wiki.jenkins.io/display/~oleg_nenashev">Unknown User
+(oleg_nenashev)</a>, <a href="https://wiki.jenkins.io/display/~vlatombe">Unknown User
+(vlatombe)</a> and <a href="https://wiki.jenkins.io/display/~varmenise">Unknown User
+(varmenise)</a> (<a href="https://wiki.jenkins.io/display/~oleg_nenashev">Unknown
+User (oleg_nenashev)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-09-02-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-09-02-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Aug19meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Aug19meeting"></a>Aug 19 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150819T11&amp;p1=224&amp;ah=1&amp;sort=1">Aug
+19th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.jenkins-ci.org/display/JENKINS/Travel+Grant+Program">Travel
+grant program draft</a>
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LTS RC status check / LTS baseline selection
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What about
+<a href="https://issues.jenkins.io/browse/JENKINS-29936">JENKINS-29936</a>?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Revisiting bundled plugins
+(<a href="https://wiki.jenkins.io/display/~kohsuke">Unknown User (kohsuke)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>See
+<a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/kRobm-cxFw8">mailing
+list post</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Allow file browsing in artifactory for ability view javadocs, add link
+in confluence macros live link, send request to jfrog support to get
+newer artifactory
+version.  (<a href="https://wiki.jenkins.io/display/~integer">Unknown User
+(integer)</a>)</p>
+</li>
+<li>
+<p>Provide public list of JIRA/confluence/artifactory admins in wiki
+(<a href="https://wiki.jenkins.io/display/~integer">Unknown User (integer)</a>)</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/1774">HTMLUnit update</a>
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-08-19-18.03.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-08-19-18.03.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Aug5meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Aug5meeting"></a>Aug 5 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150805T11&amp;p1=224&amp;ah=1&amp;sort=1">Aug
+5th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Jenkins certification
+(<a href="https://wiki.jenkins.io/display/~kohsuke">Unknown User (kohsuke)</a>)</p>
+</li>
+<li>
+<p>Approval of new
+<a href="https://wiki.jenkins-ci.org/display/JENKINS/Patron+of+Jenkins+program">Patron
+program</a> messages (<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown
+User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>JUC travel grant (<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown
+User (danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(<a href="http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-09-17-18.00.log.html">previous
+discussion</a>)</p>
+</li>
+<li>
+<p>The Jenkins project currently has
+~http://permalink.gmane.org/gmane.org.spi.general/1507[$24k] in the bank</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-08-05-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-08-05-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Jul22meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Jul22meeting"></a>Jul 22 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=201507022T11&amp;p1=224&amp;ah=1&amp;sort=1">Jul
+22th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LTS 1.609 RC status check
+(<a href="https://wiki.jenkins.io/display/~olivergondza">Unknown User
+(olivergondza)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-07-22-18.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-07-22-18.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Jul8meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Jul8meeting"></a>Jul 8 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150708T11&amp;p1=224&amp;ah=1&amp;sort=1">Jul
+8th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS 1.609.2 RC status check
+(<a href="https://wiki.jenkins.io/display/~olivergondza">Unknown User
+(olivergondza)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-07-08-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-07-08-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-June10meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-June10meeting"></a>June 10 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150610T11&amp;p1=224&amp;ah=1&amp;sort=1">June
+10th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Can we start to look at fixing the
+<a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20INFRA%20AND%20component%20%3D%20spof%20ORDER%20BY%20updated%20DESC%2C%20priority%20DESC%2C%20created%20ASC">single
+points of failure</a>? (<a href="https://wiki.jenkins.io/display/~orrc">Unknown User
+(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>e.g. <a href="https://issues.jenkins.io/browse/INFRA-225">INFRA-225</a> was
+recently broken for a month; related
+<a href="https://issues.jenkins.io/browse/INFRA-75">INFRA-75</a> is one year old</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Using labels for pull requests to core (instead of renaming to
+something like "[WIP] [JENKINS-12345] Foo").
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>"Action items are <a href="https://issues.jenkins.io/browse/MEETING">tracked
+in JIRA</a>" — can we agree to do this?
+(<a href="https://wiki.jenkins.io/display/~orrc">Unknown User (orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>People miss meetings or forget action items, and there&#8217;s usually no
+follow-up and the actions never get done</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Time to move to Servlet 3.0 (3.1?) as
+<a href="http://jenkins-ci.org/content/good-bye-java6">announced</a>?
+(<a href="https://wiki.jenkins.io/display/~teilo">Unknown User (teilo)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-06-10-18.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-06-10-18.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-May27meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-May27meeting"></a>May 27 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150527T11&amp;p1=224&amp;ah=1&amp;sort=1">May
+27th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS RC status check
+(<a href="https://wiki.jenkins.io/display/~olivergondza">Unknown User
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>When to flip the switch on
+<a href="https://github.com/jenkinsci/backend-update-center2/pull/20">plugins
+without wiki pages</a>? (<a href="https://wiki.jenkins.io/display/~orrc">Unknown User
+(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/#!msg/jenkinsci-dev/dfvRxvCv7Mg/jIailHDwY2EJ">Mailing
+list thread</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Can we start to look at fixing the
+<a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20INFRA%20AND%20component%20%3D%20spof%20ORDER%20BY%20updated%20DESC%2C%20priority%20DESC%2C%20created%20ASC">single
+points of failure</a>? (<a href="https://wiki.jenkins.io/display/~orrc">Unknown User
+(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>e.g. <a href="https://issues.jenkins.io/browse/INFRA-225">INFRA-225</a> is
+currently (again) a visible problem; related
+<a href="https://issues.jenkins.io/browse/INFRA-75">INFRA-75</a> is one year old
+today</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-05-27-18.19.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-05-27-18.19.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-May13meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-May13meeting"></a>May 13 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150513T11&amp;p1=224&amp;ah=1&amp;sort=1">May
+13th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS RC status check
+(<a href="https://wiki.jenkins.io/display/~olivergondza">Unknown User
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>#jenkins-meeting (<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown
+User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>Should we only include plugins in the Update Centre if they have a
+wiki page? (<a href="https://wiki.jenkins.io/display/~orrc">Unknown User (orrc)</a>,
+<a href="https://wiki.jenkins.io/display/~evernat">Unknown User (evernat)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a><mark>!msg/jenkinsci-dev/oEHEjKo08yA/_z2GEtcUfz0J[ML
+discussion];
+<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a></mark>!msg/jenkinsci-dev/oEHEjKo08yA/S_uQ_C_7NMQJ[more
+details]</p>
+</li>
+<li>
+<p>47+ POMs have no <code>url</code> value, or a value with typos (which we can
+<a href="https://github.com/jenkinsci/backend-update-center2/pull/14/files">override</a>
+for now)</p>
+</li>
+<li>
+<p>60+ plugins <a href="https://gist.github.com/orrc/2995a31028a27f9765d1">have no
+wiki page at all</a> (not including workflow-*)</p>
+</li>
+<li>
+<p>20+ plugins have no source code in github.com/jenkinsci (or at all);
+at least 1 is closed-source
+(<a href="http://maven.jenkins-ci.org/content/repositories/releases/com/antelink/reporter/jenkins/plugin/AntepediaReporter-CI-plugin/1.8/AntepediaReporter-CI-plugin-1.8.pom">private
+repo, Java source excluded from release</a>: AntepediaReporter — orrc
+contacted them and they&#8217;re considering open-sourcing)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Infra training/handover/expansion? (Was mentioned a while back and
+more recently, but can&#8217;t find the link)
+(<a href="https://wiki.jenkins.io/display/~orrc">Unknown User (orrc)</a>)</p>
+</li>
+<li>
+<p>Using a CDN with HTTPS / removing need for mirrorbrain?
+(<a href="https://wiki.jenkins.io/display/~orrc">Unknown User (orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.jenkins.io/browse/INFRA-266?focusedCommentId=226524#comment-226524">Comments
+on INFRA-266</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Further requirements for plugins published in the community update
+center (<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User
+(danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>To allow review, inspection and collaboration:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Require a valid SCM URL for new plugin releases inside
+@jenkinsci/svn.jenkins-ci.org (that must exist) – needs to handle
+plugins not bundled with Gradle</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To protect users:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Require that the uploader of the binary is the same user who created
+the tag (we have the data in LDAP, see jenkins-ci.org/account)</p>
+</li>
+<li>
+<p>Remove the commit permissions from 'everyone', it&#8217;s reckless</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-05-13-18.07.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-05-13-18.07.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Apr29meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Apr29meeting"></a>Apr 29 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150429T11&amp;p1=224&amp;ah=1&amp;sort=1">Apr
+29th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Carryover from last meeting w.r.t. SECURITY bounties. Anything for
+historical submitters? Who has the action item?</p>
+</li>
+<li>
+<p>Trademark usage approval for "CloudBees Jenkins Platform"
+(<a href="https://wiki.jenkins.io/display/~kohsuke">Unknown User (kohsuke)</a>)</p>
+</li>
+<li>
+<p>We only allow OSS plugins to be distributed via the update center, but
+what about closed source plugins which are documented on our wiki? (e.g.
+<a href="https://wiki.jenkins.io/display/JENKINS/Governance+Meeting+Archive+2015#">CxSuite
+Jenkins Plugin</a>)</p>
+</li>
+<li>
+<p>Should we only include plugins in the Update Centre if they have a
+wiki page? (<a href="https://wiki.jenkins.io/display/~orrc">Unknown User (orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/#!msg/jenkinsci-dev/oEHEjKo08yA/_z2GEtcUfz0J">ML
+discussion</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>#jenkins-meeting (<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown
+User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>LTS.next (<a href="https://wiki.jenkins.io/display/~olivergondza">Unknown User
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Infra training? (Was mentioned a while back and more recently, but
+can&#8217;t find the link) (<a href="https://wiki.jenkins.io/display/~orrc">Unknown User
+(orrc)</a>)</p>
+</li>
+<li>
+<p>Using a CDN with HTTPS / removing need for mirrorbrain?
+(<a href="https://wiki.jenkins.io/display/~orrc">Unknown User (orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.jenkins.io/browse/INFRA-266?focusedCommentId=226524#comment-226524">Comments
+on INFRA-266</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-29-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-29-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Apr15meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Apr15meeting"></a>Apr 15 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150415T11&amp;p1=224&amp;ah=1&amp;sort=1">Apr
+15th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Migrate Jenkins-on-Jenkins jobs onto jenkins.ci.cloudbees.com
+(<a href="https://wiki.jenkins.io/display/~rtyler">Unknown User (rtyler)</a>)</p>
+</li>
+<li>
+<p>Carryover from last meeting w.r.t. SECURITY bounties. Anything for
+historical submitters? Who has the action item?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-15-18.05.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-15-18.05.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Apr1meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Apr1meeting"></a>Apr 1 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150401T11&amp;p1=224&amp;ah=1&amp;sort=1">Apr
+1st 11:00 Pacific</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.aui-icon .aui-icon-small .aui-iconfont-warning .confluence-information-macro-icon]#
+#</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s DST change season: Make sure you&#8217;re not
+<a href="https://en.wikipedia.org/wiki/Off-by-one_error">off by one</a> (hour)!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>JUC 2015 - obtain approval for a Mobile Morning mini-track that focus
+on Jenkins mobile development (Alyssa)</p>
+</li>
+<li>
+<p>Build/publisher steps &amp; AbortException
+handling (<a href="https://wiki.jenkins.io/display/~integer">Unknown User
+(integer)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/1577" class="bare">https://github.com/jenkinsci/jenkins/pull/1577</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Defining guidelines on expected behavior and/or structure for plugins?
+If so, should we enforce them?
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/d/msg/jenkinsci-dev/OHjuxTD1W9k/d4dRBtR_vFQJ" class="bare">https://groups.google.com/d/msg/jenkinsci-dev/OHjuxTD1W9k/d4dRBtR_vFQJ</a></p>
+</li>
+<li>
+<p><a href="http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-10-01-18.01.html" class="bare">http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-10-01-18.01.html</a>
+Item 3</p>
+</li>
+<li>
+<p><a href="http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-10-15-18.02.html" class="bare">http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-10-15-18.02.html</a>
+Item 3</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Would changing the meeting time to 10 AM PST/PDT allow overruns?
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>Who gets voice on IRC? "Committers"&#8230;&#8203; to any plugin? To core?
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/JENKINS-27268">JENKINS-27268</a>
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>Bug bounties/rewards for security issues?
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>Resurrecting the MEETING Jira project (maybe even have the bot create
+issues for action items automatically)
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>The important content of the Wiki is difficult to find (between
+outdated or even empty pages), and there&#8217;s no real introduction to
+Jenkins – What can we do about it?
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>Proposal: move Jenkins
+<a href="https://github.com/cloudbees/jenkins-ci.org-docker">official image
+repo</a> to jenkinsci org so enhancement / version updates can be managed
+by the community (<a href="https://wiki.jenkins.io/display/~ndeloof">Unknown User
+(ndeloof)</a>)</p>
+</li>
+<li>
+<p>Disabling "Clone" feature in JIRA
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+</li>
+<li>
+<p>The Chinese mirror is a mess
+(<a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User (danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://mirrors.jenkins-ci.org/status.html" class="bare">http://mirrors.jenkins-ci.org/status.html</a></p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/INFRA-260" class="bare">https://issues.jenkins.io/browse/INFRA-260</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-01-18.02.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-01-18.02.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Mar18meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Mar18meeting"></a>Mar 18 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150318T11&amp;p1=224&amp;ah=1&amp;sort=1">Mar
+18th 11:00 Pacific</a>.</p>
+</div>
+<div class="paragraph">
+<p>Canceled.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Mar4meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Mar4meeting"></a>Mar 4 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150304T11&amp;p1=224&amp;ah=1&amp;sort=1">Mar
+4th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LTS RC status check</p>
+</li>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Are there new "Patron of Jenkins" sponsors? No messages have been
+shown in 2015. (<a href="https://wiki.jenkins.io/display/~orrc">Unknown User
+(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Maybe there was supposed to be one in Q1?
+<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a><mark>!topic/jenkinsci-patrons/GQZwr5tQMyQ[<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a></mark>!topic/jenkinsci-patrons/GQZwr5tQMyQ|https://groups.google.com/forum/#!topic/jenkinsci-patrons/GQZwr5tQMyQ]</p>
+</li>
+<li>
+<p>Also, the wiki states that
+"https://wiki.jenkins-ci.org/display/JENKINS/Patron+of+Jenkins+program[the
+program will be reviewed and changes might be made]" in March 2015</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Workflow specific mailing lists
+(<a href="https://wiki.jenkins-ci.org/display/~dty">Dean Yu</a>)</p>
+</li>
+<li>
+<p>New release process? (i.e. release from master; no more RC branch)
+(discussed by <a href="https://wiki.jenkins.io/display/~kohsuke">Unknown User
+(kohsuke)</a>, <a href="https://wiki.jenkins.io/display/~jglick">Unknown User
+(jglick)</a> &amp; <a href="https://wiki.jenkins.io/display/~danielbeck">Unknown User
+(danielbeck)</a> in IRC)</p>
+</li>
+<li>
+<p>Governance Document Updates
+(<a href="https://wiki.jenkins.io/display/~orrc">Unknown User (orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>As per the Jenkins 100K podcast, we now have a trademark?</p>
+</li>
+<li>
+<p>More information about the board; there appears to be no information
+about <em>who</em> that is, how to "contact the board", and if/when the board
+changes (see also: the podcast)</p>
+</li>
+<li>
+<p>Release process needs updating, if we decide to kill off RCs</p>
+</li>
+<li>
+<p>Broken or no-longer-updated links, e.g. Sun coding style, GitHub repo
+wiki page, pull request wiki page</p>
+</li>
+<li>
+<p>Other stuff we want to review, that&#8217;s changed in the past three
+years? e.g. at least simple text updates like "500+ repos" is now
+"1000+"&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Build/publisher steps &amp; AbortException
+handling (<a href="https://wiki.jenkins.io/display/~integer">Unknown User
+(integer)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-03-04-19.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-03-04-19.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Feb18meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Feb18meeting"></a>Feb 18 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150218T11&amp;p1=224&amp;ah=1&amp;sort=1">Feb
+18th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Approving another batch of stickers
+(<a href="https://wiki.jenkins.io/display/~kohsuke">Unknown User (kohsuke)</a>)</p>
+</li>
+<li>
+<p><a href="https://groups.google.com/forum/?hl=en#!topic/jenkinsci-dev/oDXLTVcy56Y">IDEA
+licenses</a> (<a href="https://wiki.jenkins.io/display/~integer">Unknown User
+(integer)</a>)</p>
+</li>
+<li>
+<p>Should we have an "ops lead"? Adding more infra team members?
+Moderator teams?
+<a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/046RwHh3Nko">mailing
+list discussion</a> (<a href="https://wiki.jenkins.io/display/~orrc">Unknown User
+(orrc)</a>)</p>
+</li>
+<li>
+<p>Who should we reach out for JUC speakers?
+(<a href="https://wiki.jenkins.io/display/~kohsuke">Unknown User (kohsuke)</a>)</p>
+</li>
+<li>
+<p>LTS status check (<a href="https://wiki.jenkins.io/display/~kohsuke">Unknown
+User (kohsuke)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-02-18-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-02-18-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Feb4meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Feb4meeting"></a>Feb 4 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150204T11&amp;p1=224&amp;ah=1&amp;sort=1">Feb
+4th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins 100K PR planning (hgilmore)</p>
+</li>
+<li>
+<p>LTS RC status (<a href="https://wiki.jenkins.io/display/~kohsuke">Unknown User
+(kohsuke)</a>/https://wiki.jenkins.io/display/JENKINS/Governance+Meeting+Archive+2015#[~ogondza])</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-02-04-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-02-04-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Jan21meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Jan21meeting"></a>Jan 21 meeting</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Releases of Windows libraries: winp and winsw
+(<a href="https://wiki.jenkins.io/display/~oleg_nenashev">Unknown User
+(oleg_nenashev)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>winp: <a href="https://github.com/kohsuke/winp/pull/12" class="bare">https://github.com/kohsuke/winp/pull/12</a> - option to disable the
+DLL unpacking</p>
+</li>
+<li>
+<p>winsw:
+<a href="https://issues.jenkins.io/browse/JENKINS-10547">JENKINS-10547</a>,
+<a href="https://issues.jenkins.io/browse/JENKINS-22685">JENKINS-22685</a>
+correct properties handling, log rotation fix</p>
+</li>
+<li>
+<p>A decision on MVS version would be useful for both projects. Proposed
+version - <strong>Visual Studio Community 2013</strong> (free for FOSS projects)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Jenkins at 100K active users (Heidi Gilmore)</p>
+</li>
+<li>
+<p>INFRA (<a href="https://wiki.jenkins.io/display/~integer">Unknown User
+(integer)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-01-21-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-01-21-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Jan7meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Jan7meeting"></a>Jan 7 meeting</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>JUC post-mortem (<a href="https://wiki.jenkins.io/display/~atong">Unknown User
+(atong)</a>/https://wiki.jenkins.io/display/~kohsuke[Unknown User
+(kohsuke)])</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-01-07-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-01-07-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/anchor-js/anchor.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/js/tether.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/js/bootstrap.min.js"></script>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<p class="box">
+<a href="https://github.com/jenkins-infra/jenkins.io/edit/master/content//project/governance-meeting/archives/2015.adoc" title="Edit /project/governance-meeting/archives/2015.adoc on GitHub">Improve this page</a>
+|
+<a href="https://github.com/jenkins-infra/jenkins.io/issues/new?labels=bug&amp;template=4-bug.md&amp;title=Jenkins Governance Meeting Archive 2015 page - TODO: Put a summary here&amp;body=Problem with the [Jenkins Governance Meeting Archive 2015](https://www.jenkins.io/project/governance-meeting/archives/2015/) page, [source file](https://github.com/jenkins-infra/jenkins.io/blob/master/content/project/governance-meeting/archives/2015.adoc)%0A%0ATODO: Describe the expected and actual behavior here %0A%0A%23%23 Screenshots %0A%0A TODO: Add screenshots if possible %0A%0A%23%23 Possible Solution %0A%0A%3C!-- If you have suggestions on a fix for the bug, please describe it here. --%3E %0A%0AN/A" title="Report a problem with /project/governance-meeting/archives/2015.adoc">Report a problem</a>
+</p>
+<div class="license-box">
+<div id="creativecommons">
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+<p>
+<img alt="Creative Commons Attribution-ShareAlike license" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+</p>
+</a>
+<p>
+The content driving this site is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 license.
+</p>
+</div>
+</div>
+</div>
+<div class="links col-md-8">
+<div class="container">
+<div class="row">
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Resources</h5>
+<ul class="resources">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Downloads
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc">
+Documentation
+</a>
+</li>
+<li>
+<a href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Contributing
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Project</h5>
+<ul class="project">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project">
+Structure and governance
+</a>
+</li>
+<li>
+<a href="https://issues.jenkins.io">
+Issue tracker
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://ci.jenkins.io">
+Jenkins on Jenkins
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Community</h5>
+<ul class="community">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists">
+Mailing lists
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/chat">
+Chats
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/sigs">
+Special Interest Groups
+</a>
+</li>
+<li>
+<a href="https://twitter.com/jenkinsci">
+Twitter
+</a>
+</li>
+<li>
+<a href="https://reddit.com/r/jenkinsci">
+Reddit
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Other</h5>
+<ul class="other">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/conduct">
+Code of Conduct
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press information
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/merchandise">
+Merchandise
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-000000-0', 'auto');
+ga('send', 'pageview');
+ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+  !function(d,s,id) {
+    var js, fjs=d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id=id;
+      js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,"script","twitter-wjs");
+  
+  $(function(){
+    var $body = $(document.body);
+    $(".nav-link.dropdown-toggle").on("mousedown", function(){
+      $body.addClass("no-outline");
+    })
+    $body.on("keydown", function(){
+      $body.removeClass("no-outline");
+    })
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+docsearch({
+  apiKey: '9df657b854f8c42d9887b34bc275db4d',
+  indexName: 'jenkins',
+  inputSelector: 'input.searchbox',
+  algoliaOptions: { 'facetFilters': ["tags:en"] },
+  debug: false
+});
+</script>
+</body>
+</html>

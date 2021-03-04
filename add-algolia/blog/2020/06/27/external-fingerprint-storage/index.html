@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+External Fingerprint Storage Phase-1 Updates
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="description">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<!-- Favicons -->
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/site.webmanifest" rel="manifest">
+<link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon">
+<meta content="#2b5797" name="msapplication-TileColor">
+<meta content="#ffffff" name="theme-color">
+<meta content="External Fingerprint Storage Phase-1 Updates" name="apple-mobile-web-app-title">
+<!-- Twitter Card data -->
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@JenkinsCI" name="twitter:site">
+<meta content="External Fingerprint Storage Phase-1 Updates" name="twitter:title">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="twitter:description">
+<meta content="@JenkinsCI" name="twitter:creator">
+<!-- Twitter Summary card images must be at least 120x120px -->
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/post-images/2020/06-external-fingerprint-storage/redis_plugin_gsoc_opengraph.png" name="twitter:image">
+<!-- Open Graph data -->
+<meta content="External Fingerprint Storage Phase-1 Updates" property="og:title">
+<meta content="article" property="og:type">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/blog/2020/06/27/external-fingerprint-storage/index.html" property="og:url">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="og:description">
+<meta content="External Fingerprint Storage Phase-1 Updates" property="og:site_name">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/post-images/2020/06-external-fingerprint-storage/redis_plugin_gsoc_opengraph.png" name="og:image">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/css/tether.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-icons.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/jenkins.css" media="screen" rel="stylesheet">
+<!-- Non-obtrusive CSS styles -->
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/ionicons/css/ionicons.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/footer.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-awesome.min.css" media="screen" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/jquery/jquery.min.js"></script>
+<!-- starting partial toptoolbar.html.haml -->
+<nav class="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top" id="ji-toolbar">
+<a class="navbar-brand" href="https://halkeye.github.io/jenkins.io/add-algolia">
+Jenkins
+</a>
+<button class="navbar-toggler" data-target="#CollapsingNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="CollapsingNavbar">
+<ul class="nav navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+<!-- starting partial cdf_logo.html.haml -->
+<svg width="36" height="18" xmlns="http://www.w3.org/2000/svg" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.23 44.77 362.70 271.95"><defs><linearGradient id="a" x1="359.765" x2="104.082" y1="134.295" y2="124.577" gradientTransform="matrix(1 0 0 -1 0 439.068)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ed1c24"/><stop offset="1" stop-color="#f7941d"/></linearGradient><linearGradient id="b" x1="355.202" x2="99.519" y1="254.467" y2="244.749" xlink:href="#a"/><linearGradient id="c" x1="183.903" x2="10.612" y1="227.598" y2="221.023" xlink:href="#a"/><linearGradient id="d" x1="367.119" x2="157.995" y1="265.311" y2="257.091" xlink:href="#a"/></defs><path fill="#c49a6c" d="M231.52 309.278c2.483-.332 4.895-.77 7.255-1.329s4.649-1.206 6.991-1.957c13.494-4.58 25.187-12.952 36.374-24.593l-.14-.175c-14.944 15.486-30.693 25.344-50.48 28.054z"/><path fill="url(#a)" d="M224.232 309.96h.332c1.084 0 2.15-.14 3.216-.228a93.844 93.844 0 0 1-3.233.227z"/><path fill="url(#b)" d="M284.692 187.187l-.122.192.122-.192z"/><path fill="url(#c)" d="M146.145 231.847a150.844 150.844 0 0 1-12.97 15.862c-7.582 7.889-15.507 13.563-24.652 16.667a47.832 47.832 0 0 1-4.738 1.326 56.959 56.959 0 0 1-4.916.9 38.32 38.32 0 0 1-1.682.214l-.912.083c-.723.059-1.445.118-2.18.154h-3.068a42.325 42.325 0 0 1-9.192-1.043 49.977 49.977 0 0 1-6.764-2.002 43.097 43.097 0 0 1-4.525-1.954c-1.493-.77-2.961-1.516-4.407-2.37a59.5 59.5 0 0 1-17.105-15.399 59.714 59.714 0 0 1-2.914-4.311 53.09 53.09 0 0 1-1.291-2.263 51.985 51.985 0 0 1-2.263-4.738 46.72 46.72 0 0 1 0-36.426 51.986 51.986 0 0 1 2.263-4.738 54.14 54.14 0 0 1 1.291-2.263 59.742 59.742 0 0 1 2.914-4.311 59.714 59.714 0 0 1 17.105-15.4 60.828 60.828 0 0 1 4.407-2.369q2.217-1 4.525-1.777a49.976 49.976 0 0 1 6.906-2.073 42.325 42.325 0 0 1 9.192-1.042h3.128c.722 0 1.445.094 2.155.154l1.043.106 1.019.119c1.8.237 3.553.557 5.271.96.853.2 1.694.426 2.523.663a51.186 51.186 0 0 1 11.846 5.176 59.645 59.645 0 0 1 4.395 2.89 74.485 74.485 0 0 1 8.386 7.108q2.038 1.99 4.063 4.193l.083-.13a159.395 159.395 0 0 1 11.064 13.942c5.437-8.576 13.658-21.464 16.584-25.74 1.185-1.718 2.37-3.46 3.66-5.212-13.54-16.513-29.827-30.23-51.587-36.082h-.154a89.397 89.397 0 0 0-3.187-.794l-.45-.107a92.565 92.565 0 0 0-3.151-.627l-.628-.119a80.578 80.578 0 0 0-3.743-.569h-.142a58.29 58.29 0 0 0-2.073-.236h-.391l-1.872-.166h-.568l-1.754-.119h-.675l-1.777-.07h-3.115c-46.447-.25-87.125 40.476-87.125 86.911s40.725 87.173 87.172 87.173h3.14l1.729-.071h.734l1.67-.095h.676l1.706-.154h.568l1.813-.213.414-.06 1.967-.272h.213a125.91 125.91 0 0 0 3.553-.628l.652-.142c.96-.201 1.907-.415 2.855-.64l.58-.142a86.66 86.66 0 0 0 3.009-.817l.237-.071c20.73-6.077 36.425-19.392 49.55-35.277-2.037-3.068-3.4-5.366-4.039-6.48z"/><path fill="url(#d)" d="M318.05 51.733v94.66a85.514 85.514 0 0 0-52.595-18.729h-3.115l-1.777.072-.7.047-1.752.118h-.569l-1.871.166h-.391c-.7.071-1.386.142-2.073.237h-.154c-1.256.154-2.5.355-3.732.569l-.628.118c-1.066.19-2.108.403-3.15.628l-.45.107c-30.35 6.858-50.333 28.808-66.822 52.82-.7 1.018-1.35 2.049-2.038 3.068-2.25 3.423-5.46 8.422-8.635 13.397-4.17 6.527-8.292 13.03-9.939 15.66l20.624 32.137s21.997 40.465 61.68 51.482l.237.07c.995.297 2.002.558 3.009.818l.58.142c.936.237 1.896.439 2.855.64l.652.142c1.184.225 2.369.439 3.553.628h.214l1.966.273.415.059 1.812.213h.569l1.705.154h.676l1.67.095h.734l1.73.07h3.139c54.703 0 86.355-30.964 87.149-85.063V51.733zm-52.595 215.403h-3.068c-.734 0-1.457-.095-2.18-.154l-.912-.083c-.568-.06-1.125-.13-1.682-.213a49.077 49.077 0 0 1-9.571-2.275 49.612 49.612 0 0 1-6.634-2.83 55.792 55.792 0 0 1-6.254-3.768 63.068 63.068 0 0 1-3.009-2.215 82.399 82.399 0 0 1-8.683-7.925l-.095.119c-1.255-1.303-2.487-2.69-3.731-4.11-.154-.167-.296-.356-.45-.534-.628-.722-1.256-1.445-1.884-2.215s-1.125-1.398-1.682-2.097-.888-1.101-1.338-1.682a184.467 184.467 0 0 1-6.053-8.292c-.7-.995-1.398-2.025-2.109-3.056-.379-.569-.77-1.184-1.185-1.73-.675-1.018-1.362-2.013-2.049-3.056l-.355-.545c-1.185-1.812-2.37-3.684-3.649-5.603q2.95-4.608 5.817-8.86c1.907-2.831 3.79-5.556 5.662-8.138s3.72-5.046 5.591-7.38 3.72-4.525 5.603-6.586q2.026-2.203 4.063-4.194c1.374-1.338 2.748-2.594 4.158-3.778s2.807-2.287 4.252-3.329a57.594 57.594 0 0 1 7.748-4.62c.331-.166.663-.367 1.006-.533l.226-.118c1.41-.652 2.843-1.185 4.3-1.73l.485-.201c.273-.083.557-.142.83-.237a44.943 44.943 0 0 1 3.34-.948l1.374-.343a60.798 60.798 0 0 1 4.738-.841l1.019-.119 1.042-.106c.711 0 1.434-.119 2.156-.154h3.128a42.431 42.431 0 0 1 4.572.26 48.011 48.011 0 0 1 6.93 1.35c1.54.427 3.08.925 4.596 1.505a48.724 48.724 0 0 1 4.525 1.955c1.493.722 2.961 1.516 4.407 2.369s2.866 1.8 4.24 2.784 2.725 2.049 4.028 3.174a58.459 58.459 0 0 1 8.837 9.477 59.73 59.73 0 0 1 2.914 4.312 51.067 51.067 0 0 1 5.318 11.916 47.38 47.38 0 0 1 1.185 5.165 45.567 45.567 0 0 1 .71 8.09c.072 35.964-16.062 52.122-52.227 52.122z"/></svg>
+
+<!-- ending partial cdf_logo.html.haml -->
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://cd.foundation/">
+What is CDF?
+</a>
+<a class="dropdown-item feature" href="https://jenkins-x.io/">
+Jenkins X
+</a>
+<a class="dropdown-item feature" href="https://cloud.google.com/tekton/">
+Tekton
+</a>
+<a class="dropdown-item feature" href="https://www.spinnaker.io/">
+Spinnaker
+</a>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Documentation
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book">
+<strong>
+User Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/installing/">
+&nbsp;-&nbsp;Installing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline">
+&nbsp;-&nbsp;Jenkins Pipeline
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/managing/">
+&nbsp;-&nbsp;Managing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/system-administration">
+&nbsp;-&nbsp;System Administration
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/glossary/">
+&nbsp;-&nbsp;Terms and Definitions
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/solutions">
+<strong>
+Solution Pages
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+<strong>
+Tutorials
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/tour/getting-started/">
+&nbsp;-&nbsp;Guided Tour
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+&nbsp;-&nbsp;More Tutorials
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/developer">
+<strong>
+Developer Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+<strong>
+Contributor Guide
+</strong>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Community
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/chat" title="Chat with the rest of the Jenkins community on IRC">
+Chat
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam">
+Meet
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+<a class="dropdown-item feature" href="https://issues.jenkins.io/">
+Issue Tracker
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists" title="Browse Jenkins mailing list archives and/or subscribe to lists">
+Mailing Lists
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item feature" href="https://accounts.jenkins.io/" title="Create/manage your account for accessing wiki, issue tracker, etc">
+Account Management
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/">
+<strong>
+Special Interest Groups
+</strong>
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/advocacy-and-outreach/">
+&nbsp;-&nbsp;Advocacy and Outreach
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/chinese-localization/">
+&nbsp;-&nbsp;Chinese Localization
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/cloud-native/">
+&nbsp;-&nbsp;Cloud Native
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/">
+&nbsp;-&nbsp;Documentation
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/gsoc/">
+&nbsp;-&nbsp;Google Summer of Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/hw-and-eda/">
+&nbsp;-&nbsp;Hardware and EDA
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/pipeline-authoring/">
+&nbsp;-&nbsp;Pipeline Authoring
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/platform/">
+&nbsp;-&nbsp;Platform
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/ux/">
+&nbsp;-&nbsp;User Experience
+</a>
+</div>
+</li>
+<li class="dropdown nav-item">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Subprojects
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/evergreen/">
+Evergreen
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/">
+Google Summer of Code in Jenkins
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/infrastructure/">
+Infrastructure
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam/">
+CI/CD and Jenkins Area Meetups
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jcasc/">
+Jenkins Configuration as Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/remoting/">
+Jenkins Remoting
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/">
+Document Jenkins on Kubernetes
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+About
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/conduct">
+Conduct
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+English
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/zh">
+中文 Chinese
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link btn btn-outline-secondary" href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Download
+</a>
+</li>
+<li class="nav-item searchbox">
+<input aria-label="Search" class="form-control searchbox" placeholder="Search" type="search">
+</li>
+</ul>
+</div>
+</nav>
+<!-- Spacing to make the fixed-top sticky navbar not occlude any content below it -->
+<div class="pt-4">
+&nbsp;
+</div>
+
+<!-- ending partial toptoolbar.html.haml -->
+<!-- starting partial anchors.html.haml -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    for (var i = 1 ; i <= 6 ; i ++) {
+      anchors.add('.container .row.body h' + i);
+    }
+  })
+</script>
+
+<!-- ending partial anchors.html.haml -->
+<div class="container blog-post">
+<div class="row body">
+<div class="col-md-11 col-md-offset-1 main-content" id="content">
+<div id="content-top">
+<h1>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/blog/2020/06/27/external-fingerprint-storage/" title="External Fingerprint Storage Phase-1 Updates">
+External Fingerprint Storage Phase-1 Updates
+</a>
+</h1>
+<div style="float: right; clear: all;">
+<a class="twitter-share-button" data-lang="en" href="https://twitter.com/share">
+Tweet
+</a>
+</div>
+<div class="post-attrs">
+<span class="submitted">
+Published on
+2020-06-27
+by
+<a href="/blog/authors/stellargo">Sumit Sarin</a>
+</span>
+<ul class="list-inline tags">
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/plugins">
+plugins
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/fingerprint">
+fingerprint
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/cloud-native">
+cloud-native
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/external-storage">
+external-storage
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/developer">
+developer
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/redis">
+redis
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/gsoc">
+gsoc
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/gsoc2020">
+gsoc2020
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="paragraph">
+<p>Externalizing fingerprint storage for Jenkins is a  Google Summer of Code 2020 project.
+We are working on building a pluggable storage engine for fingerprints (see <a href="https://github.com/jenkinsci/jep/blob/master/jep/226/README.adoc">JEP-226</a>).</p>
+</div>
+<div class="paragraph">
+<p>File fingerprinting is a way to track which version of a file is being used by a job/build, making dependency tracking easy. The fingerprint engine of Jenkins can track usages of artifacts, credentials, files, etc. within the system. Currently, it does this by maintaining a local XML-based database which leads to dependence on the physical disk of the Jenkins controller.</p>
+</div>
+<div class="paragraph">
+<p>Allowing fingerprint storage to be moved to external storages decreases the dependence of Jenkins instances on the physical disk space and also allows for tracking the flow of fingerprints across instances of Jenkins connected to the same external storage.</p>
+</div>
+<div class="paragraph">
+<p>Advantages of using external storage drivers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Remove dependence on Jenkins controller disk storage</p>
+</li>
+<li>
+<p>Can configure pay-as-you-use cloud storages</p>
+</li>
+<li>
+<p>Easy Backup Management</p>
+</li>
+<li>
+<p>Better Reliability and Availability</p>
+</li>
+<li>
+<p>Fingerprints can be tracked across Jenkins instances</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Along with this API, we are also working on a <a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin">reference implementation</a> in the form of a plugin, powered by Redis.</p>
+</div>
+<div class="paragraph">
+<p>As phase 1 of this project comes to an end, this blog post serves as a summary of the progress we made to the entire Jenkins community.</p>
+</div>
+<div class="sect1">
+<h2 id="current-state"><a class="anchor" href="#current-state"></a>Current State</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="https://github.com/jenkinsci/jenkins/pull/4731">new API</a> introduced in Jenkins core is under review. Once merged, it will offer developers to extend it to build external fingerprint storage plugins.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin">Redis Fingerprint Storage Plugin</a> is alpha release ready. We would immensely appreciate any feedback.</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="title">External Fingerprint Storage Demo</div>
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/yzd-y5ByXg8?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1 youtube com/watch?v=yzd-y5ByXg8&feature=youtu be[Demo]">
+<h2 id="introducing-the-new-api-for-plugin-developers"><a class="anchor" href="#introducing-the-new-api-for-plugin-developers"></a>Introducing the new API for plugin developers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With <a href="https://github.com/jenkinsci/jenkins/pull/4731">PR-4731</a>, we introduce a new fingerprint storage API, allowing configuring custom storage engines.
+We exposed the following methods in the new <code>FingerprintStorage</code> class:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>void save()</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Saves the given Fingerprint in the storage.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>Fingerprint load(String id)</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Returns the Fingerprint with the given unique ID. The unique ID for a fingerprint is defined by Fingerprint#getHashString().</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>void delete(String id)</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the Fingerprint with the given unique ID.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>boolean isReady()</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Returns true if there is some data in the fingerprint database corresponding to the particular Jenkins instance.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="introducing-redis-fingerprint-storage-plugin"><a class="anchor" href="#introducing-redis-fingerprint-storage-plugin"></a>Introducing Redis Fingerprint Storage Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin">Redis Fingerprint Storage Plugin</a> uses the new External Fingerprint Storage API to store the fingerprints in a Redis instance.</p>
+</div>
+<div class="sect2">
+<h3 id="installation"><a class="anchor" href="#installation"></a>Installation:</h3>
+<div class="paragraph">
+<p>The alpha release (version <code>0.1-alpha-1</code>) for the plugin was drafted, and can be installed using the <a href="https://www.jenkins.io/doc/developer/publishing/releasing-experimental-updates/">experimental update center</a>.</p>
+</div>
+<div class="paragraph">
+<p>Follow along the following steps after running Jenkins to download and install the plugin:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select <code>Manage Jenkins</code></p>
+</li>
+<li>
+<p>Select <code>Manage Plugins</code></p>
+</li>
+<li>
+<p>Go to <code>Advanced</code> tab</p>
+</li>
+<li>
+<p>Configure the Update Site URL as: <a href="https://updates.jenkins.io/experimental/update-center.json" class="bare">https://updates.jenkins.io/experimental/update-center.json</a></p>
+</li>
+<li>
+<p>Click on <code>Submit</code>, and then press the <code>Check Now</code> button.</p>
+</li>
+<li>
+<p>Go to <code>Available</code> tab.</p>
+</li>
+<li>
+<p>Search for <code>Redis Fingerprint Storage Plugin</code> and check the box along it.</p>
+</li>
+<li>
+<p>Click on <code>Install without restart</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The plugin should now be installed on your system.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="usage"><a class="anchor" href="#usage"></a>Usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once the plugin has been installed, you can configure the Redis server details by following the steps below:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select <code>Manage Jenkins</code></p>
+</li>
+<li>
+<p>Select <code>Configure System</code></p>
+</li>
+<li>
+<p>Scroll to the section <code>Redis Fingerprint Storage Configuration</code> and fill in the required details:</p>
+<div class="paragraph">
+<p><span class="image"><img src="/images/post-images/2020/06-external-fingerprint-storage/configure_redis.png" alt="Configure Redis"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Host</code> - Enter hostname where Redis is running</p>
+</li>
+<li>
+<p><code>Port</code> - Specify the port on which Redis is running</p>
+</li>
+<li>
+<p><code>SSL</code> - Click if SSL is enabled</p>
+</li>
+<li>
+<p><code>Database</code> - Redis supports integer indexed databases, which can be specified here.</p>
+</li>
+<li>
+<p><code>Connection Timeout</code> - Set the connection timeout duration in milliseconds.</p>
+</li>
+<li>
+<p><code>Socked Timeout</code> - Set the socket timeout duration in milliseconds.</p>
+</li>
+<li>
+<p><code>Credentials</code> - Configure authentication using username and password to the Redis instance.</p>
+</li>
+<li>
+<p><code>Enabled</code> - Check this to enable the plugin (Note: This is likely to be removed very soon, and will be enabled by default.)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Use the <code>Test Redis Connection</code> to verify that the details are correct and Jenkins is able to connect to the Redis instance.</p>
+</li>
+<li>
+<p>Press the <code>Save</code> button.</p>
+</li>
+<li>
+<p>Now, all the fingerprints produced by this Jenkins instance should be saved in the configured Redis server!</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="future-work"><a class="anchor" href="#future-work"></a>Future Work</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some of the topics we aim to tackle in the next phases include extending the API, fingerprint cleanup, migrations (internal&#8594;external, external&#8594;internal, external&#8594;external), tracing, ORM, implementing the saveable listener, etc.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="acknowledgements"><a class="anchor" href="#acknowledgements"></a>Acknowledgements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Redis Fingerprint Storage plugin is built and maintained by the Google Summer of Code (GSoC) Team for
+<a href="https://www.jenkins.io/projects/gsoc/2020/projects/external-fingerprint-storage/">External Fingerprint Storage for Jenkins</a>.</p>
+</div>
+<div class="paragraph">
+<p>Special thanks to <a href="https://github.com/oleg-nenashev">Oleg Nenashev</a>, <a href="https://github.com/afalko">Andrey Falko</a>, <a href="https://github.com/mikecirioli">Mike Cirioli</a>, <a href="https://github.com/jglick">Jesse Glick</a>, and the entire Jenkins community for all the contribution to this project.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="reaching-out"><a class="anchor" href="#reaching-out"></a>Reaching Out</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Feel free to reach out to us for any questions, feedback, etc. on the project&#8217;s <a href="https://gitter.im/jenkinsci/external-fingerprint-storage">Gitter Channel</a> or the <a href="mailto:jenkinsci-dev@googlegroups.com">Jenkins Developer Mailing list</a></p>
+</div>
+<div class="paragraph">
+<p>We use Jenkins <a href="https://issues.jenkins.io/">Jira</a> to track issues.
+Feel free to file issues under <code>redis-fingerprint-storage-plugin</code> component.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="other-links"><a class="anchor" href="#other-links"></a>Other Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=yzd-y5ByXg8&amp;feature=youtu.be">Phase 1 demo</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1hrdOYKXBWyQG-k53KUe6zFXJ3KWEK4t7smdtpNtp1Wo/edit#slide=id.g8061b508ca_0_149">Presentation slides</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin">Redis Fingerprint Storage Plugin</a></p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/JENKINS-62344">Issue Tracker for Phase 1</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jep/blob/master/jep/226/README.adoc">JEP-226</a></p>
+</li>
+<li>
+<p><a href="https://gitter.im/jenkinsci/external-fingerprint-storage">Gitter Channel</a></p>
+</li>
+<li>
+<p><a href="https://www.jenkins.io/projects/gsoc/2020/projects/external-fingerprint-storage/">Project Page</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<b class="author about-header">
+About the Author
+</b>
+<!-- starting partial author.html.haml -->
+<div id="about-the-author">
+<table class="author box">
+<tr>
+<td>
+<!-- starting partial avatar.html.haml -->
+<img alt="Sumit Sarin" class="author logo" src="https://halkeye.github.io/jenkins.io/add-algolia/images/avatars/stellargo.jpeg" width="128px">
+
+<!-- ending partial avatar.html.haml -->
+</td>
+<td>
+<b class="author name">
+<a href="/blog/authors/stellargo">
+Sumit Sarin
+</a>
+</b>
+<p>
+<div class="paragraph">
+<p>Jenkins Google Summer of Code 2020 student. Sumit is an engineering student (senior) at Netaji Subhas Institute of Technology, University of Delhi. He started his journey of contributing to Jenkins in December 2019. His tiny contribution revolved around the Jenkins Fingerprint engine. He is currently working on building <a href="https://www.jenkins.io/projects/gsoc/2020/projects/external-fingerprint-storage">External Fingerprint Storage for Jenkins</a>.</p>
+</div>
+</p>
+<!-- starting partial social-media-buttons.html.haml -->
+<ul class="author social-media-buttons">
+<li class="author">
+<a href="https://github.com/stellargo" rel="noreferrer noopener" target="_blank">
+GitHub
+</a>
+</li>
+<li class="author">
+<a href="https://medium.com/@sumitsarinofficial" rel="noreferrer noopener" target="_blank">
+Blog
+</a>
+</li>
+<li class="author">
+<a href="https://www.linkedin.com/in/sumit-sarin" rel="noreferrer noopener" target="_blank">
+LinkedIn
+</a>
+</li>
+</ul>
+
+<!-- ending partial social-media-buttons.html.haml -->
+</td>
+</tr>
+</table>
+</div>
+
+<!-- ending partial author.html.haml -->
+</div>
+</div>
+</div>
+
+
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/anchor-js/anchor.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/js/tether.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/js/bootstrap.min.js"></script>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<p class="box">
+<a href="https://github.com/jenkins-infra/jenkins.io/edit/master/content//blog/2020/06/2020-06-27-external-fingerprint-storage.adoc" title="Edit /blog/2020/06/2020-06-27-external-fingerprint-storage.adoc on GitHub">Improve this page</a>
+|
+<a href="https://github.com/jenkins-infra/jenkins.io/issues/new?labels=bug&amp;template=4-bug.md&amp;title=External Fingerprint Storage Phase-1 Updates page - TODO: Put a summary here&amp;body=Problem with the [External Fingerprint Storage Phase-1 Updates](https://www.jenkins.io/blog/2020/06/27/external-fingerprint-storage/) page, [source file](https://github.com/jenkins-infra/jenkins.io/blob/master/content/blog/2020/06/2020-06-27-external-fingerprint-storage.adoc)%0A%0ATODO: Describe the expected and actual behavior here %0A%0A%23%23 Screenshots %0A%0A TODO: Add screenshots if possible %0A%0A%23%23 Possible Solution %0A%0A%3C!-- If you have suggestions on a fix for the bug, please describe it here. --%3E %0A%0AN/A" title="Report a problem with /blog/2020/06/2020-06-27-external-fingerprint-storage.adoc">Report a problem</a>
+</p>
+<div class="license-box">
+<div id="creativecommons">
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+<p>
+<img alt="Creative Commons Attribution-ShareAlike license" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+</p>
+</a>
+<p>
+The content driving this site is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 license.
+</p>
+</div>
+</div>
+</div>
+<div class="links col-md-8">
+<div class="container">
+<div class="row">
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Resources</h5>
+<ul class="resources">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Downloads
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc">
+Documentation
+</a>
+</li>
+<li>
+<a href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Contributing
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Project</h5>
+<ul class="project">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project">
+Structure and governance
+</a>
+</li>
+<li>
+<a href="https://issues.jenkins.io">
+Issue tracker
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://ci.jenkins.io">
+Jenkins on Jenkins
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Community</h5>
+<ul class="community">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists">
+Mailing lists
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/chat">
+Chats
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/sigs">
+Special Interest Groups
+</a>
+</li>
+<li>
+<a href="https://twitter.com/jenkinsci">
+Twitter
+</a>
+</li>
+<li>
+<a href="https://reddit.com/r/jenkinsci">
+Reddit
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Other</h5>
+<ul class="other">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/conduct">
+Code of Conduct
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press information
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/merchandise">
+Merchandise
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-000000-0', 'auto');
+ga('send', 'pageview');
+ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+  !function(d,s,id) {
+    var js, fjs=d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id=id;
+      js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,"script","twitter-wjs");
+  
+  $(function(){
+    var $body = $(document.body);
+    $(".nav-link.dropdown-toggle").on("mousedown", function(){
+      $body.addClass("no-outline");
+    })
+    $body.on("keydown", function(){
+      $body.removeClass("no-outline");
+    })
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+docsearch({
+  apiKey: '9df657b854f8c42d9887b34bc275db4d',
+  indexName: 'jenkins',
+  inputSelector: 'input.searchbox',
+  algoliaOptions: { 'facetFilters': ["tags:en"] },
+  debug: false
+});
+</script>
+</body>
+</html>

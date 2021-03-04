@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+Jenkins UI/UX Hackfest
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="description">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<!-- Favicons -->
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/site.webmanifest" rel="manifest">
+<link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon">
+<meta content="#2b5797" name="msapplication-TileColor">
+<meta content="#ffffff" name="theme-color">
+<meta content="Jenkins UI/UX Hackfest" name="apple-mobile-web-app-title">
+<!-- Twitter Card data -->
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@JenkinsCI" name="twitter:site">
+<meta content="Jenkins UI/UX Hackfest" name="twitter:title">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="twitter:description">
+<meta content="@JenkinsCI" name="twitter:creator">
+<!-- Twitter Summary card images must be at least 120x120px -->
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/post-images/jenkins-is-the-way/jenkins-is-the-way-hackfest-opengraph.png" name="twitter:image">
+<!-- Open Graph data -->
+<meta content="Jenkins UI/UX Hackfest" property="og:title">
+<meta content="article" property="og:type">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/events/online-hackfest/2020-uiux/index.html" property="og:url">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="og:description">
+<meta content="Jenkins UI/UX Hackfest" property="og:site_name">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/post-images/jenkins-is-the-way/jenkins-is-the-way-hackfest-opengraph.png" name="og:image">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/css/tether.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-icons.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/jenkins.css" media="screen" rel="stylesheet">
+<!-- Non-obtrusive CSS styles -->
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/ionicons/css/ionicons.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/footer.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-awesome.min.css" media="screen" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/jquery/jquery.min.js"></script>
+<!-- starting partial toptoolbar.html.haml -->
+<nav class="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top" id="ji-toolbar">
+<a class="navbar-brand" href="https://halkeye.github.io/jenkins.io/add-algolia">
+Jenkins
+</a>
+<button class="navbar-toggler" data-target="#CollapsingNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="CollapsingNavbar">
+<ul class="nav navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+<!-- starting partial cdf_logo.html.haml -->
+<svg width="36" height="18" xmlns="http://www.w3.org/2000/svg" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.23 44.77 362.70 271.95"><defs><linearGradient id="a" x1="359.765" x2="104.082" y1="134.295" y2="124.577" gradientTransform="matrix(1 0 0 -1 0 439.068)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ed1c24"/><stop offset="1" stop-color="#f7941d"/></linearGradient><linearGradient id="b" x1="355.202" x2="99.519" y1="254.467" y2="244.749" xlink:href="#a"/><linearGradient id="c" x1="183.903" x2="10.612" y1="227.598" y2="221.023" xlink:href="#a"/><linearGradient id="d" x1="367.119" x2="157.995" y1="265.311" y2="257.091" xlink:href="#a"/></defs><path fill="#c49a6c" d="M231.52 309.278c2.483-.332 4.895-.77 7.255-1.329s4.649-1.206 6.991-1.957c13.494-4.58 25.187-12.952 36.374-24.593l-.14-.175c-14.944 15.486-30.693 25.344-50.48 28.054z"/><path fill="url(#a)" d="M224.232 309.96h.332c1.084 0 2.15-.14 3.216-.228a93.844 93.844 0 0 1-3.233.227z"/><path fill="url(#b)" d="M284.692 187.187l-.122.192.122-.192z"/><path fill="url(#c)" d="M146.145 231.847a150.844 150.844 0 0 1-12.97 15.862c-7.582 7.889-15.507 13.563-24.652 16.667a47.832 47.832 0 0 1-4.738 1.326 56.959 56.959 0 0 1-4.916.9 38.32 38.32 0 0 1-1.682.214l-.912.083c-.723.059-1.445.118-2.18.154h-3.068a42.325 42.325 0 0 1-9.192-1.043 49.977 49.977 0 0 1-6.764-2.002 43.097 43.097 0 0 1-4.525-1.954c-1.493-.77-2.961-1.516-4.407-2.37a59.5 59.5 0 0 1-17.105-15.399 59.714 59.714 0 0 1-2.914-4.311 53.09 53.09 0 0 1-1.291-2.263 51.985 51.985 0 0 1-2.263-4.738 46.72 46.72 0 0 1 0-36.426 51.986 51.986 0 0 1 2.263-4.738 54.14 54.14 0 0 1 1.291-2.263 59.742 59.742 0 0 1 2.914-4.311 59.714 59.714 0 0 1 17.105-15.4 60.828 60.828 0 0 1 4.407-2.369q2.217-1 4.525-1.777a49.976 49.976 0 0 1 6.906-2.073 42.325 42.325 0 0 1 9.192-1.042h3.128c.722 0 1.445.094 2.155.154l1.043.106 1.019.119c1.8.237 3.553.557 5.271.96.853.2 1.694.426 2.523.663a51.186 51.186 0 0 1 11.846 5.176 59.645 59.645 0 0 1 4.395 2.89 74.485 74.485 0 0 1 8.386 7.108q2.038 1.99 4.063 4.193l.083-.13a159.395 159.395 0 0 1 11.064 13.942c5.437-8.576 13.658-21.464 16.584-25.74 1.185-1.718 2.37-3.46 3.66-5.212-13.54-16.513-29.827-30.23-51.587-36.082h-.154a89.397 89.397 0 0 0-3.187-.794l-.45-.107a92.565 92.565 0 0 0-3.151-.627l-.628-.119a80.578 80.578 0 0 0-3.743-.569h-.142a58.29 58.29 0 0 0-2.073-.236h-.391l-1.872-.166h-.568l-1.754-.119h-.675l-1.777-.07h-3.115c-46.447-.25-87.125 40.476-87.125 86.911s40.725 87.173 87.172 87.173h3.14l1.729-.071h.734l1.67-.095h.676l1.706-.154h.568l1.813-.213.414-.06 1.967-.272h.213a125.91 125.91 0 0 0 3.553-.628l.652-.142c.96-.201 1.907-.415 2.855-.64l.58-.142a86.66 86.66 0 0 0 3.009-.817l.237-.071c20.73-6.077 36.425-19.392 49.55-35.277-2.037-3.068-3.4-5.366-4.039-6.48z"/><path fill="url(#d)" d="M318.05 51.733v94.66a85.514 85.514 0 0 0-52.595-18.729h-3.115l-1.777.072-.7.047-1.752.118h-.569l-1.871.166h-.391c-.7.071-1.386.142-2.073.237h-.154c-1.256.154-2.5.355-3.732.569l-.628.118c-1.066.19-2.108.403-3.15.628l-.45.107c-30.35 6.858-50.333 28.808-66.822 52.82-.7 1.018-1.35 2.049-2.038 3.068-2.25 3.423-5.46 8.422-8.635 13.397-4.17 6.527-8.292 13.03-9.939 15.66l20.624 32.137s21.997 40.465 61.68 51.482l.237.07c.995.297 2.002.558 3.009.818l.58.142c.936.237 1.896.439 2.855.64l.652.142c1.184.225 2.369.439 3.553.628h.214l1.966.273.415.059 1.812.213h.569l1.705.154h.676l1.67.095h.734l1.73.07h3.139c54.703 0 86.355-30.964 87.149-85.063V51.733zm-52.595 215.403h-3.068c-.734 0-1.457-.095-2.18-.154l-.912-.083c-.568-.06-1.125-.13-1.682-.213a49.077 49.077 0 0 1-9.571-2.275 49.612 49.612 0 0 1-6.634-2.83 55.792 55.792 0 0 1-6.254-3.768 63.068 63.068 0 0 1-3.009-2.215 82.399 82.399 0 0 1-8.683-7.925l-.095.119c-1.255-1.303-2.487-2.69-3.731-4.11-.154-.167-.296-.356-.45-.534-.628-.722-1.256-1.445-1.884-2.215s-1.125-1.398-1.682-2.097-.888-1.101-1.338-1.682a184.467 184.467 0 0 1-6.053-8.292c-.7-.995-1.398-2.025-2.109-3.056-.379-.569-.77-1.184-1.185-1.73-.675-1.018-1.362-2.013-2.049-3.056l-.355-.545c-1.185-1.812-2.37-3.684-3.649-5.603q2.95-4.608 5.817-8.86c1.907-2.831 3.79-5.556 5.662-8.138s3.72-5.046 5.591-7.38 3.72-4.525 5.603-6.586q2.026-2.203 4.063-4.194c1.374-1.338 2.748-2.594 4.158-3.778s2.807-2.287 4.252-3.329a57.594 57.594 0 0 1 7.748-4.62c.331-.166.663-.367 1.006-.533l.226-.118c1.41-.652 2.843-1.185 4.3-1.73l.485-.201c.273-.083.557-.142.83-.237a44.943 44.943 0 0 1 3.34-.948l1.374-.343a60.798 60.798 0 0 1 4.738-.841l1.019-.119 1.042-.106c.711 0 1.434-.119 2.156-.154h3.128a42.431 42.431 0 0 1 4.572.26 48.011 48.011 0 0 1 6.93 1.35c1.54.427 3.08.925 4.596 1.505a48.724 48.724 0 0 1 4.525 1.955c1.493.722 2.961 1.516 4.407 2.369s2.866 1.8 4.24 2.784 2.725 2.049 4.028 3.174a58.459 58.459 0 0 1 8.837 9.477 59.73 59.73 0 0 1 2.914 4.312 51.067 51.067 0 0 1 5.318 11.916 47.38 47.38 0 0 1 1.185 5.165 45.567 45.567 0 0 1 .71 8.09c.072 35.964-16.062 52.122-52.227 52.122z"/></svg>
+
+<!-- ending partial cdf_logo.html.haml -->
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://cd.foundation/">
+What is CDF?
+</a>
+<a class="dropdown-item feature" href="https://jenkins-x.io/">
+Jenkins X
+</a>
+<a class="dropdown-item feature" href="https://cloud.google.com/tekton/">
+Tekton
+</a>
+<a class="dropdown-item feature" href="https://www.spinnaker.io/">
+Spinnaker
+</a>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Documentation
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book">
+<strong>
+User Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/installing/">
+&nbsp;-&nbsp;Installing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline">
+&nbsp;-&nbsp;Jenkins Pipeline
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/managing/">
+&nbsp;-&nbsp;Managing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/system-administration">
+&nbsp;-&nbsp;System Administration
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/glossary/">
+&nbsp;-&nbsp;Terms and Definitions
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/solutions">
+<strong>
+Solution Pages
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+<strong>
+Tutorials
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/tour/getting-started/">
+&nbsp;-&nbsp;Guided Tour
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+&nbsp;-&nbsp;More Tutorials
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/developer">
+<strong>
+Developer Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+<strong>
+Contributor Guide
+</strong>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Community
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/chat" title="Chat with the rest of the Jenkins community on IRC">
+Chat
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam">
+Meet
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+<a class="dropdown-item feature" href="https://issues.jenkins.io/">
+Issue Tracker
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists" title="Browse Jenkins mailing list archives and/or subscribe to lists">
+Mailing Lists
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item feature" href="https://accounts.jenkins.io/" title="Create/manage your account for accessing wiki, issue tracker, etc">
+Account Management
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/">
+<strong>
+Special Interest Groups
+</strong>
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/advocacy-and-outreach/">
+&nbsp;-&nbsp;Advocacy and Outreach
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/chinese-localization/">
+&nbsp;-&nbsp;Chinese Localization
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/cloud-native/">
+&nbsp;-&nbsp;Cloud Native
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/">
+&nbsp;-&nbsp;Documentation
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/gsoc/">
+&nbsp;-&nbsp;Google Summer of Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/hw-and-eda/">
+&nbsp;-&nbsp;Hardware and EDA
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/pipeline-authoring/">
+&nbsp;-&nbsp;Pipeline Authoring
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/platform/">
+&nbsp;-&nbsp;Platform
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/ux/">
+&nbsp;-&nbsp;User Experience
+</a>
+</div>
+</li>
+<li class="dropdown nav-item">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Subprojects
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/evergreen/">
+Evergreen
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/">
+Google Summer of Code in Jenkins
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/infrastructure/">
+Infrastructure
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam/">
+CI/CD and Jenkins Area Meetups
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jcasc/">
+Jenkins Configuration as Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/remoting/">
+Jenkins Remoting
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/">
+Document Jenkins on Kubernetes
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+About
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/conduct">
+Conduct
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+English
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/zh">
+中文 Chinese
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link btn btn-outline-secondary" href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Download
+</a>
+</li>
+<li class="nav-item searchbox">
+<input aria-label="Search" class="form-control searchbox" placeholder="Search" type="search">
+</li>
+</ul>
+</div>
+</nav>
+<!-- Spacing to make the fixed-top sticky navbar not occlude any content below it -->
+<div class="pt-4">
+&nbsp;
+</div>
+
+<!-- ending partial toptoolbar.html.haml -->
+<!-- starting partial anchors.html.haml -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    for (var i = 1 ; i <= 6 ; i ++) {
+      anchors.add('.container .row .col-lg-9 h' + i);
+    }
+  })
+</script>
+
+<!-- ending partial anchors.html.haml -->
+<div class="container">
+<div class="row body">
+<div class="col-lg-9">
+<h1>
+Jenkins UI/UX Hackfest
+</h1>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<strong>This event is over</strong>, thanks a lot to all contributors!
+Results are being processed at the moment, this page will be updated later.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><em>UI/UX Online Hackfest</em> is an online event, it will take place on May 25-29.
+The goal to improve the Jenkins user experience, including but not limited to user interface and documentation.
+We also invite participants to share experiences about Jenkins and to participate in UX testing.
+The event will have the <a href="/blog/2020/04/30/jenkins-is-the-way/">Jenkins is the Way</a> theme.
+The most active contributors will get special edition swag and other prizes, see below!</p>
+</div>
+<div class="paragraph">
+<p><span class="image right center"><img src="/images/post-images/jenkins-is-the-way/jenkins-is-the-way.png" alt="Jenkins Is The Way" height="284"></span></p>
+</div>
+<div class="sect1">
+<h2 id="results"><a class="anchor" href="#results"></a>Results</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We had <a href="https://github.com/jenkinsci/ui-ux-hackfest-2020#contributors">53 participants</a> who did hundreds of contributions during the event (full list).
+Thanks a lot to everyone who helped to improve the Jenkins User Experience during the event!
+During this event we have improved the Read-only Jenkins Configuration support, created a new dark theme for Jenkins, migrated and renewed 40+ documentation pages, migrated almost 20 plugins to Documentation-as-code, and performed a lot of user experience testing for the hackfest stories.
+Also, there were many enhancements delivered in Jenkins components: new script approval management pages, credentials UI navigation, etc.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/ui-ux-hackfest-2020/tree/master/presentations/11-results">Hackfest results and highlights</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/ui-ux-hackfest-2020/tree/master/presentations/09-demo-sessions">Hackfest demos</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/ui-ux-hackfest-2020/tree/master/presentations">All knowledge transfer and demo sessions</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/ui-ux-hackfest-2020#contributors">All contributors</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/ui-ux-hackfest-2020/issues?q=is%3Aissue+-label%3Ainvalid+-label%3Achore+-label%3Aout-of-the-time-range">List of reported contributions</a> (multiple contributions per issue)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what-is-hackfest"><a class="anchor" href="#what-is-hackfest"></a>What is Hackfest?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This hackfest is NOT a <em>hackathon</em>.
+We do not expect participants to dedicate all their time during the event timeframe.
+Instead of that, we organize it as a hop-in/hop-off event where everybody can spend as much time as they are willing to dedicate.
+Spending a few days or a few hours is fine, any contributions matter regardless of their size.
+Jenkins experience is not required, we have newcomer-friendly stories.
+See the <a href="/participate/">Contribute and Participate</a> page for more information about how to contribute.</p>
+</div>
+<div class="paragraph">
+<p>During this hackfest, we will organize <a href="https://www.meetup.com/Jenkins-online-meetup/">online meetups</a> and ad-hoc training sessions in different timezones.
+There are no mandatory events you must attend remotely, all sessions will be recorded and published on <a href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaNll_Aw3M-NIQ042BV5teP9">our YouTube channel</a>.
+At the end of the event we will be inviting participants to join our demo sessions or to record and upload these demos to share asynchronously.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="getting-started"><a class="anchor" href="#getting-started"></a>Getting started</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://forms.gle/MrkASJagxNvdXBbdA">Register to the event</a> if you have not done it already.</p>
+</li>
+<li>
+<p>Join <a href="https://gitter.im/jenkinsci/hackfest">our Gitter channel</a>.
+We will use it for Q&amp;A and discussions during the event.</p>
+</li>
+<li>
+<p>Join the <a href="https://www.meetup.com/Jenkins-online-meetup/events/270644129/">kick-off meeting</a> (May 25, 1PM UTC) or watch the first 20 minutes of the recording.
+If you want to start early, we will also have a small opening session at 8AM UTC.</p>
+</li>
+<li>
+<p>You are all set, start contributing!</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="how-to-choose-a-project"><a class="anchor" href="#how-to-choose-a-project"></a>How to choose a project?</h3>
+<div class="paragraph">
+<p>Check out the list of ideas below.
+Try to find a project or an area interesting to you.
+If you do not have a strong preference,
+we recommend finding something that could improve your own experience and address the UX issues you hit with Jenkins personally.
+If you do not use Jenkins personally but want to explore it,
+consider working on newcomer-friendly issues or documentation for newcomer users:
+getting started guides, tutorials, etc.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-to-report-contributions"><a class="anchor" href="#how-to-report-contributions"></a>How to report contributions?</h3>
+<div class="paragraph">
+<p>We deployed a special <a href="https://github.com/jenkinsci/ui-ux-hackfest-2020">GitHub repository</a> which will be used to collect contributions and to generate reports from the event.
+Please report your code and non-code contributions as GitHub issues, there are issues templates for common types of contributions.
+You can find full guidelines <a href="https://github.com/jenkinsci/ui-ux-hackfest-2020/blob/master/CONTRIBUTING.md#reporting-contributions">here</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-to-communicate-during-the-event"><a class="anchor" href="#how-to-communicate-during-the-event"></a>How to communicate during the event?</h3>
+<div class="paragraph">
+<p>Here are the following communication channels at your disposal:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Chat: <a href="https://gitter.im/jenkinsci/hackfest">UI/UX Hackfest channel</a> in Gitter</p>
+</li>
+<li>
+<p>Mailing lists:
+<a href="https://groups.google.com/d/forum/jenkinsci-ux">User Experience</a>,
+<a href="https://groups.google.com/d/forum/jenkinsci-docs">Documentation</a>,
+<a href="https://groups.google.com/d/forum/jenkins-advocacy-and-outreach-sig">Advocacy &amp; Outreach</a> - for event tracks.
+There is also a <a href="https://groups.google.com/d/forum/jenkinsci-dev">Developer mailing list</a> for common matters.</p>
+</li>
+<li>
+<p>Office Hours: We will be organizing sessions in two timezones during the event (in Zoom or Google Meet). See the <a href="https://calendar.google.com/calendar/embed?src=0hc89b1nlp2ld35mtupb3o7cfs%40group.calendar.google.com&amp;ctz=UTC&amp;mode=week">Jenkins UI/UX Hackfest Calendar</a> for meeting links.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tracks-and-project-ideas"><a class="anchor" href="#tracks-and-project-ideas"></a>Tracks and Project ideas</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There will be 3 main tracks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>User Interface</strong> - Improve look&amp;feel and accessibility for Jenkins users,
+work on new read-only interface for instances managed with configuration as code,
+create and update Jenkins themes, etc.
+All stories can benefit from UX testing and documentation!</p>
+</li>
+<li>
+<p><strong>User Documentation</strong> - Improve and create new user documentation, tutorials and solution pages.
+Also, there is ongoing documentation migration from Jenkins Wiki to jenkins.io and plugin repositories.</p>
+</li>
+<li>
+<p><strong>Spread the word</strong> - Write user stories for Jenkins Is The Way site and the Jenkins blog,
+post about your Jenkins user experience and new features, record overview and HOWTO videos, etc.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Below you can find some project ideas we have prepared for this event.
+Everyone is welcome to suggest your own ideas in <a href="https://docs.google.com/document/d/1Wve6fXV7mPkqtFn_gR9kfDWq-qOu6pPLYcDzKTjOHoI/edit#heading=h.tdh4x3qr19c2">this Google Doc</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="user-interface"><a class="anchor" href="#user-interface"></a>User Interface</h3>
+<div class="paragraph">
+<p>This track focuses on projects related to the Jenkins web interface.
+It includes not only the UI improvements and bug fixes,
+but also the related user documentation and UX testing.
+This track is coordinated by the <a href="/sigs/ux/">Jenkins User Experience</a> special interest group.</p>
+</div>
+<table class="tableblock frame-topbot grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Project idea and Keywords</th>
+<th class="tableblock halign-left valign-top">Description and links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Look &amp; Feel updates (<a href="/sigs/ux/#project-ui-look-and-feel">project page</a>)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>We want to modernize the Jenkins Web interface styling and appearance.
+  It includes updating and restyling the commonly used layouts like main page, job pages,
+  build console outputs, etc.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jira EPIC with tasks: <a href="https://issues.jenkins.io/browse/JENKINS-60919">JENKINS-60919</a></p>
+</li>
+<li>
+<p>Other related newcomer-friendly issues: <a href="https://issues.jenkins.io/issues/?jql=labels%20in%20(ui%2C%20ux%2C%20ux-sig%2C%20frontend%2C%20user-experience)%20AND%20labels%20%3D%20newbie-friendly%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)">Jira query</a></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web UI Accessibility (<a href="/sigs/ux/#project-ui-accessibility">project page</a>)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>We would like to make Jenkins usable by as many people as possible.
+  It includes multiple groups of users: people with disabilities, ones using mobile devices, or those with slow network connections.
+  In general, all Jenkins users would benefit from better navigation and layouts.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Contribute to <a href="https://issues.jenkins.io/browse/JENKINS-62437">JENKINS-62437: Change Jenkins configuration UI from tables to divs</a> and improve visualization on mobile devices.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Due to the potentially breaking changes, crowd testing is needed!</p>
+</li>
+<li>
+<p>Submit patches to plugins which use table configuration layouts.</p>
+</li>
+<li>
+<p><a href="/doc/developer/views/table-to-div-migration/">HOWTO: Migrating layouts from tables to divs</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Work on minor accessibility issues listed in <a href="https://issues.jenkins.io/browse/JENKINS-62268">JENKINS-62268</a>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkinsci/jep/blob/master/jep/224/README.adoc">JEP-224: System Read permission</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A read-only view of Jenkins configurations, jobs and agents is important to <a href="https://plugins.jenkins.io/configuration-as-code">Jenkins Configuration-as-Code</a> users.
+  Soon we will release a new feature which extends support for read-only views
+  (<a href="https://github.com/jenkins-infra/jenkins.io/pull/3279">announcement draft</a>).
+  It is a great time to do crowd testing and to improve support for the feature in plugins.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Try out the new feature for plugins, report the testing results, discovered issues and limitations.</p>
+</li>
+<li>
+<p>Add support for read-only mode to plugins (<a href="/doc/developer/views/read-only/">guidelines</a>).</p>
+</li>
+<li>
+<p>Some stories: <a href="https://issues.jenkins.io/browse/JENKINS-12548">JENKINS-12548</a> EPIC and a <a href="https://github.com/orgs/jenkinsci/projects/4">GitHub project</a> with more issues for grabs.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UI Themes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Jenkins UI themes are widely used in Jenkins instances, and they contribute to better user experience.
+  We invite users to improve the existing themes and to create new ones.
+  <a href="/doc/book/managing/ui-themes/">UI Themes Documentation</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a new Dark theme for Jenkins (<a href="https://issues.jenkins.io/browse/JENKINS-61480">JENKINS-61480</a>)</p>
+</li>
+<li>
+<p>Blue Ocean Theme - apply Blue Ocean styling to the Jenkins UI</p>
+</li>
+<li>
+<p>Improve existing themes and adapt them to recent Jenkins versions (e.g. <a href="https://github.com/TobiX/jenkins-neo2-theme">Neo2 theme</a>)</p>
+</li>
+<li>
+<p>Document managing themes in the <a href="https://plugins.jenkins.io//simple-theme-plugin">Simple Theme Plugin</a> documentation.
+We will have a demo for it on Wednesday.</p>
+</li>
+<li>
+<p>Create a new microsite on github.io or jenkins.io with themes listing (aka "theme marketplace").</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pipeline Visualization and embedded docs</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>We would like to improve the built-in Pipeline visualization in Jenkins.
+   This is an <strong>advanced</strong> topic requiring some expertise in Jenkins development.
+   Some ideas raised by contributors:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Embeddable Pipeline Browser (maybe based on the Blue Ocean code)</p>
+</li>
+<li>
+<p>Add support for providing Pipeline examples within Jenkins</p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/JENKINS-56377">JENKINS-56377</a>: Improve performance of large Pipeline console outputs</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credentials Management UX</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://plugins.jenkins.io/credentials">Credentials Plugin</a> User interface is often reported as overly complicated.
+   It would be great to improve it and make it easier to use.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Improve navigation within the credentials management panels</p>
+</li>
+<li>
+<p>Add "Calls for action" for common operations so that users could easily access common actions</p>
+</li>
+<li>
+<p>Remove the <em>Manage credentials</em> button from the main page, move it to <em>Manage Jenkins</em></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Developer tools for Jenkins Web UI</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Development tools could help developers to create better user interfaces in Jenkins.
+   There are some areas that could be addressed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add new UI samples for plugin developers in the <a href="https://github.com/jenkinsci/ui-samples-plugin">UI Samples Plugin</a></p>
+</li>
+<li>
+<p>Improve <a href="https://github.com/stapler/idea-stapler-plugin">IntelliJ IDEA plugin for Stapler</a> to simplify development of Web UI with the Stapler framework (<a href="https://github.com/stapler/idea-stapler-plugin/issues">open issues</a>)</p>
+</li>
+<li>
+<p><strong>Advanced:</strong> Create new <a href="https://github.com/jenkinsci/archetypes">archetypes</a> for JavaScript-based plugins</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="user-documentation"><a class="anchor" href="#user-documentation"></a>User Documentation</h3>
+<div class="paragraph">
+<p>We have several projects which are specifically related to user documentation.
+It includes user and administrator guides, and also tutorials and installation guidelines
+which are referenced from <a href="/doc/book/">this page</a>.
+This track is coordinated by the <a href="/sigs/docs/">Documentation</a> special interest group.</p>
+</div>
+<div class="paragraph">
+<p><a href="/participate/document/">Contributing to user documentation</a>.</p>
+</div>
+<table class="tableblock frame-topbot grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Project idea and Keywords</th>
+<th class="tableblock halign-left valign-top">Description and links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Improve User and Administrator Documentation
+  (<a href="/sigs/docs/#user-guide">project page</a>)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Let&#8217;s improve the documentation for Jenkins end users and administrators.
+   Located <a href="/doc/">on the Jenkins website</a>, it follows the Documentation-as-Code approach.
+  We would like to extend this documentation and to also make it more accessible and discoverable.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Review and renew the user documentation.</p>
+</li>
+<li>
+<p>Help to migrate docs from Jenkins Wiki to jenkins.io (<a href="https://github.com/jenkins-infra/jenkins.io/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation+label%3Awiki-migration">open issues</a>).</p>
+</li>
+<li>
+<p>Improve navigation: better menus and ToC, search support, etc.</p>
+</li>
+<li>
+<p>Improve documentation look&amp;feel: CSS styles, rendering, etc.</p>
+</li>
+<li>
+<p>Test and improve documentation browsing on mobile devices</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Installation guidelines</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>If you are interested to do UX testing, Jenkins installation guidelines could be a great subject for you.
+   Some guidelines were created long ago, and they could benefit from a refresh.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Test <a href="/doc/book/installing/">installation guidelines</a> and <a href="/doc/tutorials/">tutorials</a>,
+submit patches and discovered issues.</p>
+</li>
+<li>
+<p>Renew the Windows installation guide for Jenkins weekly releases that use the new Windows installer.
+See <a href="/blog/2019/02/01/windows-installers/">this blogpost</a> for an overview of the new Windows Installer.</p>
+</li>
+<li>
+<p><strong>Advanced:</strong> Rewrite the <a href="/doc/book/installing/#docker">Docker installation guide</a> to use the <code>jenkins/jenkins</code> image instead of the Blue Ocean images.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document Jenkins use-cases
+  (<a href="/sigs/docs/#solution-pages">project page</a>)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Help us to improve documentation for real-world Jenkins use-cases!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Review and refresh the existing <a href="/solutions/">solution pages</a>: add links to plugins and articles, extend the overview sections, improve the rendering.
+See <a href="https://issues.jenkins.io/browse/WEBSITE-742">WEBSITE-742</a> for the issue links.</p>
+</li>
+<li>
+<p><strong>Advanced:</strong> Create new <a href="/solutions/">solution pages</a> for various use-cases (e.g. Documentation as code, Continuous Deployment, Static Analysis) or technologies (Git, Gitlab, Kubernetes, etc.).</p>
+</li>
+<li>
+<p><strong>Advanced:</strong> Create new <a href="/doc/tutorials/">Tutorials</a>, e.g. how to use a Jenkins feature or how to implement a common automation use-case with Jenkins</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Improve Plugin Documentation</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>We are moving plugin documentation from Jenkins Wiki to Documentation as Code so that it is stored directly in plugin repositories.
+   There are hundreds of plugins that need to be migrated.
+   We invite contributors to help with migrating plugin pages and improving existing ones.
+   <a href="/sigs/docs/#plugin-documentation-on-github">More info</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Migrate plugin documentation as documented in these <a href="/blog/2019/10/21/plugin-docs-on-github/">guidelines</a>).
+List of plugins for grabs can be found in the <a href="https://jenkins-wiki-exporter.jenkins.io/progress">Jenkins Wiki Exporter</a>.</p>
+</li>
+<li>
+<p>Review and renew the existing plugin documentation,
+e.g. cleanup the agent terminology usage as suggested in the <a href="https://issues.jenkins.io/browse/JENKINS-42816">JENKINS-42816</a> EPIC</p>
+</li>
+<li>
+<p>Work on other documentation issues reported to plugins and other components:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>All issues: <a href="https://issues.jenkins.io/issues/?jqllabels%20in%20(docs-sig%2C%20documentation)%20AND%20status%20in%20(Open%2C%20"In%20Progress"%2C%20Reopened)%20AND%20project%20%3D%20JENKINS%20and%20component%20!%3D%20core)">Jira</a>, <a href="https://github.com/search?q=org%3Ajenkinsci+is%3Aissue+is%3Aopen+label%3Adocumentation">GitHub Issues</a></p>
+</li>
+<li>
+<p>Newcomer-friendly issues: <a href="https://issues.jenkins.io/issues/?jql=labels%20in%20(docs-sig%2C%20documentation)%20AND%20labels%20%3D%20newbie-friendly%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)">Jira</a>,
+<a href="https://github.com/search?q=org%3Ajenkinsci+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+label%3Adocumentation&amp;type=Issues">GitHub Issues</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="spread-the-word"><a class="anchor" href="#spread-the-word"></a>Spread the Word</h3>
+<div class="paragraph">
+<p>Contributing to a project is not just about submitting code.
+We invite you to help us to contribute by sharing experiences and creating new content about Jenkins.
+Such information is essential to Jenkins users when they search for solutions.
+Below you can find some ideas about how you could contribute:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Write user stories for <a href="https://jenkinsistheway.io/">Jenkins Is The Way</a> site!</p>
+</li>
+<li>
+<p>Write case studies and feature overviews for the <a href="/blog">Jenkins blog</a> and other resources.</p>
+</li>
+<li>
+<p>Tweet/post about your Jenkins user experience and new features, use the <code>#jenkinsIsTheWay</code> hashtag.</p>
+</li>
+<li>
+<p>Record videos and publish them on YouTube or other services, use the <code>#jenkinsIsTheWay</code> label there.</p>
+</li>
+<li>
+<p>Create new demos for Jenkins features.</p>
+</li>
+<li>
+<p>Present UX-related stories at our online meetups.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This track is coordinated by the <a href="/sigs/advocacy-and-outreach/">Jenkins Advocacy &amp; Outreach</a> special interest group.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="online-events"><a class="anchor" href="#online-events"></a>Online events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have organized multiple online sessions during the hackfest to
+share experiences and do knowledge transfers.
+All these sessions have been recorded and published on <a href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaNll_Aw3M-NIQ042BV5teP9">our YouTube channel</a>.
+You can find materrials from all these sessions <a href="https://github.com/jenkinsci/ui-ux-hackfest-2020/tree/master/presentations">here</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>May 25, 08:00-09:00 AM UTC -
+Small Early Bird opening session
+(<a href="https://docs.google.com/presentation/d/1W0955Bps2MFki1qKX6ewCClV2a0tAgw3RJ1abZUag3Q/edit?usp=sharing">slides</a>,
+ <a href="https://www.youtube.com/watch?v=rsC6fqZmRFg">recording</a>)</p>
+</li>
+<li>
+<p>May 25, 01:00-02:30 PM UTC -
+<strong><em>Hackfest kick-off</em></strong>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270644129/">details</a>)</p>
+</li>
+<li>
+<p>May 25, 03:00-04:00 PM UTC -
+<em>Beautify the UI of Jenkins reporter plugins</em> by <a href="/blog/authors/uhafner/">Ullrich Hafner</a>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270767392/">details</a>)</p>
+</li>
+<li>
+<p>May 25, 04:00-04:30 PM UTC -
+<em>Jenkins is The Way program overview</em> by <a href="/blog/authors/alyssat/">Alyssa Tong</a>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270767571/">details</a>)</p>
+</li>
+<li>
+<p>May 26, 10:00-10:45 AM UTC -
+<em>Migrating plugins to Documentation-as-Code</em> by <a href="/blog/authors/oleg_nenashev/">Oleg Nenashev</a>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270775512">details</a>)</p>
+</li>
+<li>
+<p>May 26, 13:00-14:00 PM UTC -
+<em>System Read Permission: Demo and contributing</em> by <a href="/blog/authors/timja/">Tim Jacomb</a>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270775558/">details</a>)</p>
+</li>
+<li>
+<p>May 26, 15:00-16:00 PM UTC -
+<em>Migrating documentation to jenkins.io</em> by <a href="/blog/authors/markewaite/">Mark Waite</a>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270776103">details</a>)</p>
+</li>
+<li>
+<p>May 27, 04:00-05:00 PM UTC -
+<em>UX SIG meeting: mid-term hackfest updates and demos</em>
+(<a href="/sigs/ux/#meetings">meeting links</a>)</p>
+</li>
+<li>
+<p>May 27, 10:00-11:00 AM UTC -
+<em>Using and developing Jenkins themes + new dark theme project</em>
+by <a href="https://github.com/TobiX/">Tobias Gruetzmacher</a>, <a href="/blog/authors/oleg_nenashev/">Oleg Nenashev</a>, and <a href="/blog/authors/timja/">Tim Jacomb</a>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270881117/">details</a>)</p>
+</li>
+<li>
+<p>May 29, 11:00-12:00 AM UTC -
+<em>Demo: GitHub Checks API Plugin prototype</em>
+by <a href="/blog/authors/xiongkezhi/">Kezhi Xiong</a>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270931234/">details</a>)</p>
+</li>
+<li>
+<p>May 29, 03:00-05:00 PM UTC -
+<em>Demo Sessions by hackfest participants</em>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270932348/">details</a>)</p>
+</li>
+<li>
+<p>Jun 01, 11:00-12:00 AM UTC -
+<em>Demo: Custom Jenkins Distribution build service</em>
+by <a href="/blog/authors/sladyn98/">Sladyn Nunes</a>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270974407/">details</a>)</p>
+</li>
+<li>
+<p>Jun 01, 02:00-03:00 PM UTC -
+<em>Hackfest results</em>
+by <a href="/blog/authors/oleg_nenashev/">Oleg Nenashev</a> and <a href="/blog/authors/markewaite/">Mark Waite</a>
+(<a href="https://www.meetup.com/Jenkins-online-meetup/events/270934525/">details</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>More links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://calendar.google.com/calendar/embed?src=0hc89b1nlp2ld35mtupb3o7cfs%40group.calendar.google.com&amp;ctz=UTC&amp;mode=week">Jenkins UI/UX Hackfest Calendar</a>.
+(<a href="https://calendar.google.com/calendar/ical/0hc89b1nlp2ld35mtupb3o7cfs%40group.calendar.google.com/public/basic.ics">iCal format</a>)</p>
+</li>
+<li>
+<p><a href="/event-calendar/">Jenkins event calendar</a> - full list of events in the Jenkins project.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="swag-and-prizes"><a class="anchor" href="#swag-and-prizes"></a>Swag and Prizes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Thanks to our sponsors (<a href="https://www.cloudbees.com/">CloudBees, Inc.</a> and <a href="https://cd.foundation/">Continuous Delivery Foundation</a>),
+we are happy to offer swag to active contributors!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>50</strong> most-active contributors will get an exclusive "Jenkins Is The Way" T-shirt and stickers</p>
+</li>
+<li>
+<p>Active contributors will get Jenkins stickers and socks</p>
+</li>
+<li>
+<p>We are working on special prizes for top contributors, to be announced later</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image center"><img src="/images/post-images/jenkins-is-the-way/jenkins-is-the-way-t-shirt.png" alt="Jenkins Is The Way T-shirt" height="229"></span>
+<span class="image center"><img src="/images/post-images/jenkins-is-the-way/hackfest-swag-socks.png" alt="Jenkins Socks" height="229"></span>
+<span class="image center"><img src="/images/post-images/jenkins-is-the-way/hackfest-swag-sticker.png" alt="Jenkins Stickers" height="229"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="frequently-asked-questions"><a class="anchor" href="#frequently-asked-questions"></a>Frequently Asked Questions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="/events/online-hackfest/2020-uiux/faq">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code-of-conduct"><a class="anchor" href="#code-of-conduct"></a>Code of Conduct</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We want to make this event a great experience for everyone, please be nice to all participants!
+All event participants must follow this the <a href="/project/conduct/">Jenkins Code of Conduct</a>,
+Unacceptable behavior will make trespassers ineligible to get swag and prizes,
+and it may lead to other actions defined in the Code of Conduct.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="acknowledgements"><a class="anchor" href="#acknowledgements"></a>Acknowledgements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We thank all contributors who participate in this event as committers!
+We especially thank all reviewers, organizers and those who participated in the initial program reviews and provided invaluable feedback.
+In particular, we thank <a href="/sigs/ux/">User Experience</a>, <a href="/sigs/docs/">Documentation</a> and <a href="sigs/advocacy-and-outreach/">Advocacy and Outreach</a> SIG members who heavily contributed to this event.</p>
+</div>
+<div class="paragraph">
+<p>We also thank sponsors of the event who make the swag and prizes possible:
+<a href="https://www.cloudbees.com/">CloudBees, Inc.</a> and
+<a href="https://cd.foundation/">Continuous Delivery Foundation (CDF)</a>.
+In addition to swag, CloudBees donates working time for event hosts and reviewers.
+CDF also sponsors our <a href="/events/online-meetup">online meetup platform</a> which we will be using for the event.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><a class="image" href="https://cloudbees.com/"><img src="/images/sponsors/cloudbees.png" alt="CloudBees"></a></span>
+<span class="image"><a class="image" href="https://cd.foundation/"><img src="/images/sponsors/cdf.png" alt="Continuous Delivery Foundation"></a></span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="sidebar-nav">
+<h4>
+On this page
+</h4>
+<ul class="sectlevel1">
+<li><a href="#results">Results</a></li>
+<li><a href="#what-is-hackfest">What is Hackfest?</a></li>
+<li><a href="#getting-started">Getting started</a>
+<ul class="sectlevel2">
+<li><a href="#how-to-choose-a-project">How to choose a project?</a></li>
+<li><a href="#how-to-report-contributions">How to report contributions?</a></li>
+<li><a href="#how-to-communicate-during-the-event">How to communicate during the event?</a></li>
+</ul>
+</li>
+<li><a href="#tracks-and-project-ideas">Tracks and Project ideas</a>
+<ul class="sectlevel2">
+<li><a href="#user-interface">User Interface</a></li>
+<li><a href="#user-documentation">User Documentation</a></li>
+<li><a href="#spread-the-word">Spread the Word</a></li>
+</ul>
+</li>
+<li><a href="#online-events">Online events</a></li>
+<li><a href="#swag-and-prizes">Swag and Prizes</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#code-of-conduct">Code of Conduct</a></li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+</ul>
+<!-- starting partial connect-h4-div.html.haml -->
+<div>
+<h4>
+Connect
+</h4>
+</div>
+<ul>
+<!-- starting partial connect-links.html.haml -->
+<li>
+<a href="https://groups.google.com/forum/#!forum/jenkins-advocacy-and-outreach-sig" rel="noreferrer noopener" target="_blank">
+Mailing List
+</a>
+</li>
+<li>
+<a href="https://gitter.im/jenkinsci/hackfest" rel="noreferrer noopener" target="_blank">
+<img src="https://badges.gitter.im/jenkinsci/hackfest.svg" title="Gitter">
+</a>
+</li>
+
+<!-- ending partial connect-links.html.haml -->
+</ul>
+
+<!-- ending partial connect-h4-div.html.haml -->
+<div>
+<div class="block block-block even blog-posts" id="block-block-15">
+<h4 class="title">
+Recent Blog Posts
+</h4>
+<ul>
+<li>
+<a href="/blog/2021/02/16/contributor-summit-online/">
+Jenkins Contributor Summit Online Feb 23-25
+</a>
+</li>
+<li>
+<a href="/blog/2021/01/12/new-year-report/">
+2020 A Year Like No Other
+</a>
+</li>
+<li>
+<a href="/blog/2020/12/22/gsoc-report/">
+Google Summer of Code 2020 summary
+</a>
+</li>
+<li>
+<a href="/blog/2020/12/16/call-for-mentors/">
+Google Summer of Code 2021 call for Project Ideas and Mentors
+</a>
+</li>
+<li>
+<a href="/blog/2020/12/11/devops-world-2020-jenkins-contributors-awarded-top-honors-at-devops-worlds-2020/">
+“Jenkins Contributors Awarded Top Honors at DevOps World 2020”
+</a>
+</li>
+<li>
+<a href="/blog/2020/12/04/gsod-project-report/">
+GSOD Project Report: Document Jenkins on Kubernetes
+</a>
+</li>
+<li>
+<a href="/blog/2020/12/03/election-results/">
+2020 Jenkins Board and Officer Elections Results
+</a>
+</li>
+<li>
+<a href="/blog/2020/11/10/spring-xstream/">
+Spring and XStream updates (breaking changes!)
+</a>
+</li>
+<li>
+<a href="/blog/2020/11/10/major-changes-in-weekly-releases/">
+Jenkins 2.264+: Major changes in the weekly release line
+</a>
+</li>
+<li>
+<a href="/blog/2020/11/05/installing-jenkins-on-kubernetes/">
+Document Jenkins on Kubernetes: Installing Jenkins on Kubernetes Documentation Release
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/anchor-js/anchor.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/js/tether.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/js/bootstrap.min.js"></script>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<p class="box">
+<a href="https://github.com/jenkins-infra/jenkins.io/edit/master/content//events/online-hackfest/2020-uiux/index.adoc" title="Edit /events/online-hackfest/2020-uiux/index.adoc on GitHub">Improve this page</a>
+|
+<a href="https://github.com/jenkins-infra/jenkins.io/issues/new?labels=bug&amp;template=4-bug.md&amp;title=Jenkins UI/UX Hackfest page - TODO: Put a summary here&amp;body=Problem with the [Jenkins UI/UX Hackfest](https://www.jenkins.io/events/online-hackfest/2020-uiux/) page, [source file](https://github.com/jenkins-infra/jenkins.io/blob/master/content/events/online-hackfest/2020-uiux/index.adoc)%0A%0ATODO: Describe the expected and actual behavior here %0A%0A%23%23 Screenshots %0A%0A TODO: Add screenshots if possible %0A%0A%23%23 Possible Solution %0A%0A%3C!-- If you have suggestions on a fix for the bug, please describe it here. --%3E %0A%0AN/A" title="Report a problem with /events/online-hackfest/2020-uiux/index.adoc">Report a problem</a>
+</p>
+<div class="license-box">
+<div id="creativecommons">
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+<p>
+<img alt="Creative Commons Attribution-ShareAlike license" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+</p>
+</a>
+<p>
+The content driving this site is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 license.
+</p>
+</div>
+</div>
+</div>
+<div class="links col-md-8">
+<div class="container">
+<div class="row">
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Resources</h5>
+<ul class="resources">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Downloads
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc">
+Documentation
+</a>
+</li>
+<li>
+<a href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Contributing
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Project</h5>
+<ul class="project">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project">
+Structure and governance
+</a>
+</li>
+<li>
+<a href="https://issues.jenkins.io">
+Issue tracker
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://ci.jenkins.io">
+Jenkins on Jenkins
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Community</h5>
+<ul class="community">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists">
+Mailing lists
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/chat">
+Chats
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/sigs">
+Special Interest Groups
+</a>
+</li>
+<li>
+<a href="https://twitter.com/jenkinsci">
+Twitter
+</a>
+</li>
+<li>
+<a href="https://reddit.com/r/jenkinsci">
+Reddit
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Other</h5>
+<ul class="other">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/conduct">
+Code of Conduct
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press information
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/merchandise">
+Merchandise
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-000000-0', 'auto');
+ga('send', 'pageview');
+ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+  !function(d,s,id) {
+    var js, fjs=d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id=id;
+      js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,"script","twitter-wjs");
+  
+  $(function(){
+    var $body = $(document.body);
+    $(".nav-link.dropdown-toggle").on("mousedown", function(){
+      $body.addClass("no-outline");
+    })
+    $body.on("keydown", function(){
+      $body.removeClass("no-outline");
+    })
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+docsearch({
+  apiKey: '9df657b854f8c42d9887b34bc275db4d',
+  indexName: 'jenkins',
+  inputSelector: 'input.searchbox',
+  algoliaOptions: { 'facetFilters': ["tags:en"] },
+  debug: false
+});
+</script>
+</body>
+</html>

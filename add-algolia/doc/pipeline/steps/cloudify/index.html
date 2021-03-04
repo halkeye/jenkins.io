@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+Cloudify
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="description">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<!-- Favicons -->
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/site.webmanifest" rel="manifest">
+<link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon">
+<meta content="#2b5797" name="msapplication-TileColor">
+<meta content="#ffffff" name="theme-color">
+<meta content="Cloudify" name="apple-mobile-web-app-title">
+<!-- Twitter Card data -->
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@JenkinsCI" name="twitter:site">
+<meta content="Cloudify" name="twitter:title">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="twitter:description">
+<meta content="@JenkinsCI" name="twitter:creator">
+<!-- Twitter Summary card images must be at least 120x120px -->
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/logo-title-opengraph.png" name="twitter:image">
+<!-- Open Graph data -->
+<meta content="Cloudify" property="og:title">
+<meta content="article" property="og:type">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/steps/cloudify/index.html" property="og:url">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="og:description">
+<meta content="Cloudify" property="og:site_name">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/logo-title-opengraph.png" name="og:image">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/css/tether.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-icons.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/jenkins.css" media="screen" rel="stylesheet">
+<!-- Non-obtrusive CSS styles -->
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/ionicons/css/ionicons.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/footer.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-awesome.min.css" media="screen" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/jquery/jquery.min.js"></script>
+<!-- starting partial toptoolbar.html.haml -->
+<nav class="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top" id="ji-toolbar">
+<a class="navbar-brand" href="https://halkeye.github.io/jenkins.io/add-algolia">
+Jenkins
+</a>
+<button class="navbar-toggler" data-target="#CollapsingNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="CollapsingNavbar">
+<ul class="nav navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+<!-- starting partial cdf_logo.html.haml -->
+<svg width="36" height="18" xmlns="http://www.w3.org/2000/svg" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.23 44.77 362.70 271.95"><defs><linearGradient id="a" x1="359.765" x2="104.082" y1="134.295" y2="124.577" gradientTransform="matrix(1 0 0 -1 0 439.068)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ed1c24"/><stop offset="1" stop-color="#f7941d"/></linearGradient><linearGradient id="b" x1="355.202" x2="99.519" y1="254.467" y2="244.749" xlink:href="#a"/><linearGradient id="c" x1="183.903" x2="10.612" y1="227.598" y2="221.023" xlink:href="#a"/><linearGradient id="d" x1="367.119" x2="157.995" y1="265.311" y2="257.091" xlink:href="#a"/></defs><path fill="#c49a6c" d="M231.52 309.278c2.483-.332 4.895-.77 7.255-1.329s4.649-1.206 6.991-1.957c13.494-4.58 25.187-12.952 36.374-24.593l-.14-.175c-14.944 15.486-30.693 25.344-50.48 28.054z"/><path fill="url(#a)" d="M224.232 309.96h.332c1.084 0 2.15-.14 3.216-.228a93.844 93.844 0 0 1-3.233.227z"/><path fill="url(#b)" d="M284.692 187.187l-.122.192.122-.192z"/><path fill="url(#c)" d="M146.145 231.847a150.844 150.844 0 0 1-12.97 15.862c-7.582 7.889-15.507 13.563-24.652 16.667a47.832 47.832 0 0 1-4.738 1.326 56.959 56.959 0 0 1-4.916.9 38.32 38.32 0 0 1-1.682.214l-.912.083c-.723.059-1.445.118-2.18.154h-3.068a42.325 42.325 0 0 1-9.192-1.043 49.977 49.977 0 0 1-6.764-2.002 43.097 43.097 0 0 1-4.525-1.954c-1.493-.77-2.961-1.516-4.407-2.37a59.5 59.5 0 0 1-17.105-15.399 59.714 59.714 0 0 1-2.914-4.311 53.09 53.09 0 0 1-1.291-2.263 51.985 51.985 0 0 1-2.263-4.738 46.72 46.72 0 0 1 0-36.426 51.986 51.986 0 0 1 2.263-4.738 54.14 54.14 0 0 1 1.291-2.263 59.742 59.742 0 0 1 2.914-4.311 59.714 59.714 0 0 1 17.105-15.4 60.828 60.828 0 0 1 4.407-2.369q2.217-1 4.525-1.777a49.976 49.976 0 0 1 6.906-2.073 42.325 42.325 0 0 1 9.192-1.042h3.128c.722 0 1.445.094 2.155.154l1.043.106 1.019.119c1.8.237 3.553.557 5.271.96.853.2 1.694.426 2.523.663a51.186 51.186 0 0 1 11.846 5.176 59.645 59.645 0 0 1 4.395 2.89 74.485 74.485 0 0 1 8.386 7.108q2.038 1.99 4.063 4.193l.083-.13a159.395 159.395 0 0 1 11.064 13.942c5.437-8.576 13.658-21.464 16.584-25.74 1.185-1.718 2.37-3.46 3.66-5.212-13.54-16.513-29.827-30.23-51.587-36.082h-.154a89.397 89.397 0 0 0-3.187-.794l-.45-.107a92.565 92.565 0 0 0-3.151-.627l-.628-.119a80.578 80.578 0 0 0-3.743-.569h-.142a58.29 58.29 0 0 0-2.073-.236h-.391l-1.872-.166h-.568l-1.754-.119h-.675l-1.777-.07h-3.115c-46.447-.25-87.125 40.476-87.125 86.911s40.725 87.173 87.172 87.173h3.14l1.729-.071h.734l1.67-.095h.676l1.706-.154h.568l1.813-.213.414-.06 1.967-.272h.213a125.91 125.91 0 0 0 3.553-.628l.652-.142c.96-.201 1.907-.415 2.855-.64l.58-.142a86.66 86.66 0 0 0 3.009-.817l.237-.071c20.73-6.077 36.425-19.392 49.55-35.277-2.037-3.068-3.4-5.366-4.039-6.48z"/><path fill="url(#d)" d="M318.05 51.733v94.66a85.514 85.514 0 0 0-52.595-18.729h-3.115l-1.777.072-.7.047-1.752.118h-.569l-1.871.166h-.391c-.7.071-1.386.142-2.073.237h-.154c-1.256.154-2.5.355-3.732.569l-.628.118c-1.066.19-2.108.403-3.15.628l-.45.107c-30.35 6.858-50.333 28.808-66.822 52.82-.7 1.018-1.35 2.049-2.038 3.068-2.25 3.423-5.46 8.422-8.635 13.397-4.17 6.527-8.292 13.03-9.939 15.66l20.624 32.137s21.997 40.465 61.68 51.482l.237.07c.995.297 2.002.558 3.009.818l.58.142c.936.237 1.896.439 2.855.64l.652.142c1.184.225 2.369.439 3.553.628h.214l1.966.273.415.059 1.812.213h.569l1.705.154h.676l1.67.095h.734l1.73.07h3.139c54.703 0 86.355-30.964 87.149-85.063V51.733zm-52.595 215.403h-3.068c-.734 0-1.457-.095-2.18-.154l-.912-.083c-.568-.06-1.125-.13-1.682-.213a49.077 49.077 0 0 1-9.571-2.275 49.612 49.612 0 0 1-6.634-2.83 55.792 55.792 0 0 1-6.254-3.768 63.068 63.068 0 0 1-3.009-2.215 82.399 82.399 0 0 1-8.683-7.925l-.095.119c-1.255-1.303-2.487-2.69-3.731-4.11-.154-.167-.296-.356-.45-.534-.628-.722-1.256-1.445-1.884-2.215s-1.125-1.398-1.682-2.097-.888-1.101-1.338-1.682a184.467 184.467 0 0 1-6.053-8.292c-.7-.995-1.398-2.025-2.109-3.056-.379-.569-.77-1.184-1.185-1.73-.675-1.018-1.362-2.013-2.049-3.056l-.355-.545c-1.185-1.812-2.37-3.684-3.649-5.603q2.95-4.608 5.817-8.86c1.907-2.831 3.79-5.556 5.662-8.138s3.72-5.046 5.591-7.38 3.72-4.525 5.603-6.586q2.026-2.203 4.063-4.194c1.374-1.338 2.748-2.594 4.158-3.778s2.807-2.287 4.252-3.329a57.594 57.594 0 0 1 7.748-4.62c.331-.166.663-.367 1.006-.533l.226-.118c1.41-.652 2.843-1.185 4.3-1.73l.485-.201c.273-.083.557-.142.83-.237a44.943 44.943 0 0 1 3.34-.948l1.374-.343a60.798 60.798 0 0 1 4.738-.841l1.019-.119 1.042-.106c.711 0 1.434-.119 2.156-.154h3.128a42.431 42.431 0 0 1 4.572.26 48.011 48.011 0 0 1 6.93 1.35c1.54.427 3.08.925 4.596 1.505a48.724 48.724 0 0 1 4.525 1.955c1.493.722 2.961 1.516 4.407 2.369s2.866 1.8 4.24 2.784 2.725 2.049 4.028 3.174a58.459 58.459 0 0 1 8.837 9.477 59.73 59.73 0 0 1 2.914 4.312 51.067 51.067 0 0 1 5.318 11.916 47.38 47.38 0 0 1 1.185 5.165 45.567 45.567 0 0 1 .71 8.09c.072 35.964-16.062 52.122-52.227 52.122z"/></svg>
+
+<!-- ending partial cdf_logo.html.haml -->
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://cd.foundation/">
+What is CDF?
+</a>
+<a class="dropdown-item feature" href="https://jenkins-x.io/">
+Jenkins X
+</a>
+<a class="dropdown-item feature" href="https://cloud.google.com/tekton/">
+Tekton
+</a>
+<a class="dropdown-item feature" href="https://www.spinnaker.io/">
+Spinnaker
+</a>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Documentation
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book">
+<strong>
+User Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/installing/">
+&nbsp;-&nbsp;Installing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline">
+&nbsp;-&nbsp;Jenkins Pipeline
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/managing/">
+&nbsp;-&nbsp;Managing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/system-administration">
+&nbsp;-&nbsp;System Administration
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/glossary/">
+&nbsp;-&nbsp;Terms and Definitions
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/solutions">
+<strong>
+Solution Pages
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+<strong>
+Tutorials
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/tour/getting-started/">
+&nbsp;-&nbsp;Guided Tour
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+&nbsp;-&nbsp;More Tutorials
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/developer">
+<strong>
+Developer Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+<strong>
+Contributor Guide
+</strong>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Community
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/chat" title="Chat with the rest of the Jenkins community on IRC">
+Chat
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam">
+Meet
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+<a class="dropdown-item feature" href="https://issues.jenkins.io/">
+Issue Tracker
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists" title="Browse Jenkins mailing list archives and/or subscribe to lists">
+Mailing Lists
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item feature" href="https://accounts.jenkins.io/" title="Create/manage your account for accessing wiki, issue tracker, etc">
+Account Management
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/">
+<strong>
+Special Interest Groups
+</strong>
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/advocacy-and-outreach/">
+&nbsp;-&nbsp;Advocacy and Outreach
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/chinese-localization/">
+&nbsp;-&nbsp;Chinese Localization
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/cloud-native/">
+&nbsp;-&nbsp;Cloud Native
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/">
+&nbsp;-&nbsp;Documentation
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/gsoc/">
+&nbsp;-&nbsp;Google Summer of Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/hw-and-eda/">
+&nbsp;-&nbsp;Hardware and EDA
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/pipeline-authoring/">
+&nbsp;-&nbsp;Pipeline Authoring
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/platform/">
+&nbsp;-&nbsp;Platform
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/ux/">
+&nbsp;-&nbsp;User Experience
+</a>
+</div>
+</li>
+<li class="dropdown nav-item">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Subprojects
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/evergreen/">
+Evergreen
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/">
+Google Summer of Code in Jenkins
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/infrastructure/">
+Infrastructure
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam/">
+CI/CD and Jenkins Area Meetups
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jcasc/">
+Jenkins Configuration as Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/remoting/">
+Jenkins Remoting
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/">
+Document Jenkins on Kubernetes
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+About
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/conduct">
+Conduct
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+English
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/zh">
+中文 Chinese
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link btn btn-outline-secondary" href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Download
+</a>
+</li>
+<li class="nav-item searchbox">
+<input aria-label="Search" class="form-control searchbox" placeholder="Search" type="search">
+</li>
+</ul>
+</div>
+</nav>
+<!-- Spacing to make the fixed-top sticky navbar not occlude any content below it -->
+<div class="pt-4">
+&nbsp;
+</div>
+
+<!-- ending partial toptoolbar.html.haml -->
+<!-- starting partial anchors.html.haml -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    for (var i = 1 ; i <= 6 ; i ++) {
+      anchors.add('.container .row .col-lg-9 h' + i);
+    }
+  })
+</script>
+
+<!-- ending partial anchors.html.haml -->
+<div class="container">
+<div class="row body">
+<div class="col-lg-3">
+<div class="sidebar-nav tour">
+<p>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc" class="">> User Documentation Home</a>
+</p>
+<h5>
+User Handbook
+</h5>
+<ul>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/getting-started" class="">User Handbook overview</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/installing" class="">Installing Jenkins</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/using" class="">Using Jenkins</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline" class="">Pipeline</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/blueocean" class="">Blue Ocean</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/managing" class="">Managing Jenkins</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/system-administration" class="">System Administration</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/scaling" class="">Scaling Jenkins</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/appendix" class="">Appendix</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/glossary" class="">Glossary</a>
+</li>
+</ul>
+<h5>
+Tutorials
+</h5>
+<ul>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/tour/getting-started" class="">Guided Tour</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials#pipeline" class="">Jenkins Pipeline</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials#tools" class="">Using Build Tools</a>
+</li>
+</ul>
+<h5>
+Resources
+</h5>
+<ul>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline/syntax" class="">Pipeline Syntax reference</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/steps" class="">Pipeline Steps reference</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/upgrade-guide" class="">LTS Upgrade guides</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-lg-9">
+<p>
+The following plugin provides functionality available through
+Pipeline-compatible steps. Read more about how to integrate steps into your
+Pipeline in the
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline/syntax/#declarative-steps">Steps</a>
+section of the
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline/syntax">Pipeline Syntax</a>
+page.
+</p>
+<p>
+For a list of other such plugins, see the
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/steps/">Pipeline Steps Reference</a>
+page.
+</p>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#cloudify">Cloudify</a>
+<ul class="sectlevel2">
+<li><a href="#cfyazurearm-create-azure-arm-deployment"><code>cfyAzureArm</code>: Create Azure ARM Deployment</a></li>
+<li><a href="#cfyansible-run-ansible-playbook"><code>cfyAnsible</code>: Run Ansible Playbook</a></li>
+<li><a href="#cfycloudformation-create-cloudformation-stack"><code>cfyCloudFormation</code>: Create CloudFormation Stack</a></li>
+<li><a href="#createcloudifyenv-create-cloudify-environment"><code>createCloudifyEnv</code>: Create Cloudify Environment</a></li>
+<li><a href="#deletecloudifyblueprint-delete-cloudify-blueprint"><code>deleteCloudifyBlueprint</code>: Delete Cloudify Blueprint</a></li>
+<li><a href="#deletecloudifyenv-delete-cloudify-environment"><code>deleteCloudifyEnv</code>: Delete Cloudify Environment</a></li>
+<li><a href="#executecloudifyworkflow-execute-cloudify-workflow"><code>executeCloudifyWorkflow</code>: Execute Cloudify Workflow</a></li>
+<li><a href="#cfykubernetes-create-kubernetes-resources"><code>cfyKubernetes</code>: Create Kubernetes Resources</a></li>
+<li><a href="#cfyoutputstoinputs-convert-cloudify-environment-outputscapabilities-to-inputs"><code>cfyOutputsToInputs</code>: Convert Cloudify Environment Outputs/Capabilities to Inputs</a></li>
+<li><a href="#cfyterraform-apply-terraform-module"><code>cfyTerraform</code>: Apply Terraform Module</a></li>
+<li><a href="#uploadcloudifyblueprint-upload-cloudify-blueprint"><code>uploadCloudifyBlueprint</code>: Upload Cloudify Blueprint</a></li>
+<li><a href="#uploadcloudifyblueprint-upload-cloudify-plugin"><code>uploadCloudifyBlueprint</code>: Upload Cloudify Plugin</a></li>
+<li><a href="#wrapclass-cloudifybuildwrapper-cloudify-environment"><code>wrap([$class: 'CloudifyBuildWrapper'])</code>: Cloudify Environment</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="cloudify"><a class="anchor" href="#cloudify"></a>Cloudify</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://plugins.jenkins.io/cloudify">View this plugin on the Plugins site</a></p>
+</div>
+<div class="sect2">
+<h3 id="cfyazurearm-create-azure-arm-deployment"><a class="anchor" href="#cfyazurearm-create-azure-arm-deployment"></a><code>cfyAzureArm</code>: Create Azure ARM Deployment</h3>
+<ul><li><code>azureCredentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Azure. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>debugOutput</code> (optional)
+<div><div>
+ If checked, then printed Cloudify events and logs will include debug-level records.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>deploymentId</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>echoEnvData</code> (optional)
+<div><div>
+ <p>If checked, then the created environment's data will be printed to the job's log.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>echoInputs</code> (optional)
+<div><div>
+  If checked, then the Cloudify deployment inputs are echoed to the Jenkins log.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>envDataLocation</code> (optional)
+<div><div>
+ <p>Path to a file that will contain the created environment's data. If not provided, the environment data won't be written.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>location</code> (optional)
+<div><div>
+ <p>The Azure location where the created resource group should reside in. If omitted, the value of the <code>azure_default_location</code> Cloudify secret will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>parameters</code> (optional)
+<div><div>
+ <p>YAML/JSON of parameters to pass to the template.</p>
+</div></div>
+
+<ul><li><b>Type:</b> <code>java.util.Map&lt;java.lang.String, java.lang.Object&gt;</code></li>
+</ul></li>
+<li><code>parametersAsString</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>parametersFile</code> (optional)
+<div><div>
+ <p>Path, relative to the Jenkins workspace root, of a YAML/JSON file containing parmaeters to pass to the template.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>resourceGroupName</code> (optional)
+<div><div>
+ <p>Name of resource group to create for the template.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>templateFile</code> (optional)
+<div><div>
+ <p>Workspace-relative path of the ARM template file.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="cfyansible-run-ansible-playbook"><a class="anchor" href="#cfyansible-run-ansible-playbook"></a><code>cfyAnsible</code>: Run Ansible Playbook</h3>
+<ul><li><code>additionalArgs</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>ansibleEnvVars</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>debugLevel</code> (optional)
+<ul><li><b>Type:</b>  <code>int</code></li></ul></li>
+<li><code>debugOutput</code> (optional)
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>deploymentId</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>echoEnvData</code> (optional)
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>echoInputs</code> (optional)
+<div><div>
+  If checked, then the Cloudify deployment inputs are echoed to the Jenkins log.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>envDataLocation</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>optionsConfig</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>playbookPath</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>remergeSources</code> (optional)
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>runData</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>savePlaybook</code> (optional)
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>scpExtraArgs</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>sensitiveKeys</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>sftpExtraArgs</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>sourcePath</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>sources</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>sshCommonArgs</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>sshExtraArgs</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>startAtTask</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>timeout</code> (optional)
+<ul><li><b>Type:</b>  <code>int</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="cfycloudformation-create-cloudformation-stack"><a class="anchor" href="#cfycloudformation-create-cloudformation-stack"></a><code>cfyCloudFormation</code>: Create CloudFormation Stack</h3>
+<ul><li><code>awsCredentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing AWS. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>debugOutput</code> (optional)
+<div><div>
+ If checked, then printed Cloudify events and logs will include debug-level records.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>deploymentId</code> (optional)
+<div><div>
+ <p>ID to assign to the created Cloudify deployment. If not provided, one will be randomly generated. You can obtain the deployment ID from the "environment data" output file.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>echoEnvData</code> (optional)
+<div><div>
+ <p>If checked, then the created environment's data will be printed to the job's log.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>echoInputs</code> (optional)
+<div><div>
+  If checked, then the Cloudify deployment inputs are echoed to the Jenkins log.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>envDataLocation</code> (optional)
+<div><div>
+ <p>Path to a file that will contain the created environment's data. If not provided, the environment data won't be written.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>parameters</code> (optional)
+<ul><li><b>Type:</b> <code>java.util.Map&lt;java.lang.String, java.lang.Object&gt;</code></li>
+</ul></li>
+<li><code>parametersAsString</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>parametersFile</code> (optional)
+<div><div>
+ <p>Path, relative to the Jenkins workspace root, of a YAML/JSON file containing parmaeters to pass to the template.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>regionName</code> (optional)
+<div><div>
+ <p>AWS region to use. If not specified, the value of the <code>aws_region_name</code> secret is used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>stackName</code> (optional)
+<div><div>
+ <p>Name of the new stack.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>templateBody</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>templateBucketName</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>templateFile</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>templateResourceName</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>templateUrl</code> (optional)
+<div><div>
+ <p>URL of the Terraform template. May be a ZIP, <code>tar.gz</code>, or a Git repository.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="createcloudifyenv-create-cloudify-environment"><a class="anchor" href="#createcloudifyenv-create-cloudify-environment"></a><code>createCloudifyEnv</code>: Create Cloudify Environment</h3>
+<div><div>
+ <p>Creates a topology from an environment blueprint.</p>
+ <p>The "Output File" parameter denotes where the new environment's outputs will be written to. Later build steps can inspect this file in order to grab information pertinent to them (such as IP addresses, user names and so forth).</p>
+ <p> All input fields support standard Jenkins parameters' expansion. For example, the string <code>${app_name}</code> will be expanded, in runtime, to the value of a build parameter called <code>app_name</code> . </p>
+ <p>For explanation about the format of the outputs file, refer to the help tooltip for that parameter.</p>
+</div></div>
+<ul><li><code>blueprintId</code> (optional)
+<div><div>
+ <p>Unique identifier for the created deployment.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>debugOutput</code> (optional)
+<div><div>
+ If checked, then printed Cloudify events and logs will include debug-level records.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>deploymentId</code> (optional)
+<div><div>
+ <p>Identifies the blueprint to create a deployment off.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>echoInputs</code> (optional)
+<div><div>
+  If checked, then the Cloudify deployment inputs are echoed to the Jenkins log.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>echoOutputs</code> (optional)
+<div><div>
+ At the end of the build step, print the outputs and capabilities to the console.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>inputs</code> (optional)
+<div><div>
+ <p> A YAML/JSON containing inputs for the deployment. These inputs will be merged with inputs provided through the " <code>inputs file</code> " parameter. </p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>inputsFile</code> (optional)
+<div><div>
+ <p> A path (relative to the workspace root) to a YAML/JSON file containing inputs for the deployment. These inputs will be merged with inputs provided through the " <code>inputs</code> " parameter. </p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>mapping</code> (optional)
+<div><div>
+ <p>If specified, this YAML/JSON will be used to transform a YAML/JSON coming from the "inputs file" parameter. This is useful if the "inputs file" is the result of a different Cloudify environment build.</p>
+ <p>This parameter must not be provided if "mapping file" is provided.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>mappingFile</code> (optional)
+<div><div>
+ <p>If specified, this YAML/JSON file will be used to transform a YAML/JSON coming from the "inputs file" parameter. This is useful if the "inputs file" is the result of a different Cloudify environment build.</p>
+ <p>This parameter must not be provided if "mapping" is provided.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>outputFile</code> (optional)
+<div><div>
+ <p>Name of file into which the deployment's outputs and capabilities will be written. The file will be a JSON, adhering to the following format:</p>
+ <pre>{
+    "outputs": &lt;outputs_dictionary&gt;,
+    "capabilities": &lt;capabilities_dictionary&gt;
+}
+	</pre>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>skipInstall</code> (optional)
+<div><div>
+ Only create a Cloudify deployment; skip running the <code>install</code> workflow.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<div><div>
+ <p>Cloudify tenant to operate on. If left empty, then the default tenant (defined in the plugin's configuration page) will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="deletecloudifyblueprint-delete-cloudify-blueprint"><a class="anchor" href="#deletecloudifyblueprint-delete-cloudify-blueprint"></a><code>deleteCloudifyBlueprint</code>: Delete Cloudify Blueprint</h3>
+<div><div>
+ Use this step to delete a Cloudify blueprint from Cloudify Manager.
+</div></div>
+<ul><li><code>blueprintId</code> (optional)
+<div><div>
+ ID of blueprint to delete.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<div><div>
+ <p>Cloudify tenant to operate on. If left empty, then the default tenant (defined in the plugin's configuration page) will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="deletecloudifyenv-delete-cloudify-environment"><a class="anchor" href="#deletecloudifyenv-delete-cloudify-environment"></a><code>deleteCloudifyEnv</code>: Delete Cloudify Environment</h3>
+<div><div>
+ Deletes a Cloudify environment.
+</div></div>
+<ul><li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>debugOutput</code> (optional)
+<div><div>
+ If checked, then printed Cloudify events and logs will include debug-level records.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>deleteBlueprintIfLast</code> (optional)
+<div><div>
+ <p>If checked, and this is the last environment for the associated blueprint, then also delete the blueprint.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>deploymentId</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>ignoreFailure</code> (optional)
+<div><div>
+ <p>If checked, then failures during the removal of the environment will be ignored.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>skipUninstall</code> (optional)
+<div><div>
+ Only delete the Cloudify deployment; skip running the <code>uninstall</code> workflow.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<div><div>
+ <p>Cloudify tenant to operate on. If left empty, then the default tenant (defined in the plugin's configuration page) will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="executecloudifyworkflow-execute-cloudify-workflow"><a class="anchor" href="#executecloudifyworkflow-execute-cloudify-workflow"></a><code>executeCloudifyWorkflow</code>: Execute Cloudify Workflow</h3>
+<div><div>
+ This step executes a workflow on Cloudify Manager.
+</div></div>
+<ul><li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>debugOutput</code> (optional)
+<div><div>
+ If checked, then printed Cloudify events and logs will include debug-level records.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>deploymentId</code> (optional)
+<div><div>
+ ID of the Cloudify environment to delete.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>executionParameters</code> (optional)
+<div><div>
+ <p>Parameters to pass to the execution, in YAML/JSON format.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>printLogs</code> (optional)
+<div><div>
+ If checked, then the execution's events and logs are printed to the build log. Note that this implies "wait for completion".
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<div><div>
+ <p>Cloudify tenant to operate on. If left empty, then the default tenant (defined in the plugin's configuration page) will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>waitForCompletion</code> (optional)
+<div><div>
+ If checked, then the build waits for the execution to finish. If the execution ends in any way other than success, the build step will fail.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>workflowId</code> (optional)
+<div><div>
+ <p>The ID of the workflow to execute.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="cfykubernetes-create-kubernetes-resources"><a class="anchor" href="#cfykubernetes-create-kubernetes-resources"></a><code>cfyKubernetes</code>: Create Kubernetes Resources</h3>
+<ul><li><code>allowNodeRedefinition</code> (optional)
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>apiKeyCredentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials entry that contains the API key.</p>
+ <p>This parameter is optional; the API key may also be provided through "API options", however this method is preferred.</p>
+ <p>If provided, then this credentials entry must either be of type "text" or "file". In the latter case, the file is read as-is and the resultant string is used as the API credentials.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>apiKeyFile</code> (optional)
+<div><div>
+ <p>Path to file, relative to the Jenkins workspace, containing the API key.</p>
+ <p>This parameter is optional, as the API key may be provided by other means.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>caCert</code> (optional)
+<div><div>
+ Path, relative to the workspace's root, of a file containing the CA certificates store to use for verifying the Kubernetes host's certificate.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>debugOutput</code> (optional)
+<div><div>
+ If checked, then printed Cloudify events and logs will include debug-level records.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>definition</code> (optional)
+<ul><li><b>Type:</b> <code>java.util.Map&lt;java.lang.String, java.lang.Object&gt;</code></li>
+</ul></li>
+<li><code>definitionAsString</code> (optional)
+<div><div>
+  The Kubernetes application definition.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>definitionFile</code> (optional)
+<div><div>
+  Path, relative to the Jenkins workspace root, to a file containing the Kubernetes application definition.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>deploymentId</code> (optional)
+<div><div>
+ <p>ID to assign to the created Cloudify deployment. If not provided, one will be randomly generated. You can obtain the deployment ID from the "environment data" output file.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>echoEnvData</code> (optional)
+<div><div>
+ <p>If checked, then the created environment's data will be printed to the job's log.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>echoInputs</code> (optional)
+<div><div>
+  If checked, then the Cloudify deployment inputs are echoed to the Jenkins log.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>envDataLocation</code> (optional)
+<div><div>
+ <p>Path to a file that will contain the created environment's data. If not provided, the environment data won't be written.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>gcpCredentialsFile</code> (optional)
+<div><div>
+ <p>A YAML/JSON file containing GCP service account details, to use for authentication against GCP.</p>
+ <p>This parameter is optional, and is only relevant for authenticating against GCP.</p>
+ <p>If provided, it should follow the same layout as described in the "GCP Credentials ID" parameter.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>gcpCredentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to be used for authentication against GCP.</p>
+ <p>This parameter is optional, and is only relevant for authenticating against GCP.</p>
+ <p>If provided, it should be the ID of either a string-type or file-type credentials entry, with the standard GCP service account YAML/JSON syntax:</p>
+ <pre>{
+  "type": "...",
+  "project_id": "...",
+  "private_key_id": "...",
+  "private_key": "...",
+  "client_email": "...",
+  "client_id": "...",
+  "auth_uri": "...",
+  "token_uri": "...",
+  "auth_provider_x509_cert_url": "...",
+  "client_x509_cert_url": "..."
+}
+	</pre>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>k8sDebug</code> (optional)
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>k8sMaster</code> (optional)
+<div><div>
+ The Kubernetes master host to use. This can also be provided through the API Options field; it is available as a separate parameter for convenience.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>namespace</code> (optional)
+<div><div>
+  The application's namespace. <b>Note:</b> value provided here will overwrite the <code>namespace</code> value in the <code>options</code> field, if exists.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>options</code> (optional)
+<ul><li><b>Type:</b> <code>java.util.Map&lt;java.lang.String, java.lang.Object&gt;</code></li>
+</ul></li>
+<li><code>optionsAsString</code> (optional)
+<div><div>
+  Kubernetes options.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>optionsFile</code> (optional)
+<div><div>
+  Path, relative to the Jenkins workspace root, to a file containing Kubernetes options.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>skipSslVerification</code> (optional)
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>sslCertFile</code> (optional)
+<div><div>
+ Path, relative to the workspace's root, of a file containing the certificate presented to the Kubernetes host.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>sslKeyFile</code> (optional)
+<div><div>
+ Path, relative to the workspace's root, of a file containing the key for the certificate presented to the Kubernetes host.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>validateStatus</code> (optional)
+<div><div>
+  If checked, then the status of the Kubernetes application is validated after provisioning.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="cfyoutputstoinputs-convert-cloudify-environment-outputscapabilities-to-inputs"><a class="anchor" href="#cfyoutputstoinputs-convert-cloudify-environment-outputscapabilities-to-inputs"></a><code>cfyOutputsToInputs</code>: Convert Cloudify Environment Outputs/Capabilities to Inputs</h3>
+<div><div>
+ <p>This step maps outputs and capabilities, of an environment created by Cloudify, into inputs of another deployment.</p>
+ <p>This step takes two inputs:</p>
+ <ul>
+  <li>A JSON file in the format generated by the "Build Cloudify Environment" ("outputs file"). For more information, refer to the tooltip of the "Outputs File" parameter.</li>
+  <li>A JSON file (or string) containing the mapping.</li>
+ </ul>
+ <p>The format of the mapping JSON is as follows:</p>
+ <pre>{
+    "outputs": {
+    	"&lt;output_name&gt;": "&lt;input_name&gt;",
+    	"&lt;output_name&gt;": "&lt;input_name&gt;",
+    	...
+    },
+    "capabilities": {
+    	"&lt;capability_name&gt;": "&lt;input_name&gt;",
+    	"&lt;capability_name&gt;": "&lt;input_name&gt;",
+    	...
+    }
+}
+	</pre>
+ <p>At the end, a file will be generated, containing a JSON compatible with Cloudify's standard "Deployment Inputs" structure, namely:</p>
+ <pre>{
+	"&lt;input_name&gt;": "&lt;intput_value&gt;",
+	"&lt;input_name&gt;": "&lt;intput_value&gt;",
+	...
+	</pre>
+ <p>For example, if the "outputs file" is as follows:</p>
+ <pre>{
+	"outputs": {
+		"endpoint": "10.0.0.130",
+		"username": "centos"
+	},
+	"capabilities": {
+		"public_key": "/tmp/public_key"
+	}
+}
+	</pre>
+ <p>And the mapping is as follows:</p>
+ <pre>{
+	"outputs": {
+		"username": "app_username"
+	},
+	"capabilities": {
+		"public_key": "app_data"
+	}
+}
+	</pre>
+ <p>Then the resultant inputs file will be as follows:</p>
+ <pre>{
+	"app_username": "centos",
+	"app_data": "/tmp/public_key"
+}
+	</pre>
+</div></div>
+<ul><li><code>credentialsId</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>inputsLocation</code> (optional)
+<div><div>
+ <p>Path to the inputs file to be created.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>mapping</code> (optional)
+<div><div>
+ <p>A JSON containing mapping between outputs/capabilities and inputs. For information about the structure, refer to the tooltip of this build step.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>mappingLocation</code> (optional)
+<div><div>
+ <p>A JSON containing mapping between outputs/capabilities and inputs. For information about the structure, refer to the tooltip of this build step.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>outputsLocation</code> (optional)
+<div><div>
+ <p>Location of the outputs JSON file, containing outputs and capabilities of another deployment. The file must be in the following format:</p>
+ <pre>{
+    "outputs": {
+    	"&lt;output_name&gt;": "&lt;output_value&gt;",
+    	"&lt;output_name&gt;": "&lt;output_value&gt;",
+    	...
+    },
+    "capabilities": {
+    	"&lt;capability_name&gt;": "&lt;capability_value&gt;",
+    	"&lt;capability_name&gt;": "&lt;capability_value&gt;",
+    	...
+    }
+}
+	</pre>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<div><div>
+ <p>Cloudify tenant to operate on. If left empty, then the default tenant (defined in the plugin's configuration page) will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="cfyterraform-apply-terraform-module"><a class="anchor" href="#cfyterraform-apply-terraform-module"></a><code>cfyTerraform</code>: Apply Terraform Module</h3>
+<ul><li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>debugOutput</code> (optional)
+<div><div>
+ If checked, then printed Cloudify events and logs will include debug-level records.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>deploymentId</code> (optional)
+<div><div>
+ <p>ID to assign to the created Cloudify deployment. If not provided, one will be randomly generated. You can obtain the deployment ID from the "environment data" output file.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>echoEnvData</code> (optional)
+<div><div>
+ <p>If checked, then the created environment's data will be printed to the job's log.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>echoInputs</code> (optional)
+<div><div>
+  If checked, then the Cloudify deployment inputs are echoed to the Jenkins log.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>envDataLocation</code> (optional)
+<div><div>
+ <p>Path to a file that will contain the created environment's data. If not provided, the environment data won't be written.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>environmentVariables</code> (optional)
+<ul><li><b>Type:</b> <code>java.util.Map&lt;java.lang.String, java.lang.String&gt;</code></li>
+</ul></li>
+<li><code>environmentVariablesAsString</code> (optional)
+<div><div>
+ <p>YAML/JSON containing environment variables to pass to the Terraform process. The provided string will be expanded for environment variables (<code>${VAR_NAME}</code>).</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>environmentVariablesFile</code> (optional)
+<div><div>
+ <p>Path, relative to the Jenkins workspace root, of a YAML/JSON file containing environment variables to pass to the Terraform process.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>executable</code> (optional)
+<div><div>
+ <p>Path, on Cloudify Manager, of the Terraform executable. If omitted, the value of the <code>terraform_executable</code> Cloudify secret will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>pluginsDirectory</code> (optional)
+<div><div>
+ <p>Path, on Cloudify Manager, of Terraform's plugins directory. If omitted, the value of the <code>terraform_plugins_dir</code> Cloudify secret will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>storageDirectory</code> (optional)
+<div><div>
+ <p>Path, on Cloudify Manager, of Terraform's storage directory. If omitted, the value of the <code>terraform_storage_dir</code> Cloudify secret will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>templateUrl</code> (optional)
+<div><div>
+ <p>URL of the Terraform template. May be a ZIP, <code>tar.gz</code>, or a Git repository.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>variables</code> (optional)
+<ul><li><b>Type:</b> <code>java.util.Map&lt;java.lang.String, java.lang.Object&gt;</code></li>
+</ul></li>
+<li><code>variablesAsString</code> (optional)
+<div><div>
+ <p>YAML/JSON containing variables to pass to the Terraform template. The provided string will be expanded for environment variables (<code>${VAR_NAME}</code>).</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>variablesFile</code> (optional)
+<div><div>
+ <p>Path, relative to the Jenkins workspace root, of a YAML/JSON file containing parmaeters to pass to the template.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="uploadcloudifyblueprint-upload-cloudify-blueprint"><a class="anchor" href="#uploadcloudifyblueprint-upload-cloudify-blueprint"></a><code>uploadCloudifyBlueprint</code>: Upload Cloudify Blueprint</h3>
+<div><div>
+ <p>Use this step to upload a blueprint to Cloudify Manager.</p>
+ <p>Two paramters are mandatory:</p>
+ <ul>
+  <li>Blueprint ID</li>
+  <li>Main blueprint file name</li>
+ </ul>
+ <p>In addition, exactly one of the following parameters is mandatory:</p>
+ <ul>
+  <li>Blueprint archive path</li>
+  <li>Blueprint archive URL</li>
+  <li>Blueprint's root directory </li>
+  <li> </li>
+ </ul>
+ <p>If you provide a blueprint's root directory, then the entire directory contents are packaged into a blueprint archive.</p>
+</div></div>
+<ul><li><code>archivePath</code> (optional)
+<div><div>
+ Path (relative to the workspace root) of the blueprint archive.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>archiveUrl</code> (optional)
+<div><div>
+ URL of the blueprint archive.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>blueprintId</code> (optional)
+<div><div>
+ ID to assign to the uploaded blueprint.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>mainFileName</code> (optional)
+<div><div>
+ Name of the YAML file containing the main entry point to the blueprint.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>rootDirectory</code> (optional)
+<div><div>
+ Directory where the blueprint is located.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<div><div>
+ <p>Cloudify tenant to operate on. If left empty, then the default tenant (defined in the plugin's configuration page) will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="uploadcloudifyblueprint-upload-cloudify-plugin"><a class="anchor" href="#uploadcloudifyblueprint-upload-cloudify-plugin"></a><code>uploadCloudifyBlueprint</code>: Upload Cloudify Plugin</h3>
+<div><div>
+ Use this step to upload a plugin to Cloudify Manager.
+</div></div>
+<ul><li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>outputLocation</code> (optional)
+<div><div>
+ Location where the plugin information, in JSON format, will be stored.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<div><div>
+ <p>Cloudify tenant to operate on. If left empty, then the default tenant (defined in the plugin's configuration page) will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>wagonLocation</code> (optional)
+<div><div>
+ URL of the Wagon file.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>yamlLocation</code> (optional)
+<div><div>
+  URL of the <code>plugin.yaml</code> file of the plugin.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="wrapclass-cloudifybuildwrapper-cloudify-environment"><a class="anchor" href="#wrapclass-cloudifybuildwrapper-cloudify-environment"></a><code>wrap([$class: 'CloudifyBuildWrapper'])</code>: Cloudify Environment</h3>
+<div><div>
+ <p>Applies a Cloudify "Wrapper" around this job: </p>
+ <p> </p>
+ <ul>
+  <li>A Cloudify deployment will be created at the beginning of the job.</li>
+  <li>The deployment will be torn down at the end of the job.</li>
+ </ul>
+</div></div>
+<ul><li><code>blueprintArchiveUrl</code> (optional)
+<div><div>
+ <p>URL to the blueprint's archive.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>blueprintId</code> (optional)
+<div><div>
+ <p>For newly uploaded blueprints, this will be the new blueprint's ID.</p>
+ <p>For existing blueprints, this should be the existing blueprint's ID.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>blueprintMainFile</code> (optional)
+<div><div>
+ <p>The name of the YAML file that is to be considered the blueprint's main YAML.</p>
+ <p>In order to use an existing blueprint, leave this field blank.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>blueprintRootDirectory</code> (optional)
+<div><div>
+ <p>The path, relative to the build's workspace, to the new blueprint's root.</p>
+ <p>In order to use an existing blueprint, leave this field blank.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>credentialsId</code> (optional)
+<div><div>
+ <p>The ID of the credentials to use when accessing Cloudify. Parameters' expansion is supported when using freestyle jobs.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>debugOutput</code> (optional)
+<div><div>
+ If checked, then printed Cloudify events and logs will include debug-level records.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>deploymentId</code> (optional)
+<div><div>
+ <p>ID of the deployment to create.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>echoInputs</code> (optional)
+<div><div>
+  If checked, then the Cloudify deployment inputs are echoed to the Jenkins log.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>echoOutputs</code> (optional)
+<div><div>
+ At the end of the build step, print the outputs and capabilities to the console.
+</div></div>
+
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>ignoreFailureOnTeardown</code> (optional)
+<ul><li><b>Type:</b>  <code>boolean</code></li></ul></li>
+<li><code>inputs</code> (optional)
+<div><div>
+ <p>Inputs to pass to the new deployment, in YAML/JSON format.</p>
+ <p>Inputs provided here will be merged with inputs provided through a file.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>inputsLocation</code> (optional)
+<div><div>
+ <p>A path, relative to the workspace's root, to a YAML/JSON file containing inputs for the new deployment.</p>
+ <p>Inputs provided here will be merged with inputs provided through text.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>outputsLocation</code> (optional)
+<div><div>
+ <p>A path, relative to the workspace's root, to a JSON file that will contain the outputs and capabilities of the new deployment.</p>
+ <p>If not provided, the file won't be created.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+<li><code>tenant</code> (optional)
+<div><div>
+ <p>Cloudify tenant to operate on. If left empty, then the default tenant (defined in the plugin's configuration page) will be used.</p>
+</div></div>
+
+<ul><li><b>Type:</b>  <code>String</code></li></ul></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class="container"></div>
+<!-- starting partial _feedback-footer.html -->
+<!-- HTML inclusion for chapter and section layouts (i.e. as footers) as well as
+     for use in AsciiDoc file inclusions. -->
+
+<!--
+This feedback form was prepared from a Google Form, based on the techniques in
+the following documentation sources:
+https://codepen.io/learningcode/post/customize-a-google-form-for-your-website,
+https://mrhaki.blogspot.com.au/2014/06/awesome-asciidoc-include-raw-html.html,
+https://www.freshtechtips.com/2013/05/custom-google-drive-contact-form.html,
+https://stackoverflow.com/questions/24436165/set-value-of-hidden-input-inside-form
+-->
+
+<!-- Feedback form functionality in JavaScript - refer to comments in this file
+     for details on the functionality. -->
+<script>
+var feedbackForm = {
+    formKey : 'e/1FAIpQLSfCEexH09x_-ytEyE7wetizqOvE_-06WkK89dpBLEJcYnOp8w'
+};
+$(document).ready(function() {
+    window.onload = feedbackForm.start(window.location.href);
+});
+</script>
+<script src="/js/feedback-form-functionality.js"></script>
+
+<p><a href="#feedback" data-toggle="collapse">Was this page helpful?</a></p>
+
+<div id="feedback" class="collapse">
+
+<p>Please submit your feedback about this page through this
+<a href="/doc/feedback-form/">quick form</a>.</p>
+
+<p>Alternatively, if you don't wish to complete the quick form, you can simply
+indicate if you found this page helpful?</p>
+
+<!-- Redirects to custom "thank you" page once form is submitted. -->
+<script type="text/javascript">
+var submitted=false;
+</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+onload="if(submitted) {window.location='/doc/thank-you-for-your-feedback/';}">
+</iframe>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSfCEexH09x_-ytEyE7wetizqOvE_-06WkK89dpBLEJcYnOp8w/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
+
+<!-- Set the value of the current URL into the form. -->
+<input type="hidden" name="entry.1246830226" id="current-url" value=""/>
+
+<!-- The answer bit -->
+<p><input type="radio" name="entry.790002525" id="h1" value="Yes" required/>
+<label for="h1">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="entry.790002525" id="h2" value="No"/>
+<label for="h2">No</label></p>
+
+<!-- The CAPTCHA bit -->
+
+<p><label id="ssTestLabel" for="ssTestValue"></label><br/>
+<input type="text" name="ssTestValue" value="" id="ssTestValue"/></p>
+
+<!-- Submit button -->
+
+<p><input class="button" type="submit" value="Submit"/></p>
+
+</form>
+
+<p>See existing feedback <a href="https://docs.google.com/spreadsheets/d/1IIdpVs39JDYKg0sLQIv-MNO928qcGApAIfdW5ohfD78" target="_blank" rel="noreferrer noopener">here</a>.</p>
+
+</div>
+
+<!-- ending partial _feedback-footer.html -->
+<script>
+  $(function() {
+    var collapsibleList = function(e){
+      for (var i=1; i < e.length; i++) {
+        var li = e[i];
+        if (li.tagName == "LI" && li.children[0]) {
+          var r=li.children[0].innerText;
+  
+          var plus = $("<button class='btn btn-outline-secondary btn-xs'>+</button>");
+          var minus = $("<button class='btn btn-outline-secondary btn-xs'>-</button>");
+          $(li.children[0]).prepend(minus);
+  
+          var expander = $("<li/>").append($("<code/>").text(r)).prepend(plus);
+          var toggle = (function() {
+            this.next().toggleClass("collapse");
+            this.toggleClass("collapse")
+          }).bind(plus.parent());
+          plus.on("click", toggle);
+          minus.on("click", toggle);
+          expander.insertBefore($(li));
+          $(li).addClass("collapse");
+        }
+      }
+    };
+    $("ul>b:contains('Nested')").each(function(e,f){
+      collapsibleList($(f).parent().children())
+    });
+  });
+</script>
+
+</div>
+</div>
+</div>
+
+
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/anchor-js/anchor.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/js/tether.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/js/bootstrap.min.js"></script>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="license-box">
+<div id="creativecommons">
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+<p>
+<img alt="Creative Commons Attribution-ShareAlike license" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+</p>
+</a>
+<p>
+The content driving this site is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 license.
+</p>
+</div>
+</div>
+</div>
+<div class="links col-md-8">
+<div class="container">
+<div class="row">
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Resources</h5>
+<ul class="resources">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Downloads
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc">
+Documentation
+</a>
+</li>
+<li>
+<a href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Contributing
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Project</h5>
+<ul class="project">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project">
+Structure and governance
+</a>
+</li>
+<li>
+<a href="https://issues.jenkins.io">
+Issue tracker
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://ci.jenkins.io">
+Jenkins on Jenkins
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Community</h5>
+<ul class="community">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists">
+Mailing lists
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/chat">
+Chats
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/sigs">
+Special Interest Groups
+</a>
+</li>
+<li>
+<a href="https://twitter.com/jenkinsci">
+Twitter
+</a>
+</li>
+<li>
+<a href="https://reddit.com/r/jenkinsci">
+Reddit
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Other</h5>
+<ul class="other">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/conduct">
+Code of Conduct
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press information
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/merchandise">
+Merchandise
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-000000-0', 'auto');
+ga('send', 'pageview');
+ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+  !function(d,s,id) {
+    var js, fjs=d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id=id;
+      js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,"script","twitter-wjs");
+  
+  $(function(){
+    var $body = $(document.body);
+    $(".nav-link.dropdown-toggle").on("mousedown", function(){
+      $body.addClass("no-outline");
+    })
+    $body.on("keydown", function(){
+      $body.removeClass("no-outline");
+    })
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+docsearch({
+  apiKey: '9df657b854f8c42d9887b34bc275db4d',
+  indexName: 'jenkins',
+  inputSelector: 'input.searchbox',
+  algoliaOptions: { 'facetFilters': ["tags:en"] },
+  debug: false
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+Google Summer of Code. Information for mentors
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="This page aggregates links to internal and external resources for Google Summer of Code mentors" name="description">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<!-- Favicons -->
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/site.webmanifest" rel="manifest">
+<link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon">
+<meta content="#2b5797" name="msapplication-TileColor">
+<meta content="#ffffff" name="theme-color">
+<meta content="Google Summer of Code. Information for mentors" name="apple-mobile-web-app-title">
+<!-- Twitter Card data -->
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@JenkinsCI" name="twitter:site">
+<meta content="Google Summer of Code. Information for mentors" name="twitter:title">
+<meta content="This page aggregates links to internal and external resources for Google Summer of Code mentors" name="twitter:description">
+<meta content="@JenkinsCI" name="twitter:creator">
+<!-- Twitter Summary card images must be at least 120x120px -->
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/gsoc/opengraph.png" name="twitter:image">
+<!-- Open Graph data -->
+<meta content="Google Summer of Code. Information for mentors" property="og:title">
+<meta content="article" property="og:type">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/mentors/index.html" property="og:url">
+<meta content="This page aggregates links to internal and external resources for Google Summer of Code mentors" name="og:description">
+<meta content="Google Summer of Code. Information for mentors" property="og:site_name">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/gsoc/opengraph.png" name="og:image">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/css/tether.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-icons.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/jenkins.css" media="screen" rel="stylesheet">
+<!-- Non-obtrusive CSS styles -->
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/ionicons/css/ionicons.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/footer.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-awesome.min.css" media="screen" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/jquery/jquery.min.js"></script>
+<!-- starting partial toptoolbar.html.haml -->
+<nav class="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top" id="ji-toolbar">
+<a class="navbar-brand" href="https://halkeye.github.io/jenkins.io/add-algolia">
+Jenkins
+</a>
+<button class="navbar-toggler" data-target="#CollapsingNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="CollapsingNavbar">
+<ul class="nav navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+<!-- starting partial cdf_logo.html.haml -->
+<svg width="36" height="18" xmlns="http://www.w3.org/2000/svg" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.23 44.77 362.70 271.95"><defs><linearGradient id="a" x1="359.765" x2="104.082" y1="134.295" y2="124.577" gradientTransform="matrix(1 0 0 -1 0 439.068)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ed1c24"/><stop offset="1" stop-color="#f7941d"/></linearGradient><linearGradient id="b" x1="355.202" x2="99.519" y1="254.467" y2="244.749" xlink:href="#a"/><linearGradient id="c" x1="183.903" x2="10.612" y1="227.598" y2="221.023" xlink:href="#a"/><linearGradient id="d" x1="367.119" x2="157.995" y1="265.311" y2="257.091" xlink:href="#a"/></defs><path fill="#c49a6c" d="M231.52 309.278c2.483-.332 4.895-.77 7.255-1.329s4.649-1.206 6.991-1.957c13.494-4.58 25.187-12.952 36.374-24.593l-.14-.175c-14.944 15.486-30.693 25.344-50.48 28.054z"/><path fill="url(#a)" d="M224.232 309.96h.332c1.084 0 2.15-.14 3.216-.228a93.844 93.844 0 0 1-3.233.227z"/><path fill="url(#b)" d="M284.692 187.187l-.122.192.122-.192z"/><path fill="url(#c)" d="M146.145 231.847a150.844 150.844 0 0 1-12.97 15.862c-7.582 7.889-15.507 13.563-24.652 16.667a47.832 47.832 0 0 1-4.738 1.326 56.959 56.959 0 0 1-4.916.9 38.32 38.32 0 0 1-1.682.214l-.912.083c-.723.059-1.445.118-2.18.154h-3.068a42.325 42.325 0 0 1-9.192-1.043 49.977 49.977 0 0 1-6.764-2.002 43.097 43.097 0 0 1-4.525-1.954c-1.493-.77-2.961-1.516-4.407-2.37a59.5 59.5 0 0 1-17.105-15.399 59.714 59.714 0 0 1-2.914-4.311 53.09 53.09 0 0 1-1.291-2.263 51.985 51.985 0 0 1-2.263-4.738 46.72 46.72 0 0 1 0-36.426 51.986 51.986 0 0 1 2.263-4.738 54.14 54.14 0 0 1 1.291-2.263 59.742 59.742 0 0 1 2.914-4.311 59.714 59.714 0 0 1 17.105-15.4 60.828 60.828 0 0 1 4.407-2.369q2.217-1 4.525-1.777a49.976 49.976 0 0 1 6.906-2.073 42.325 42.325 0 0 1 9.192-1.042h3.128c.722 0 1.445.094 2.155.154l1.043.106 1.019.119c1.8.237 3.553.557 5.271.96.853.2 1.694.426 2.523.663a51.186 51.186 0 0 1 11.846 5.176 59.645 59.645 0 0 1 4.395 2.89 74.485 74.485 0 0 1 8.386 7.108q2.038 1.99 4.063 4.193l.083-.13a159.395 159.395 0 0 1 11.064 13.942c5.437-8.576 13.658-21.464 16.584-25.74 1.185-1.718 2.37-3.46 3.66-5.212-13.54-16.513-29.827-30.23-51.587-36.082h-.154a89.397 89.397 0 0 0-3.187-.794l-.45-.107a92.565 92.565 0 0 0-3.151-.627l-.628-.119a80.578 80.578 0 0 0-3.743-.569h-.142a58.29 58.29 0 0 0-2.073-.236h-.391l-1.872-.166h-.568l-1.754-.119h-.675l-1.777-.07h-3.115c-46.447-.25-87.125 40.476-87.125 86.911s40.725 87.173 87.172 87.173h3.14l1.729-.071h.734l1.67-.095h.676l1.706-.154h.568l1.813-.213.414-.06 1.967-.272h.213a125.91 125.91 0 0 0 3.553-.628l.652-.142c.96-.201 1.907-.415 2.855-.64l.58-.142a86.66 86.66 0 0 0 3.009-.817l.237-.071c20.73-6.077 36.425-19.392 49.55-35.277-2.037-3.068-3.4-5.366-4.039-6.48z"/><path fill="url(#d)" d="M318.05 51.733v94.66a85.514 85.514 0 0 0-52.595-18.729h-3.115l-1.777.072-.7.047-1.752.118h-.569l-1.871.166h-.391c-.7.071-1.386.142-2.073.237h-.154c-1.256.154-2.5.355-3.732.569l-.628.118c-1.066.19-2.108.403-3.15.628l-.45.107c-30.35 6.858-50.333 28.808-66.822 52.82-.7 1.018-1.35 2.049-2.038 3.068-2.25 3.423-5.46 8.422-8.635 13.397-4.17 6.527-8.292 13.03-9.939 15.66l20.624 32.137s21.997 40.465 61.68 51.482l.237.07c.995.297 2.002.558 3.009.818l.58.142c.936.237 1.896.439 2.855.64l.652.142c1.184.225 2.369.439 3.553.628h.214l1.966.273.415.059 1.812.213h.569l1.705.154h.676l1.67.095h.734l1.73.07h3.139c54.703 0 86.355-30.964 87.149-85.063V51.733zm-52.595 215.403h-3.068c-.734 0-1.457-.095-2.18-.154l-.912-.083c-.568-.06-1.125-.13-1.682-.213a49.077 49.077 0 0 1-9.571-2.275 49.612 49.612 0 0 1-6.634-2.83 55.792 55.792 0 0 1-6.254-3.768 63.068 63.068 0 0 1-3.009-2.215 82.399 82.399 0 0 1-8.683-7.925l-.095.119c-1.255-1.303-2.487-2.69-3.731-4.11-.154-.167-.296-.356-.45-.534-.628-.722-1.256-1.445-1.884-2.215s-1.125-1.398-1.682-2.097-.888-1.101-1.338-1.682a184.467 184.467 0 0 1-6.053-8.292c-.7-.995-1.398-2.025-2.109-3.056-.379-.569-.77-1.184-1.185-1.73-.675-1.018-1.362-2.013-2.049-3.056l-.355-.545c-1.185-1.812-2.37-3.684-3.649-5.603q2.95-4.608 5.817-8.86c1.907-2.831 3.79-5.556 5.662-8.138s3.72-5.046 5.591-7.38 3.72-4.525 5.603-6.586q2.026-2.203 4.063-4.194c1.374-1.338 2.748-2.594 4.158-3.778s2.807-2.287 4.252-3.329a57.594 57.594 0 0 1 7.748-4.62c.331-.166.663-.367 1.006-.533l.226-.118c1.41-.652 2.843-1.185 4.3-1.73l.485-.201c.273-.083.557-.142.83-.237a44.943 44.943 0 0 1 3.34-.948l1.374-.343a60.798 60.798 0 0 1 4.738-.841l1.019-.119 1.042-.106c.711 0 1.434-.119 2.156-.154h3.128a42.431 42.431 0 0 1 4.572.26 48.011 48.011 0 0 1 6.93 1.35c1.54.427 3.08.925 4.596 1.505a48.724 48.724 0 0 1 4.525 1.955c1.493.722 2.961 1.516 4.407 2.369s2.866 1.8 4.24 2.784 2.725 2.049 4.028 3.174a58.459 58.459 0 0 1 8.837 9.477 59.73 59.73 0 0 1 2.914 4.312 51.067 51.067 0 0 1 5.318 11.916 47.38 47.38 0 0 1 1.185 5.165 45.567 45.567 0 0 1 .71 8.09c.072 35.964-16.062 52.122-52.227 52.122z"/></svg>
+
+<!-- ending partial cdf_logo.html.haml -->
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://cd.foundation/">
+What is CDF?
+</a>
+<a class="dropdown-item feature" href="https://jenkins-x.io/">
+Jenkins X
+</a>
+<a class="dropdown-item feature" href="https://cloud.google.com/tekton/">
+Tekton
+</a>
+<a class="dropdown-item feature" href="https://www.spinnaker.io/">
+Spinnaker
+</a>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Documentation
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book">
+<strong>
+User Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/installing/">
+&nbsp;-&nbsp;Installing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline">
+&nbsp;-&nbsp;Jenkins Pipeline
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/managing/">
+&nbsp;-&nbsp;Managing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/system-administration">
+&nbsp;-&nbsp;System Administration
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/glossary/">
+&nbsp;-&nbsp;Terms and Definitions
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/solutions">
+<strong>
+Solution Pages
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+<strong>
+Tutorials
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/tour/getting-started/">
+&nbsp;-&nbsp;Guided Tour
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+&nbsp;-&nbsp;More Tutorials
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/developer">
+<strong>
+Developer Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+<strong>
+Contributor Guide
+</strong>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Community
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/chat" title="Chat with the rest of the Jenkins community on IRC">
+Chat
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam">
+Meet
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+<a class="dropdown-item feature" href="https://issues.jenkins.io/">
+Issue Tracker
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists" title="Browse Jenkins mailing list archives and/or subscribe to lists">
+Mailing Lists
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item feature" href="https://accounts.jenkins.io/" title="Create/manage your account for accessing wiki, issue tracker, etc">
+Account Management
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/">
+<strong>
+Special Interest Groups
+</strong>
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/advocacy-and-outreach/">
+&nbsp;-&nbsp;Advocacy and Outreach
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/chinese-localization/">
+&nbsp;-&nbsp;Chinese Localization
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/cloud-native/">
+&nbsp;-&nbsp;Cloud Native
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/">
+&nbsp;-&nbsp;Documentation
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/gsoc/">
+&nbsp;-&nbsp;Google Summer of Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/hw-and-eda/">
+&nbsp;-&nbsp;Hardware and EDA
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/pipeline-authoring/">
+&nbsp;-&nbsp;Pipeline Authoring
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/platform/">
+&nbsp;-&nbsp;Platform
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/ux/">
+&nbsp;-&nbsp;User Experience
+</a>
+</div>
+</li>
+<li class="dropdown nav-item">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Subprojects
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/evergreen/">
+Evergreen
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/">
+Google Summer of Code in Jenkins
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/infrastructure/">
+Infrastructure
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam/">
+CI/CD and Jenkins Area Meetups
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jcasc/">
+Jenkins Configuration as Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/remoting/">
+Jenkins Remoting
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/">
+Document Jenkins on Kubernetes
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+About
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/conduct">
+Conduct
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+English
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/zh">
+中文 Chinese
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link btn btn-outline-secondary" href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Download
+</a>
+</li>
+<li class="nav-item searchbox">
+<input aria-label="Search" class="form-control searchbox" placeholder="Search" type="search">
+</li>
+</ul>
+</div>
+</nav>
+<!-- Spacing to make the fixed-top sticky navbar not occlude any content below it -->
+<div class="pt-4">
+&nbsp;
+</div>
+
+<!-- ending partial toptoolbar.html.haml -->
+<!-- starting partial anchors.html.haml -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    for (var i = 1 ; i <= 6 ; i ++) {
+      anchors.add('.container .row .col-lg-9 h' + i);
+    }
+  })
+</script>
+
+<!-- ending partial anchors.html.haml -->
+<div class="container">
+<div class="row body">
+<div class="col-lg-9">
+<h1>
+Google Summer of Code. Information for mentors
+</h1>
+<div class="paragraph">
+<p><span class="image right center"><img src="/images/gsoc/jenkins-gsoc-logo_small.png" alt="Jenkins GSoC"></span></p>
+</div>
+<div class="paragraph">
+<p>This page aggregates links to internal and external resources for Google Summer of Code <strong>mentors</strong>.
+Student resources can be found <a href="/projects/gsoc/students">here</a>.</p>
+</div>
+<div class="sect1">
+<h2 id="links"><a class="anchor" href="#links"></a>Links</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mandatory reading:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://google.github.io/gsocguides/mentor/">GSoC Mentor Guide</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/open-source/gsoc/help/responsibilities#mentor_responsibilities">Mentoring Responsibilities</a></p>
+</li>
+<li>
+<p><a href="https://summerofcode.withgoogle.com/terms/mentor">Google Summer of Code Mentor Participant Agreement</a></p>
+</li>
+<li>
+<p><a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC timeline</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/open-source/gsoc/timeline">Unofficial GSoC timeline</a> (appears to be updated with a few days of lag behind the official one)</p>
+</li>
+<li>
+<p><a href="/conduct">Code of Conduct</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additional links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Mailing list for mentors: <a href="mailto:jenkins-gsoc-2020-mentors@googlegroups.com">jenkins-gsoc-2020-mentors@googlegroups.com</a></p>
+</li>
+<li>
+<p><a href="/projects/gsoc/#orgadmin">Mailing list for contacting Org Admins</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what-do-mentors-get"><a class="anchor" href="#what-do-mentors-get"></a>What do mentors get?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>A student who works full-time in the area of your interest for several months</p>
+</li>
+<li>
+<p>Joint projects with Jenkins experts, lots of fun and ability to study something together</p>
+</li>
+<li>
+<p>Limited-edition of swags from Google and Jenkins project</p>
+</li>
+<li>
+<p>Maybe: Participation in GSoC Mentor Summit and other GSoC events/meetups</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-to-become-a-mentor"><a class="anchor" href="#how-to-become-a-mentor"></a>How to become a mentor?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During GSoC you can join an existing project at any time, including community bonding and coding periods.
+Just send an email to our GSoC mailing list.
+You can also <a href="/projects/gsoc/proposing-project-ideas">propose your own project</a> for GSoC, see below.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="expectations-from-mentors"><a class="anchor" href="#expectations-from-mentors"></a>Expectations from mentors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mentors are expected to&#8230;&#8203;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Be passionate about Jenkins</p>
+</li>
+<li>
+<p>Lead the project in the area of their interest</p>
+</li>
+<li>
+<p>Actively participate in the project during student selection, community bonding and coding phases (March - August)</p>
+</li>
+<li>
+<p>Work in teams of 2+ mentors per 1 each student</p>
+</li>
+<li>
+<p>Dedicate a consistent and significant amount of time, especially during the coding phase (<em>~5 hours</em> per week in a team of two mentors)</p>
+</li>
+<li>
+<p><strong>We recommend to keep the communications with the students in the open, no private emails unless it is a personal matter</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the existing mailing list and channels of the community</p>
+</li>
+<li>
+<p>If you need a new communication channel (new chat room or other) let the Org Admins know</p>
+</li>
+<li>
+<p>It&#8217;s okay to initiate conversations and introductions in private, but:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure the information given to the student is also available in public</p>
+</li>
+<li>
+<p>Make sure that no student is put at an advantage by seeing answers not seen by other students</p>
+</li>
+<li>
+<p>You could create a Q&amp;A in the project description details where questions are anonymized</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Mentoring does <strong>NOT</strong> require strong expertise in Jenkins plugin development.
+The main objective is to guide students and to get them involved in the Jenkins community.
+GSoC org admins will help to find advisers if any special expertise is needed.</p>
+</div>
+<div class="paragraph">
+<p>GSoC is an international program.
+Some events and deadlines in the timeline may coincide with holidays and celebrations around the world.
+Although we do our best to accommodate everyone, it is impossible to change the GSoC timeline.
+<strong>Please communicate your holidays to Org Admins, your co-mentors and your student as soon as possible.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="expectations-from-mentors-per-phase"><a class="anchor" href="#expectations-from-mentors-per-phase"></a>Expectations from mentors per phase</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have divided what mentors should expect in different phases.
+Always refer to the <a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC Timeline</a> for the official timeline, phases and their duration.
+As soon as you become a registered mentor, you will receive via email all timeline updates and reminders.</p>
+</div>
+<div class="paragraph">
+<p>Overall for mentors the time commitment is (for details of activities see below):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#org_application_phase">Call for mentors and organization application phase</a>: 2 to 3 hours per week</p>
+</li>
+<li>
+<p><a href="#org_approval_waiting_phase">Organization approval waiting period</a>: 2 to 3 hours per week</p>
+</li>
+<li>
+<p><a href="#forming_mentor_teams">Mentors and mentor teams</a>: a few hours</p>
+</li>
+<li>
+<p><a href="#student_application_phase">Student exploration and application phase</a>: 2 to 5 hours per week until the student proposal submission deadline</p>
+</li>
+<li>
+<p><a href="#ranking_and_slot_request_phase">Proposal ranking and slot request phase</a>: about 5 hours total until the slot request submission deadline, but because this phase is time critical and short, we insist that you make an extra effort to attend meetings and participate actively in this process (see below for details).</p>
+</li>
+<li>
+<p><a href="#community_bonding_phase">Community Bonding</a>: 5 to 8 hours per week, this phase is critical for the success of the project, make sure you get on the ball right away.</p>
+</li>
+<li>
+<p><a href="#coding_periods">Coding Periods</a>: 5 to 8 hours per week until the end of the program. The number of hours tend to vary, more at the start, less at the end, not everyone is the same.</p>
+</li>
+<li>
+<p><a href="#eval_periods">Evaluation periods</a>: Same as coding.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="org_application_phase"><a class="anchor" href="#org_application_phase"></a>Call for mentors and organization application phase</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> it is the time you spend reading about the program (2 to 3 hours) and the time you wish to spend submitting project ideas (maybe 3 to 5 hours per project idea).</p>
+</div>
+<div class="paragraph">
+<p>When you get the call for mentors announcement towards the end of December or beginning of January,
+it is time to think about joining the Jenkins GSoC program as a mentor.
+During this phase, the mentor responsibilities are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read this document and the related links</p>
+</li>
+<li>
+<p>Reach out to the Jenkins GSoC community in the <a href="https://gitter.im/jenkins-gsoc">gitter chat</a></p>
+</li>
+<li>
+<p>Add your name as potential mentor to the project ideas you wish to mentor (in pull-requests)</p>
+</li>
+<li>
+<p>Propose new project idea(s)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Engage with prospective students in Gitter and the mailing lists</p>
+</li>
+<li>
+<p>Encourage students to study code and send newbie-friendly pull-requests</p>
+</li>
+<li>
+<p>Ensure the project ideas you are interested in are discussed in the community with subject matter experts and potential users</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Optionally, you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recruit additional mentors for projects (if possible)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The important aspect of this phase is to produce a list of good project ideas, as this is key to be accepted in the GSoC program.</p>
+</div>
+<div class="paragraph">
+<p>The deadline for producing this list is indicated on the
+<a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC timeline</a>.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins GSoC Org Admins are responsible for submitting the application form for the Jenkins organization.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="org_approval_waiting_phase"><a class="anchor" href="#org_approval_waiting_phase"></a>Organization approval waiting period</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> 2 to 3 hours per week until organizations are announced.</p>
+</div>
+<div class="paragraph">
+<p>During this period, we wait for Google to approve our application request.</p>
+</div>
+<div class="paragraph">
+<p>Mentors should keep interacting with students during this period.</p>
+</div>
+<div class="paragraph">
+<p>Google publishes the list of accepted organizations according to the
+<a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC timeline</a>.
+If we are accepted, we move on to the next phase.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="forming_mentor_teams"><a class="anchor" href="#forming_mentor_teams"></a>Mentors and mentor teams</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> a few hours before the <a href="#ranking_and_slot_request_phase">Proposal ranking and slot request phase</a>.</p>
+</div>
+<div class="paragraph">
+<p>We want mentors to form mentor teams of at least 2 or 3 mentors and to co-mentor projects together.
+Please spend a few hours forming your mentor team as soon as possible but no later than the start of the <a href="#ranking_and_slot_request_phase">Proposal ranking and slot request phase</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you do not have enough potential mentors for a project,
+do spend a few hours looking for co-mentors (mailing list, chat room, social media, etc.) and contact them.
+You should also setup introduction audio or video conference with them, and you should invite them to the office hours meeting.
+It is good to discuss your mutual interests (why you are interested in the same projects, your respective backgrounds in open source, etc.)
+and your respective availabilities during the program.</p>
+</div>
+<div class="paragraph">
+<p>Mentors must make sure they get invited by org admins, and must make sure to respond to that invitation
+by the time the <a href="#ranking_and_slot_request_phase">Proposal ranking and slot request phase</a> phase begins.</p>
+</div>
+<div class="paragraph">
+<p>All mentors work with the student during all phases on the program,
+answering the student questions, coaching, advising, motivating, unblocking, reviewing code and pull-requests, ensuring the process is followed,
+ensuring communications are in public as this is an open source program, and report issues to the lead mentor, etc.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="student_application_phase"><a class="anchor" href="#student_application_phase"></a>Student exploration and application phase</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> about 2 to 5 hours per week (more if you submit your own project ideas which we encourage highly) until the student application phase ends.</p>
+</div>
+<div class="paragraph">
+<p>Officially, this phase is divided in two:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Students explore and discuss projects and project ideas</p>
+</li>
+<li>
+<p>Students formally apply to GSoC with Google</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>During this long phase, mentors are expected to actively interact and discuss with students on projects they wish to mentor.
+This means that you need to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>answer questions from students and clarify the project&#8217;s detailed objectives with them</p>
+</li>
+<li>
+<p>help the student prepare a high quality proposal</p>
+</li>
+<li>
+<p>review the student pull-request(s) if any (some students send fixes for small issues during this phase to get familiar with the process)</p>
+</li>
+<li>
+<p>find out who else is interested in the same project as you (your co-mentors)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>of course we appreciate if you help us find more mentors if you can</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>participate in the weekly public meeting</p>
+</li>
+<li>
+<p>make sure the students follow the process and that their application meets the requirements in the <a href="https://docs.google.com/document/d/1dIlPLXfLbFsvcaHFuwmH9_lSCVm9m6-SgNYTNAnSZpY/edit">template</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>make sure the students determine whether they are <a href="../students/#eligibility-steps">eligible</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>if the student proposes a genuine project idea in your area of interest or expertise, make sure it is presented and discussed in the community</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can still submit new project ideas during this phase.</p>
+</div>
+<div class="paragraph">
+<p>This is a very important phase, use it to get to know the students who apply to projects that are of interest to you.</p>
+</div>
+<div class="paragraph">
+<p>For this deadline, please see the
+<a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC timeline</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ranking_and_slot_request_phase"><a class="anchor" href="#ranking_and_slot_request_phase"></a>Proposal ranking and slot request phase</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> about 5 hours total, plus continuous interaction with potential students, until the community bonding starts.</p>
+</div>
+<div class="paragraph">
+<p>This phase is divided in two sub-phases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#slot_request_sub_phase">Initial proposal ranking and slot request sub-phase</a>: usually 2 to 3 weeks (not very long)</p>
+</li>
+<li>
+<p><a href="#final_selection_phase">Final proposal selection sub-phase</a>: usually 1 week (very short!)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Mentor teams are formalized during this phase, and mentors must be registered with the GSoC website.
+For details on forming mentor teams, see <a href="#forming_mentor_teams">Mentors and mentor teams</a>.</p>
+</div>
+<div class="paragraph">
+<p>Student proposals are ranked for slot requests, and a final selection is made.</p>
+</div>
+<div class="paragraph">
+<p>Note that <strong>we are NOT allowed to communicate any information regarding the selection to students during this phase until Google makes the official Student Project Announcements.</strong>
+We do not make this announcement, Google does.</p>
+</div>
+<div class="sect3">
+<h4 id="slot_request_sub_phase"><a class="anchor" href="#slot_request_sub_phase"></a>Initial proposal ranking and slot request sub-phase</h4>
+<div class="paragraph">
+<p>The goal of this phase is to determine and request the minimum and the maximum number of projects we can take on as an organization.
+This process is explained in the Mentor Guide in the
+<a href="https://google.github.io/gsocguides/mentor/selecting-students-and-mentors#slot-count">Slot Count</a> section.</p>
+</div>
+<div class="paragraph">
+<p>We have three weeks to send our slot request to Google.
+<strong>It is an intense and critical period for Org Admins and mentors</strong>,
+as this determines who participates in the rest of the program!</p>
+</div>
+<div class="paragraph">
+<p>During this phase, mentors and org admins need to rank the projects.
+Fake and incomplete proposals are discarded.
+Good proposals are ranked in order of chances of success.
+Here we look for quality, completeness and compliance of the student applications and our capacity to mentor.
+We usually get more projects than we can mentor, so we must make a selection.</p>
+</div>
+<div class="paragraph">
+<p>Regarding our capacity to mentor a project,
+it is critical at this phase that <strong>mentors register their name in the Google GSoC system and
+assign themselves to all the projects they would like to mentor</strong> (as if they had infinite time).</p>
+</div>
+<div class="paragraph">
+<p>When we rank projects, we make sure mentors only get the number of projects they want (usually one or two)
+regardless of how many projects the mentor registers for.
+We also ask mentors to rank the projects they&#8217;d like to mentor in order of their preference.
+Org Admins make sure there is at least TWO mentors per project.
+The Org Admins help organize mentor teams and projects are ranked in a manner that tries to maximize success and happiness for everyone.</p>
+</div>
+<div class="paragraph">
+<p>Note that we allow mentors to participate in more than one project only if the mentor agrees with it.
+We do not recommend taking on more than two projects.
+You can still contribute in the Jenkins project while you mentor in GSoC.</p>
+</div>
+<div class="paragraph">
+<p>This all sounds complicated, but long story short, this phase is when the match making process formally happens between mentors, students and projects.</p>
+</div>
+<div class="paragraph">
+<p>The max number should never exceed our total mentoring capacity.
+The min number is the quantity of projects we feel confident we can mentor and succeed.
+For example We can feel very confident about 5 projects,
+and reasonably about 2 projects, and not enough confident about the rest.
+Then our min and max would be 5 and 7.</p>
+</div>
+<div class="paragraph">
+<p>Then we send our slot request min and max numbers to Google.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="final_selection_phase"><a class="anchor" href="#final_selection_phase"></a>Final proposal selection sub-phase</h4>
+<div class="paragraph">
+<p>This phase is very short and starts immediately when Google sends us our final number of slots.</p>
+</div>
+<div class="paragraph">
+<p>We may get only the minimum of slots.
+Sometimes heart wrenching decisions need to be made.</p>
+</div>
+<div class="paragraph">
+<p>Org Admins and Mentors need to make an extra effort to devote time to this phase because it is very short and this does not leave us much time to make critical decisions, and it just as important as the other phases.</p>
+</div>
+<div class="paragraph">
+<p>During this phase, mentors and Jenkins Org Admins hold a private meeting to make the final project selection
+and the mentor teams are finalized and confirmed. Then we submit our final selection to the GSoC program.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="final-selection-awaiting-period"><a class="anchor" href="#final-selection-awaiting-period"></a>Final selection awaiting period</h3>
+<div class="paragraph">
+<p>This only usually lasts a few days.</p>
+</div>
+<div class="paragraph">
+<p>We wait. We are NOT allowed to communicate any information regarding the selection to students.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="community_bonding_phase"><a class="anchor" href="#community_bonding_phase"></a>Community Bonding</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> about 5 to 8 hours per week, until coding starts.</p>
+</div>
+<div class="paragraph">
+<p>This is the most critical phase when it comes to working with your student.
+Year after year, if this phase goes well, the rest of the program usually goes well, but if this phase does not go well, the project usually fails.</p>
+</div>
+<div class="paragraph">
+<p>Mentors are expected to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Send a welcome message to their student within 24 hours after the projects are announced (<a href="https://developers.google.com/open-source/gsoc/timeline">GSoC timeline</a>)</p>
+</li>
+<li>
+<p>Organize your first meeting with the student, within the first week.
+Bring as many contributors as possible there, and make sure to celebrate and to discuss the next steps.</p>
+</li>
+<li>
+<p>Set the pace, establish your regular meeting times together.</p>
+</li>
+<li>
+<p>Agree on the main communication channels (chats or mailing lists).
+GSoC org admins can help you to create communication channels if needed</p>
+</li>
+<li>
+<p>Help the student to do first contributions to the project if it has not happened before.
+Newbie-friendly issues might be a good start.
+Get them merged and released as soon as possible</p>
+</li>
+<li>
+<p>Make sure the student has a detailed plan and a design document for the first coding phase before it starts</p>
+</li>
+<li>
+<p>Get the student to create issues in Jira for the work items of the coming coding phase</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We have written a guide for this phase, <a href="../students/#community-bonding">read it</a> and follow it.</p>
+</div>
+<div class="paragraph">
+<p>In rare cases, it is acceptable to re-work the project idea, even change it completely, as long as the student and the mentors all agree.
+Written documentation about this is essential, if it happens, let the Org Admins know.</p>
+</div>
+<div class="paragraph">
+<p>Let Jenkins Org Admins know as soon as possible if there is any need for knowledge transfer sessions.
+We often organize special public presentations to go over plugin and core development flows and code that
+students and mentors alike benefit from attending.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="coding_periods"><a class="anchor" href="#coding_periods"></a>Coding Periods</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> about 5 to 8 hours per week until the end of the program.</p>
+</div>
+<div class="paragraph">
+<p>See also: <a href="../students/#coding-periods">student coding periods</a>.</p>
+</div>
+<div class="paragraph">
+<p>You are mentoring now. Guide, coach, review pull-requests, unblock the student,
+ensure students use Jira for task, bug and feature tracking,
+meet your student at least once or twice per week over a live one-on-one session
+(video conferencing and screen sharing is infinitely useful here).</p>
+</div>
+<div class="paragraph">
+<p>What if the student is done early? Student and mentor must determine other work that can be done and let the Jenkins Org Admins know.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="eval_periods"><a class="anchor" href="#eval_periods"></a>Evaluation periods</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> same as during the coding periods.</p>
+</div>
+<div class="paragraph">
+<p>See also: <a href="../students/#evaluations">student evaluations</a>.</p>
+</div>
+<div class="paragraph">
+<p>Mentors are expected to evaluate their student, while they continue to mentor them.
+Coding seldom completely stops during this period.</p>
+</div>
+<div class="paragraph">
+<p>Mentors are expected to:
+* ensure that the student creates a presentation and prepares a demo
+* ensure their student presents their project (presentation and demo) at a public meeting in the style of an on-line meetup.
+<strong> We record these presentations and publish them on YouTube.
+* evaluate their student by comparing the student project plan with the actual code produced.
+</strong> There is usually great flexibility as we allow mentors and students to agree on what the expectations are in terms of features and content.
+* fill in the GSoC evaluation form and provide written feedback in that form to their student and to the Google GSoC organization.</p>
+</div>
+<div class="paragraph">
+<p>This period is a good time to review the Jira tickets and prepare the tickets for the next coding phase.</p>
+</div>
+<div class="paragraph">
+<p>If too little code is produced for reasons that cannot be understood,
+inform your student of your concerns, and ask the student why this is happening.
+Often students are blocked on a technical problem and do not communicate with their mentors.
+As a rule of thumb, there should be code pushed to Github almost every day.
+If not, let the Org Admins know as soon as possible.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="after_the_program"><a class="anchor" href="#after_the_program"></a>After the program</h3>
+<div class="paragraph">
+<p>Many students ask their mentors how they can continue to contribute after the program.</p>
+</div>
+<div class="paragraph">
+<p>You could setup one-on-one on-line meeting with the student on a monthly basis.
+You can invite the student to SIG or other community meetings.
+Jenkins also has on-line meetups with various people presenting that the student might be interested in joining.</p>
+</div>
+<div class="paragraph">
+<p>Usually, you can invite the student to look at the bugs and features that have been captured
+in Jira during the coding phases for inspiration on what to do next.
+You can also invite students to apply next year as a student or even as a mentor.
+Students like to see their projects continue, and becoming a mentor is a great way to make that happen.</p>
+</div>
+<div class="paragraph">
+<p>Google organizes a mentor summit a few months after the program has ended.
+Each year, the Jenkins Org Admins select 2 mentors who get to go to that summit
+(travel costs and accommodations are paid for by Google).
+Mentors agree that this is a fantastic event!</p>
+</div>
+<div class="paragraph">
+<p>Some mentors travel to the Jenkins World conference and get to meet students and other mentors.
+This is definitely a conference worth attending for mentors and students alike.</p>
+</div>
+<div class="paragraph">
+<p>Here are some posts by mentors from past years conferences:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/blog/2020/01/29/gsoc-report/">GSoC 2019 Report</a>, multiple authors</p>
+</li>
+<li>
+<p><a href="http://jeff-pearce.com/google-summer-of-code-with-the-jenkins-project/">Google Summer of Code with the Jenkins Project</a>, by Jeff Pearce</p>
+</li>
+<li>
+<p><a href="/blog/2018/11/13/martinda-gsoc-mentor-summit-experience/">Google Summer of Code Mentor Summit 2018</a>, by Martin d&#8217;Anjou</p>
+</li>
+<li>
+<p><a href="/blog/2019/10/08/google-summer-of-code-mentor-and-org-admin-perspective/">Google Summer of Code Mentor and Org Admin Perspective</a>, by Marky Jackson</p>
+</li>
+<li>
+<p><a href="/blog/2019/08/25/jenkinsworld-contrib-summit-ask-the-expert-booth/">Jenkins World Contributor Summit and Ask the Expert booth</a>, by Marky Jackson</p>
+</li>
+<li>
+<p><a href="/blog/2018/10/14/gsoc2018-results/">Jenkins in Google summer of Code 2018 Results</a> by Oleg Nenashev</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="regarding-mentor-time-off"><a class="anchor" href="#regarding-mentor-time-off"></a>Regarding mentor time off</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The GSoC program lasts several months.
+We know people go on vacation and need to take time off from their regular day job.
+We are flexible.
+This is one of the reasons why we also assign at least two mentors per student.
+Make sure you timely communicate your availability to your student, your co-mentors, and the org admins.</p>
+</div>
+<div class="paragraph">
+<p>If you must withdraw from the program completely, let the Jenkins Org Admins know as soon as possible.
+Life happens, but we need to know about unplanned changes so that we can ensure continuity of the ongoing GSoC projects.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="conflict-of-interest-prevention"><a class="anchor" href="#conflict-of-interest-prevention"></a>Conflict of interest prevention</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We appreciate mentorship provided by any Jenkins contributor.
+On the other hand, we want to avoid any conflicts with GSoC rules and spirit.
+We also want to avoid conflicts of interest between all sides.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Only an individual contributor may be a mentor according to GSoC rules.
+One or more company representatives may act as individual contributors</p>
+</li>
+<li>
+<p>All mentors and org admins are considered as Jenkins community representatives.
+They must follow the <a href="/conduct">Code of Conduct</a></p>
+</li>
+<li>
+<p>If a mentor works for a company, which use Jenkins in commercial products&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The mentorship work should be performed during spare time or during the OSS contribution time dedicated by the company.
+In the latter case the mentor should ensure that there will be a consistent time dedicated over the entire GSoC mentorship period</p>
+</li>
+<li>
+<p>The project proposed by mentors should not overlap neither with direct responsibilities within the company nor with the company product roadmaps.</p>
+</li>
+<li>
+<p>He/She should ensure there is no conflict of interest between the project and the work responsibilities</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There are several examples below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"I would like to have this feature in my Jenkins installation. I have already made a commitment to deliver within my company. I will lose my bonus if I fail the commitment"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>NOT FINE, you have a conflict of interest. GSoC project may fail due to many reasons</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I would like to have this feature in my Jenkins installation. It would provide us some added value, but we can live without it. I have not made any commitments"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>FINE if the proposed project is useful to a significant part of the community. Added value will keep you motivated</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"This feature has been already announced publicly by my company, we want to ship it as a part of our product"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>NOT FINE, you have a conflict of interest</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"This feature has not been announced publicly by my company, but we will do it after GSoC"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>NOT FINE, you have a conflict of interest</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"Our product may benefit from the feature, but it&#8217;s not in our roadmaps. The project idea is useful to the community"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PROBABLY FINE, consult with GSoC Org Admins</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I want to mentor this feature, but I see that somebody works on the similar feature in open-source"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PROBABLY FINE, consult with the developers of the competing solution.
+Try to join forces and get them as mentors.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I want to mentor this project, but I see that another company provides a similar closed-source solution"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>FINE, but ask GSoC Org Admins to contact the company. Maybe they agree to open-source it (and to assign a mentor). If no, it&#8217;s their problem.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I want to implement a feature based on a patented algorithm/technology. It&#8217;s open-source, so we are free to do whatever"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>NOT FINE, Jenkins project recognizes laws.
+We are under umbrella of Software In Public Interest organization, which is a subject for US and international legislation.
+Contact the patent holder to get a license (needs a review by Jenkins Governance meeting).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I went through the list and still have concerns"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PROBABLY FINE, contact GSoC Org Admins</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All potential issues should be escalated to GSoC admins.
+Intentional violation of the rules above may be a subject for Code of Conduct violation process.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="sidebar-nav">
+<h4>
+On this page
+</h4>
+<ul class="sectlevel1">
+<li><a href="#links">Links</a></li>
+<li><a href="#what-do-mentors-get">What do mentors get?</a></li>
+<li><a href="#how-to-become-a-mentor">How to become a mentor?</a></li>
+<li><a href="#expectations-from-mentors">Expectations from mentors</a></li>
+<li><a href="#expectations-from-mentors-per-phase">Expectations from mentors per phase</a>
+<ul class="sectlevel2">
+<li><a href="#org_application_phase">Call for mentors and organization application phase</a></li>
+<li><a href="#org_approval_waiting_phase">Organization approval waiting period</a></li>
+<li><a href="#forming_mentor_teams">Mentors and mentor teams</a></li>
+<li><a href="#student_application_phase">Student exploration and application phase</a></li>
+<li><a href="#ranking_and_slot_request_phase">Proposal ranking and slot request phase</a></li>
+<li><a href="#final-selection-awaiting-period">Final selection awaiting period</a></li>
+<li><a href="#community_bonding_phase">Community Bonding</a></li>
+<li><a href="#coding_periods">Coding Periods</a></li>
+<li><a href="#eval_periods">Evaluation periods</a></li>
+<li><a href="#after_the_program">After the program</a></li>
+</ul>
+</li>
+<li><a href="#regarding-mentor-time-off">Regarding mentor time off</a></li>
+<li><a href="#conflict-of-interest-prevention">Conflict of interest prevention</a></li>
+</ul>
+<!-- starting partial connect-h4-div.html.haml -->
+<div>
+<h4>
+Connect
+</h4>
+</div>
+<ul>
+<!-- starting partial connect-links.html.haml -->
+<li>
+<a href="https://groups.google.com/forum/#!forum/jenkinsci-gsoc-all-public" rel="noreferrer noopener" target="_blank">
+Mailing List
+</a>
+</li>
+<li>
+<a href="https://gitter.im/jenkinsci/gsoc-sig" rel="noreferrer noopener" target="_blank">
+<img src="https://badges.gitter.im/jenkinsci/gsoc-sig.svg" title="Gitter">
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/#office-hours" rel="noreferrer noopener" target="_blank">
+Meetings
+</a>
+</li>
+
+<!-- ending partial connect-links.html.haml -->
+</ul>
+
+<!-- ending partial connect-h4-div.html.haml -->
+<div>
+<div class="block block-block even blog-posts" id="block-block-15">
+<h4 class="title">
+Recent Blog Posts
+</h4>
+<ul>
+<li>
+<a href="/blog/2020/12/22/gsoc-report/">
+Google Summer of Code 2020 summary
+</a>
+</li>
+<li>
+<a href="/blog/2020/12/16/call-for-mentors/">
+Google Summer of Code 2021 call for Project Ideas and Mentors
+</a>
+</li>
+<li>
+<a href="/blog/2020/08/31/github-checks-api-plugin-coding-phase-3/">
+GitHub Checks API Plugin Project - Coding Phase 3
+</a>
+</li>
+<li>
+<a href="/blog/2020/08/31/custom-distribution-service/">
+Custom Distribution Service : Phase 3 Blogpost
+</a>
+</li>
+<li>
+<a href="/blog/2020/08/29/git-performance-improvement-phase3/">
+Git Plugin Performance Improvement: Final Phase and Release
+</a>
+</li>
+<li>
+<a href="/blog/2020/08/27/winsw-yaml-support/">
+Jenkins Windows Services: YAML Configuration Support - GSoC Project Results
+</a>
+</li>
+<li>
+<a href="/blog/2020/08/27/machine-learning-plugin-coding-phase3/">
+Machine Learning Plugin project - Coding Phase 3 blog post
+</a>
+</li>
+<li>
+<a href="/blog/2020/08/25/external-fingerprint-storage-phase-3/">
+External Fingerprint Storage Phase-3 Update: Introducing the PostgreSQL Fingerprint Storage Plugin
+</a>
+</li>
+<li>
+<a href="/blog/2020/08/09/custom-distribution-service-phase-2/">
+Custom Distribution Service : Phase 2 Blogpost
+</a>
+</li>
+<li>
+<a href="/blog/2020/08/03/github-checks-api-plugin-coding-phase-2/">
+GitHub Checks API Plugin Project - Coding Phase 2
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/anchor-js/anchor.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/js/tether.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/js/bootstrap.min.js"></script>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<p class="box">
+<a href="https://github.com/jenkins-infra/jenkins.io/edit/master/content//projects/gsoc/mentors.adoc" title="Edit /projects/gsoc/mentors.adoc on GitHub">Improve this page</a>
+|
+<a href="https://github.com/jenkins-infra/jenkins.io/issues/new?labels=bug&amp;template=4-bug.md&amp;title=Google Summer of Code. Information for mentors page - TODO: Put a summary here&amp;body=Problem with the [Google Summer of Code. Information for mentors](https://www.jenkins.io/projects/gsoc/mentors/) page, [source file](https://github.com/jenkins-infra/jenkins.io/blob/master/content/projects/gsoc/mentors.adoc)%0A%0ATODO: Describe the expected and actual behavior here %0A%0A%23%23 Screenshots %0A%0A TODO: Add screenshots if possible %0A%0A%23%23 Possible Solution %0A%0A%3C!-- If you have suggestions on a fix for the bug, please describe it here. --%3E %0A%0AN/A" title="Report a problem with /projects/gsoc/mentors.adoc">Report a problem</a>
+</p>
+<div class="license-box">
+<div id="creativecommons">
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+<p>
+<img alt="Creative Commons Attribution-ShareAlike license" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+</p>
+</a>
+<p>
+The content driving this site is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 license.
+</p>
+</div>
+</div>
+</div>
+<div class="links col-md-8">
+<div class="container">
+<div class="row">
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Resources</h5>
+<ul class="resources">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Downloads
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc">
+Documentation
+</a>
+</li>
+<li>
+<a href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Contributing
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Project</h5>
+<ul class="project">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project">
+Structure and governance
+</a>
+</li>
+<li>
+<a href="https://issues.jenkins.io">
+Issue tracker
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://ci.jenkins.io">
+Jenkins on Jenkins
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Community</h5>
+<ul class="community">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists">
+Mailing lists
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/chat">
+Chats
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/sigs">
+Special Interest Groups
+</a>
+</li>
+<li>
+<a href="https://twitter.com/jenkinsci">
+Twitter
+</a>
+</li>
+<li>
+<a href="https://reddit.com/r/jenkinsci">
+Reddit
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Other</h5>
+<ul class="other">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/conduct">
+Code of Conduct
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press information
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/merchandise">
+Merchandise
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-000000-0', 'auto');
+ga('send', 'pageview');
+ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+  !function(d,s,id) {
+    var js, fjs=d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id=id;
+      js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,"script","twitter-wjs");
+  
+  $(function(){
+    var $body = $(document.body);
+    $(".nav-link.dropdown-toggle").on("mousedown", function(){
+      $body.addClass("no-outline");
+    })
+    $body.on("keydown", function(){
+      $body.removeClass("no-outline");
+    })
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+docsearch({
+  apiKey: '9df657b854f8c42d9887b34bc275db4d',
+  indexName: 'jenkins',
+  inputSelector: 'input.searchbox',
+  algoliaOptions: { 'facetFilters': ["tags:en"] },
+  debug: false
+});
+</script>
+</body>
+</html>

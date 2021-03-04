@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+Jenkins Roadmap
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="description">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<!-- Favicons -->
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/site.webmanifest" rel="manifest">
+<link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon">
+<meta content="#2b5797" name="msapplication-TileColor">
+<meta content="#ffffff" name="theme-color">
+<meta content="Jenkins Roadmap" name="apple-mobile-web-app-title">
+<!-- Twitter Card data -->
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@JenkinsCI" name="twitter:site">
+<meta content="Jenkins Roadmap" name="twitter:title">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="twitter:description">
+<meta content="@JenkinsCI" name="twitter:creator">
+<!-- Twitter Summary card images must be at least 120x120px -->
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/logo-title-opengraph.png" name="twitter:image">
+<!-- Open Graph data -->
+<meta content="Jenkins Roadmap" property="og:title">
+<meta content="article" property="og:type">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap/index.html" property="og:url">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="og:description">
+<meta content="Jenkins Roadmap" property="og:site_name">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/logo-title-opengraph.png" name="og:image">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/css/tether.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-icons.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/jenkins.css" media="screen" rel="stylesheet">
+<!-- Non-obtrusive CSS styles -->
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/ionicons/css/ionicons.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/footer.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-awesome.min.css" media="screen" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/jquery/jquery.min.js"></script>
+<!-- starting partial toptoolbar.html.haml -->
+<nav class="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top" id="ji-toolbar">
+<a class="navbar-brand" href="https://halkeye.github.io/jenkins.io/add-algolia">
+Jenkins
+</a>
+<button class="navbar-toggler" data-target="#CollapsingNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="CollapsingNavbar">
+<ul class="nav navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+<!-- starting partial cdf_logo.html.haml -->
+<svg width="36" height="18" xmlns="http://www.w3.org/2000/svg" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.23 44.77 362.70 271.95"><defs><linearGradient id="a" x1="359.765" x2="104.082" y1="134.295" y2="124.577" gradientTransform="matrix(1 0 0 -1 0 439.068)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ed1c24"/><stop offset="1" stop-color="#f7941d"/></linearGradient><linearGradient id="b" x1="355.202" x2="99.519" y1="254.467" y2="244.749" xlink:href="#a"/><linearGradient id="c" x1="183.903" x2="10.612" y1="227.598" y2="221.023" xlink:href="#a"/><linearGradient id="d" x1="367.119" x2="157.995" y1="265.311" y2="257.091" xlink:href="#a"/></defs><path fill="#c49a6c" d="M231.52 309.278c2.483-.332 4.895-.77 7.255-1.329s4.649-1.206 6.991-1.957c13.494-4.58 25.187-12.952 36.374-24.593l-.14-.175c-14.944 15.486-30.693 25.344-50.48 28.054z"/><path fill="url(#a)" d="M224.232 309.96h.332c1.084 0 2.15-.14 3.216-.228a93.844 93.844 0 0 1-3.233.227z"/><path fill="url(#b)" d="M284.692 187.187l-.122.192.122-.192z"/><path fill="url(#c)" d="M146.145 231.847a150.844 150.844 0 0 1-12.97 15.862c-7.582 7.889-15.507 13.563-24.652 16.667a47.832 47.832 0 0 1-4.738 1.326 56.959 56.959 0 0 1-4.916.9 38.32 38.32 0 0 1-1.682.214l-.912.083c-.723.059-1.445.118-2.18.154h-3.068a42.325 42.325 0 0 1-9.192-1.043 49.977 49.977 0 0 1-6.764-2.002 43.097 43.097 0 0 1-4.525-1.954c-1.493-.77-2.961-1.516-4.407-2.37a59.5 59.5 0 0 1-17.105-15.399 59.714 59.714 0 0 1-2.914-4.311 53.09 53.09 0 0 1-1.291-2.263 51.985 51.985 0 0 1-2.263-4.738 46.72 46.72 0 0 1 0-36.426 51.986 51.986 0 0 1 2.263-4.738 54.14 54.14 0 0 1 1.291-2.263 59.742 59.742 0 0 1 2.914-4.311 59.714 59.714 0 0 1 17.105-15.4 60.828 60.828 0 0 1 4.407-2.369q2.217-1 4.525-1.777a49.976 49.976 0 0 1 6.906-2.073 42.325 42.325 0 0 1 9.192-1.042h3.128c.722 0 1.445.094 2.155.154l1.043.106 1.019.119c1.8.237 3.553.557 5.271.96.853.2 1.694.426 2.523.663a51.186 51.186 0 0 1 11.846 5.176 59.645 59.645 0 0 1 4.395 2.89 74.485 74.485 0 0 1 8.386 7.108q2.038 1.99 4.063 4.193l.083-.13a159.395 159.395 0 0 1 11.064 13.942c5.437-8.576 13.658-21.464 16.584-25.74 1.185-1.718 2.37-3.46 3.66-5.212-13.54-16.513-29.827-30.23-51.587-36.082h-.154a89.397 89.397 0 0 0-3.187-.794l-.45-.107a92.565 92.565 0 0 0-3.151-.627l-.628-.119a80.578 80.578 0 0 0-3.743-.569h-.142a58.29 58.29 0 0 0-2.073-.236h-.391l-1.872-.166h-.568l-1.754-.119h-.675l-1.777-.07h-3.115c-46.447-.25-87.125 40.476-87.125 86.911s40.725 87.173 87.172 87.173h3.14l1.729-.071h.734l1.67-.095h.676l1.706-.154h.568l1.813-.213.414-.06 1.967-.272h.213a125.91 125.91 0 0 0 3.553-.628l.652-.142c.96-.201 1.907-.415 2.855-.64l.58-.142a86.66 86.66 0 0 0 3.009-.817l.237-.071c20.73-6.077 36.425-19.392 49.55-35.277-2.037-3.068-3.4-5.366-4.039-6.48z"/><path fill="url(#d)" d="M318.05 51.733v94.66a85.514 85.514 0 0 0-52.595-18.729h-3.115l-1.777.072-.7.047-1.752.118h-.569l-1.871.166h-.391c-.7.071-1.386.142-2.073.237h-.154c-1.256.154-2.5.355-3.732.569l-.628.118c-1.066.19-2.108.403-3.15.628l-.45.107c-30.35 6.858-50.333 28.808-66.822 52.82-.7 1.018-1.35 2.049-2.038 3.068-2.25 3.423-5.46 8.422-8.635 13.397-4.17 6.527-8.292 13.03-9.939 15.66l20.624 32.137s21.997 40.465 61.68 51.482l.237.07c.995.297 2.002.558 3.009.818l.58.142c.936.237 1.896.439 2.855.64l.652.142c1.184.225 2.369.439 3.553.628h.214l1.966.273.415.059 1.812.213h.569l1.705.154h.676l1.67.095h.734l1.73.07h3.139c54.703 0 86.355-30.964 87.149-85.063V51.733zm-52.595 215.403h-3.068c-.734 0-1.457-.095-2.18-.154l-.912-.083c-.568-.06-1.125-.13-1.682-.213a49.077 49.077 0 0 1-9.571-2.275 49.612 49.612 0 0 1-6.634-2.83 55.792 55.792 0 0 1-6.254-3.768 63.068 63.068 0 0 1-3.009-2.215 82.399 82.399 0 0 1-8.683-7.925l-.095.119c-1.255-1.303-2.487-2.69-3.731-4.11-.154-.167-.296-.356-.45-.534-.628-.722-1.256-1.445-1.884-2.215s-1.125-1.398-1.682-2.097-.888-1.101-1.338-1.682a184.467 184.467 0 0 1-6.053-8.292c-.7-.995-1.398-2.025-2.109-3.056-.379-.569-.77-1.184-1.185-1.73-.675-1.018-1.362-2.013-2.049-3.056l-.355-.545c-1.185-1.812-2.37-3.684-3.649-5.603q2.95-4.608 5.817-8.86c1.907-2.831 3.79-5.556 5.662-8.138s3.72-5.046 5.591-7.38 3.72-4.525 5.603-6.586q2.026-2.203 4.063-4.194c1.374-1.338 2.748-2.594 4.158-3.778s2.807-2.287 4.252-3.329a57.594 57.594 0 0 1 7.748-4.62c.331-.166.663-.367 1.006-.533l.226-.118c1.41-.652 2.843-1.185 4.3-1.73l.485-.201c.273-.083.557-.142.83-.237a44.943 44.943 0 0 1 3.34-.948l1.374-.343a60.798 60.798 0 0 1 4.738-.841l1.019-.119 1.042-.106c.711 0 1.434-.119 2.156-.154h3.128a42.431 42.431 0 0 1 4.572.26 48.011 48.011 0 0 1 6.93 1.35c1.54.427 3.08.925 4.596 1.505a48.724 48.724 0 0 1 4.525 1.955c1.493.722 2.961 1.516 4.407 2.369s2.866 1.8 4.24 2.784 2.725 2.049 4.028 3.174a58.459 58.459 0 0 1 8.837 9.477 59.73 59.73 0 0 1 2.914 4.312 51.067 51.067 0 0 1 5.318 11.916 47.38 47.38 0 0 1 1.185 5.165 45.567 45.567 0 0 1 .71 8.09c.072 35.964-16.062 52.122-52.227 52.122z"/></svg>
+
+<!-- ending partial cdf_logo.html.haml -->
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://cd.foundation/">
+What is CDF?
+</a>
+<a class="dropdown-item feature" href="https://jenkins-x.io/">
+Jenkins X
+</a>
+<a class="dropdown-item feature" href="https://cloud.google.com/tekton/">
+Tekton
+</a>
+<a class="dropdown-item feature" href="https://www.spinnaker.io/">
+Spinnaker
+</a>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Documentation
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book">
+<strong>
+User Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/installing/">
+&nbsp;-&nbsp;Installing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline">
+&nbsp;-&nbsp;Jenkins Pipeline
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/managing/">
+&nbsp;-&nbsp;Managing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/system-administration">
+&nbsp;-&nbsp;System Administration
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/glossary/">
+&nbsp;-&nbsp;Terms and Definitions
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/solutions">
+<strong>
+Solution Pages
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+<strong>
+Tutorials
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/tour/getting-started/">
+&nbsp;-&nbsp;Guided Tour
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+&nbsp;-&nbsp;More Tutorials
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/developer">
+<strong>
+Developer Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+<strong>
+Contributor Guide
+</strong>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Community
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/chat" title="Chat with the rest of the Jenkins community on IRC">
+Chat
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam">
+Meet
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+<a class="dropdown-item feature" href="https://issues.jenkins.io/">
+Issue Tracker
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists" title="Browse Jenkins mailing list archives and/or subscribe to lists">
+Mailing Lists
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item feature" href="https://accounts.jenkins.io/" title="Create/manage your account for accessing wiki, issue tracker, etc">
+Account Management
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/">
+<strong>
+Special Interest Groups
+</strong>
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/advocacy-and-outreach/">
+&nbsp;-&nbsp;Advocacy and Outreach
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/chinese-localization/">
+&nbsp;-&nbsp;Chinese Localization
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/cloud-native/">
+&nbsp;-&nbsp;Cloud Native
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/">
+&nbsp;-&nbsp;Documentation
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/gsoc/">
+&nbsp;-&nbsp;Google Summer of Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/hw-and-eda/">
+&nbsp;-&nbsp;Hardware and EDA
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/pipeline-authoring/">
+&nbsp;-&nbsp;Pipeline Authoring
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/platform/">
+&nbsp;-&nbsp;Platform
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/ux/">
+&nbsp;-&nbsp;User Experience
+</a>
+</div>
+</li>
+<li class="dropdown nav-item">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Subprojects
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/evergreen/">
+Evergreen
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/">
+Google Summer of Code in Jenkins
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/infrastructure/">
+Infrastructure
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam/">
+CI/CD and Jenkins Area Meetups
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jcasc/">
+Jenkins Configuration as Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/remoting/">
+Jenkins Remoting
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/">
+Document Jenkins on Kubernetes
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+About
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/conduct">
+Conduct
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+English
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/zh">
+中文 Chinese
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link btn btn-outline-secondary" href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Download
+</a>
+</li>
+<li class="nav-item searchbox">
+<input aria-label="Search" class="form-control searchbox" placeholder="Search" type="search">
+</li>
+</ul>
+</div>
+</nav>
+<!-- Spacing to make the fixed-top sticky navbar not occlude any content below it -->
+<div class="pt-4">
+&nbsp;
+</div>
+
+<!-- ending partial toptoolbar.html.haml -->
+<style>
+  .toc {
+      float: right;
+  }
+</style>
+<!-- starting partial anchors.html.haml -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    for (var i = 1 ; i <= 6 ; i ++) {
+      anchors.add('.container .row.body h' + i);
+    }
+  })
+</script>
+
+<!-- ending partial anchors.html.haml -->
+<div class="container">
+<div class="row body">
+<div class="col-md-12">
+<h1>
+Jenkins Roadmap
+</h1>
+<link href="/css/roadmap.css" rel="stylesheet" type="text/css">
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/js/roadmap.js" type="text/javascript"></script>
+<p>
+Jenkins project offers a public community-driven roadmap.
+It aggregates key initiatives in all areas: features, infrastructure, documentation, community, etc.
+See
+<a href="https://github.com/jenkinsci/jep/tree/master/jep/14">
+JEP-14
+</a>
+for more information about the public roadmap process.
+We do NOT commit on delivery dates, all initiatives depend on contributions.
+Anyone is welcome to participate and help us to deliver the initiatves below!
+<a href="/participate/">
+Contributing to Jenkins
+</a>
+</p>
+<p>
+Filters:
+<input class="initiative-selector" id="initiative-label-feature" onclick="filterRoadmap()" type="checkbox">
+Features
+</input>
+<input class="initiative-selector" id="initiative-label-documentation" onclick="filterRoadmap()" type="checkbox">
+Documentation
+</input>
+<input class="initiative-selector" id="initiative-label-outreach-program" onclick="filterRoadmap()" type="checkbox">
+Outreach Programs
+</input>
+<input class="initiative-selector" id="initiative-label-infrastructure" onclick="filterRoadmap()" type="checkbox">
+Infrastructure and Services
+</input>
+<input class="initiative-selector" id="initiative-label-policies" onclick="filterRoadmap()" type="checkbox">
+Policies
+</input>
+<input class="initiative-selector" id="initiative-label-tools" onclick="filterRoadmap()" type="checkbox">
+Tools
+</input>
+<input class="initiative-selector" id="initiative-label-events" onclick="filterRoadmap()" type="checkbox">
+Community Events
+</input>
+<input class="initiative-selector" id="initiative-label-security" onclick="filterRoadmap()" type="checkbox">
+Security
+</input>
+</p>
+<table class="roadmap-table">
+<thead>
+<tr>
+<th>
+Released
+</th>
+<th>
+Preview
+</th>
+<th>
+Current
+</th>
+<th>
+Near Term
+</th>
+<th>
+Future
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Pipeline authoring and development tools
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+</td>
+<td class="status preview" data-header="Preview">
+<div class="status initiative preview  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/projects/gsoc/2020/project-ideas/pipeline-as-yaml-experiment/" rel="noreferrer noopener" target="_blank" title="Official support for defining Jenkins Pipelines in YAML, without additional Pipeline libraries">
+Pipeline as YAML
+</a>
+</div>
+</td>
+<td class="status current" data-header="Current">
+</td>
+<td class="status near-term" data-header="Near Term">
+<div class="status initiative near-term  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/templating-engine-plugin/blob/2.0/Version_2.adoc" rel="noreferrer noopener" target="_blank" title="JTE enables the creation of tool-agnostic pipeline templates that can be shared across teams. Version 2.0 will have improved integration with the underlying pipeline engine and incorporate many of the community&#39;s top feature requests.">
+Jenkins Templating Engine 2.0
+</a>
+</div>
+</td>
+<td class="status future" data-header="Future">
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="/sigs/pipeline-authoring" rel="noreferrer noopener" target="_blank" title="The goal is to extend support for Pipeline development in IDEs, visual editors, and other development tools. The scope may include creation of new IDE plugins and extending Jenkins Pipeline to support common features like live code deployment and debugging.
+">
+Pipeline development in IDE
+</a>
+</div>
+<div class="status initiative future  initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="/sigs/pipeline-authoring" rel="noreferrer noopener" target="_blank" title="Expand Pipeline reference documentation, tutorials, and more.
+">
+Pipeline Documentation
+</a>
+</div>
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-36089" rel="noreferrer noopener" target="_blank" title="Provide out-of-the-box support for manual and automatic promotion of build artifacts in a separate Pipeline after the job completion">
+Promotion support for Pipeline jobs
+</a>
+</div>
+<div class="status initiative future  initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/project-ideas/pipeline-step-documentation-generator/" rel="noreferrer noopener" target="_blank" title="Enhance the Jenkins Pipeline documentation generator to produce better documentation for thousands of Pipeline developers.
+">
+Improve Pipeline step documentation generator
+</a>
+</div>
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Tool and Service integrations
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+<div class="status initiative released  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/blog/2020/04/16/github-app-authentication/" rel="noreferrer noopener" target="_blank" title="The initiative is completed and available to users. There might be follow-up improvements to the initiative, and any contributions are welcome.
+">
+Pipeline: GitHub App authentication
+</a>
+</div>
+<div class="status initiative released  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/projects/git-plugin-performance/" rel="noreferrer noopener" target="_blank" title="Improve Jenkins git plugin performance by fixing known issues in performance critical areas
+">
+Git Plugin Performance Improvements
+</a>
+</div>
+<div class="status initiative released  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/projects/github-checks/" rel="noreferrer noopener" target="_blank" title="Create a new plugin API so that plugins can publish GitHub Checks statuses. Implement Checks API support in Warnings NG and Code Coverage API plugins.
+">
+GitHub Checks API integrations
+</a>
+</div>
+<div class="status initiative released  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/projects/machine-learning/" rel="noreferrer noopener" target="_blank" title="Integrate Machine Learning workflow with Jenkins build tasks, including Data preprocessing, Model Training, Evaluation and Prediction. This plugin will be capable of executing code fragments via IPython kernel as currently supported by Jupyter.
+">
+Machine Learning Plugin for Data Science
+</a>
+</div>
+</td>
+<td class="status preview" data-header="Preview">
+</td>
+<td class="status current" data-header="Current">
+</td>
+<td class="status near-term" data-header="Near Term">
+</td>
+<td class="status future" data-header="Future">
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/project-ideas/automatic-spec-generator-for-jenkins-rest-api/" rel="noreferrer noopener" target="_blank" title="Expose Jenkins REST APIs as the OpenAPI Specification so that users could easily integrate with Jenkins and create clients for it.
+">
+OpenAPI for Jenkins core and plugins
+</a>
+</div>
+<div class="status initiative future  initiative-label-feature initiative-label-security">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/project-ideas/docker-registries-polling-plugin/" rel="noreferrer noopener" target="_blank" title="Create a new Jenkins plugin to automate polling of image changes and security scans.
+">
+Docker: image changes polling and security scans
+</a>
+</div>
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+End user experience and interface
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+<div class="status initiative released  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/dark-theme-plugin" rel="noreferrer noopener" target="_blank" title="A new official Dark Theme for Jenkins, and Jenkins core and plugin changes to make it possible">
+Dark Theme
+</a>
+</div>
+<div class="status initiative released  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/theme-manager-plugin" rel="noreferrer noopener" target="_blank" title="Create a new Theme Manager plugin for Jenkins. In addition to the features offered by the Simple Theme Plugin, it will help users to easily discover and manage themes compatible with their Jenkins version.
+">
+Improve UI Theme Management
+</a>
+</div>
+<div class="status initiative released  initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/INFRA-2516" rel="noreferrer noopener" target="_blank" title="Improve and expand the mirror infrastructure to provide fast and reliable downloads to Jenkins users.
+">
+Modernize mirror infrastructure
+</a>
+</div>
+</td>
+<td class="status preview" data-header="Preview">
+<div class="status initiative preview  initiative-label-feature initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/sigs/ux/#project-plugin-management-ui-ux" rel="noreferrer noopener" target="_blank" title="This initiative aims to improve plugin management UI for Jenkins administrators so that they can easily discover plugins and make decisions about plugin upgrades. Scope: Plugin Manager in the Jenkins core, plugins.jenkins.io, Jenkins Update Center and other services.
+">
+Plugin management UI/UX revamp
+</a>
+</div>
+<div class="status initiative preview  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-62437" rel="noreferrer noopener" target="_blank" title="Improve visualization of configuration pages by changing layouts from tables to divs. It will improve layout on narrow screens and particularly on mobile devices.
+">
+Configuration UI: Tables to Divs migration
+</a>
+</div>
+</td>
+<td class="status current" data-header="Current">
+<div class="status initiative current  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/sigs/ux/#project-ui-look-and-feel" rel="noreferrer noopener" target="_blank" title="Modernize the Jenkins Web interface styling and appearance">
+UI/UX: Look and Feel updates
+</a>
+</div>
+<div class="status initiative current  initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/sigs/docs/#ongoing-projects" rel="noreferrer noopener" target="_blank" title="Host plugin documentation on GitHub rather than the Jenkins Wiki">
+Plugin docs migration to GitHub
+</a>
+</div>
+<div class="status initiative current  initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/INFRA-2328" rel="noreferrer noopener" target="_blank" title="Migrate remaining documentation from the Jenkins Wiki to jenkins.io">
+Docs migration to jenkins.io
+</a>
+</div>
+<div class="status initiative current  initiative-label-documentation initiative-label-feature initiative-label-policies">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-42816" rel="noreferrer noopener" target="_blank" title="In Jenkins 2.0 we deprecated the &quot;slave&quot; terminology and mandated usage of the &quot;agent&quot; or &quot;node&quot; terms instead. There are still leftover occurrences in documentation, Web UI, localizations and API. We want to clean them up.
+">
+Agent terminology cleanup
+</a>
+</div>
+<div class="status initiative current  initiative-label-documentation initiative-label-feature initiative-label-policies">
+<a data-placement="top" data-toggle="tooltip" href="https://groups.google.com/forum/#!topic/jenkinsci-dev/CLR55wMZwZ8" rel="noreferrer noopener" target="_blank" title="We would like to deprecate and replace the inappropriate &quot;master&quot;, &quot;whitelist&quot; and &quot;blacklist&quot; terms. Scope: documentation, Web UI, localizations, API, etc.
+">
+Inappropriate terminology deprecation and updates
+</a>
+</div>
+</td>
+<td class="status near-term" data-header="Near Term">
+<div class="status initiative near-term  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/sigs/ux/#project-ui-accessibility" rel="noreferrer noopener" target="_blank" title="Improve Jenkins navigation and layouts to make it more usable by as many user groups as possible.">
+UI/UX: Accessibility
+</a>
+</div>
+</td>
+<td class="status future" data-header="Future">
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/sigs/ux/#project-ui-overhaul" rel="noreferrer noopener" target="_blank" title="There is a consensus within the community that we would like this initiative to happen. We intend to work on that in the future, but there is no ongoing development.
+">
+UI/UX: User interface rework
+</a>
+</div>
+<div class="status initiative future  initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/WEBSITE-739" rel="noreferrer noopener" target="_blank" title="Improve Jenkins User Guide with pipeline examples, additional tutorials, and better navigation">
+User Guide improvements
+</a>
+</div>
+<div class="status initiative future  initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/WEBSITE-742" rel="noreferrer noopener" target="_blank" title="Improve the navigation and content of the solution pages">
+Solution Pages
+</a>
+</div>
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Management and Administration
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+<div class="status initiative released  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jep/tree/master/jep/224" rel="noreferrer noopener" target="_blank" title="Update Jenkins Web UI to support read-only access to system configuration and diagnostics information. It complements Jenkins Configuration-as-Code stories by preventing undesired manual modifications on running instances.
+">
+JEP-224: SystemRead permissions
+</a>
+</div>
+</td>
+<td class="status preview" data-header="Preview">
+<div class="status initiative preview  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jep/tree/master/jep/222" rel="noreferrer noopener" target="_blank" title="This initiative is available to Jenkins users and contributors for preview. We would appreciate testing and any feedback!
+">
+JEP-222: Remoting over WebSockets
+</a>
+</div>
+<div class="status initiative preview  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jep/tree/master/jep/223" rel="noreferrer noopener" target="_blank" title="This initiative is available to Jenkins users and contributors for preview. We would appreciate testing and any feedback!
+">
+JEP-223: Manage permissions
+</a>
+</div>
+</td>
+<td class="status current" data-header="Current">
+<div class="status initiative current  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/configuration-as-code-plugin/issues/809" rel="noreferrer noopener" target="_blank" title="Ensure wide support for Jenkins Configuration-as-Code in the Jenkins core and plugins.
+">
+JCasC: Plugin compatibility
+</a>
+</div>
+<div class="status initiative current  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/projects/winsw-yaml-configs/" rel="noreferrer noopener" target="_blank" title="Enhance Jenkins controller and agent service management on Windows by offering new configuration file formats and improving settings validation.
+">
+Windows Services: YAML Configuration Support
+</a>
+</div>
+<div class="status initiative current  initiative-label-feature initiative-label-security">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-62448" rel="noreferrer noopener" target="_blank" title="In the current version of the &quot;In-process Script Approval&quot; page, you have the possibility to approve/deny a script and then, once approved, you can only revoke all approvals at once. It complicates administration and exposes the instance to potential security concerns due to obsolete scripts.
+">
+Script Security: Improve approval management
+</a>
+</div>
+</td>
+<td class="status near-term" data-header="Near Term">
+<div class="status initiative near-term  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/project-ideas/plugin-installation-manager-tool/" rel="noreferrer noopener" target="_blank" title="Evolution of plugin management capabilities in the Jenkins core and Docker images. It includes adoption of the new Plugin Management Tool in distributions, and support of advanced plugin definition formats like YAML.
+">
+Built-in plugin management as-code
+</a>
+</div>
+</td>
+<td class="status future" data-header="Future">
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/configuration-as-code-plugin/issues/1365" rel="noreferrer noopener" target="_blank" title="Support external configuration sources in the Jenkins Configuration-as-Code plugin. Examples of potential configuration sources: Git, S3 Buckets, Kubernetes CRD.
+">
+JCasC: Pluggable configuration sources
+</a>
+</div>
+<div class="status initiative future  initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/WEBSITE-738" rel="noreferrer noopener" target="_blank" title="Create a Jenkins Administrator Guide from the administration content in the Jenkins Handbook">
+Administrator Guide overhaul
+</a>
+</div>
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/project-ideas/remoting-monitoring/" rel="noreferrer noopener" target="_blank" title="Support monitoring of Jenkins networking (controller to agent communications, etc.) with open source monitoring tools such as Prometheus, Grafana, etc.
+">
+Better Remoting Monitoring
+</a>
+</div>
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Jenkins on cloud platforms
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+<div class="status initiative released  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jep/tree/master/jep/219" rel="noreferrer noopener" target="_blank" title="Further evolution of a Kubernetes Native Operator which manages operations for Jenkins on Kubernetes. It has been built with Immutability and declarative Configuration as Code in mind.
+">
+JEP-219: Jenkins Kubernetes Operator
+</a>
+</div>
+</td>
+<td class="status preview" data-header="Preview">
+<div class="status initiative preview  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jenkinsfile-runner/milestone/1" rel="noreferrer noopener" target="_blank" title="Finalization of Jenkinsfile Runner prototype which would allow running jobs and pipelines as Function-as-Service in cloud environments.
+">
+Jenkinsfile Runner 1.0
+</a>
+</div>
+<div class="status initiative preview  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jep/tree/master/jep/226" rel="noreferrer noopener" target="_blank" title="Extend Jenkins to support storing artifact usage history in external databases. The project also includes a reference implementation, powered by Redis.
+">
+JEP-226: External Fingerprint Storage
+</a>
+</div>
+<div class="status initiative preview  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/tekton-client-plugin/blob/master/roadmap.md" rel="noreferrer noopener" target="_blank" title="Support managing and triggering Tekton Pipelines on a Kubernetes Cluster as Jenkins build steps.
+">
+Tekton Pipelines build steps
+</a>
+</div>
+<div class="status initiative preview  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="/sigs/cloud-native/pluggable-storage/#build-log-storage" rel="noreferrer noopener" target="_blank" title="Support for externalizing build logs in Jenkins Pipeline. Includes streaming logs from agents directly to the storage, as well as support for log visualization in Jenkins.
+">
+Pluggable Build Log storage for Jenkins Pipeline
+</a>
+</div>
+<div class="status initiative preview  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/junit-plugin/issues/142" rel="noreferrer noopener" target="_blank" title="Support for storing unit test results in an external database or a test management system.
+">
+Pluggable Unit Test Results Storage
+</a>
+</div>
+</td>
+<td class="status current" data-header="Current">
+<div class="status initiative current  initiative-label-outreach-program initiative-label-events">
+<a data-placement="top" data-toggle="tooltip" href="https://www.meetup.com/Jenkins-online-meetup/" rel="noreferrer noopener" target="_blank" title="Promote best practices and success stories for Jenkins on Kubernetes by organizing a series of online meetups.
+">
+Jenkins on Kubernetes online meetups
+</a>
+</div>
+<div class="status initiative current  initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/sigs/docs/#jenkins-on-kubernetes" rel="noreferrer noopener" target="_blank" title="Describe the concepts, techniques, and choices available for Jenkins on Kubernetes">
+Document Jenkins on Kubernetes
+</a>
+</div>
+</td>
+<td class="status near-term" data-header="Near Term">
+<div class="status initiative near-term  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jenkinsfile-runner" rel="noreferrer noopener" target="_blank" title="Continued development of the Jenkinsfile Runner and its packaging/development tools to simplify usage of the tool as Function-as-Service.
+">
+Jenkins FaaS Capability
+</a>
+</div>
+<div class="status initiative near-term  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/tektoncd/pipeline" rel="noreferrer noopener" target="_blank" title="Seamless integration of Tekton Pipelines as additional Pipeline execution engine in Jenkins. It would allow running executions on Tekton while benefiting from the Jenkins Pipeline orchestration and UI features: Multi-Branch Pipeline, organization folders, pipeline browsers, etc.
+">
+Tekton Pipelines execution engine
+</a>
+</div>
+</td>
+<td class="status future" data-header="Future">
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/sigs/cloud-native/pluggable-storage/#status-summary" rel="noreferrer noopener" target="_blank" title="Support for storing build results in an external storage or a databases. It includes build histories, metadata, and build actions which are stored in build.xml files.
+">
+Pluggable Build Results Storage
+</a>
+</div>
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="/sigs/cloud-native/pluggable-storage/#build-log-storage" rel="noreferrer noopener" target="_blank" title="Support for externalizing logs for all build types, not just for Jenkins Pipeline. Includes streaming logs from agents directly to the storage, as well as support for log visualization in Jenkins.
+">
+Pluggable Build Log storage for all job types
+</a>
+</div>
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/sigs/cloud-native/pluggable-storage/" rel="noreferrer noopener" target="_blank" title="Continuation of the external cloud native storage initiatives. The scope includes supporting external storages in common Jenkins data types, most notably build logs build results and reports, job configurations, etc. Particular initiatives might be split off this roadmap item.
+">
+External/Pluggable Data Storage
+</a>
+</div>
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Packaging and platform support
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+<div class="status initiative released  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/blog/2020/05/11/docker-windows-agents/" rel="noreferrer noopener" target="_blank" title="Official Windows Docker images for Jenkins controllers and agents.">
+Docker images for Windows agents
+</a>
+</div>
+<div class="status initiative released  initiative-label-feature initiative-label-security">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/blog/2020/08/12/windows-installers-upgrade/" rel="noreferrer noopener" target="_blank" title="Rework of the Windows installer user experience. Java unbundling, account management and port setup.
+">
+New Windows installer
+</a>
+</div>
+<div class="status initiative released  initiative-label-documentation initiative-label-policies">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/doc/administration/requirements/windows/" rel="noreferrer noopener" target="_blank" title="Currently Jenkins has no documented Windows Support policy. We want to add one and to deprecate/remove support for old platforms">
+Windows support policy
+</a>
+</div>
+</td>
+<td class="status preview" data-header="Preview">
+<div class="status initiative preview  initiative-label-feature initiative-label-tools">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/projects/custom-jenkins-distribution-build-service" rel="noreferrer noopener" target="_blank" title="A new service which would allow users to configure and build their own Jenkins distributions, with custom plugin sets and configurations included. This would be a self-hosted service initially.
+">
+Custom Jenkins distribution build service
+</a>
+</div>
+<div class="status initiative preview  initiative-label-feature initiative-label-tools">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/custom-war-packager/blob/master/ROADMAP.adoc#custom-war-packager-2x" rel="noreferrer noopener" target="_blank" title="New edition of Custom WAR Packager with a new configuration YAML format. It also includes integrations with other Jenkins tools and services: Update Centers, Plugin Installation Manager, Jenkinsfile Runner Packager, etc.
+">
+Custom WAR/Docker Packager 2.0
+</a>
+</div>
+</td>
+<td class="status current" data-header="Current">
+<div class="status initiative current  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-61773" rel="noreferrer noopener" target="_blank" title="Docker image support for IBM series 390 mainframes running Java 8 and Java 11">
+Docker images for IBM s390x
+</a>
+</div>
+<div class="status initiative current  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-61774" rel="noreferrer noopener" target="_blank" title="Docker image support for IBM PowerPC 64 running Java 8 and Java 11">
+Docker images for PowerPC 64
+</a>
+</div>
+<div class="status initiative current  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-62150" rel="noreferrer noopener" target="_blank" title="We would like to provide official images based on OpenJ9 JVM">
+OpenJ9 Docker images
+</a>
+</div>
+<div class="status initiative current  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-63286" rel="noreferrer noopener" target="_blank" title="Currently Jenkins uses OpenJDK in the most of official Docker packages. We would like to migrate to AdoptOpenJDK which offers wider range of supported platforms.
+">
+Migration to AdoptOpenJDK in distributions
+</a>
+</div>
+<div class="status initiative current  initiative-label-feature initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/projects/gsoc/2020/projects/custom-jenkins-distribution-build-service" rel="noreferrer noopener" target="_blank" title="Hosted versions of the Custom Jenkins distribution build service provided by the Jenkins project
+">
+customize.jenkins.io
+</a>
+</div>
+</td>
+<td class="status near-term" data-header="Near Term">
+<div class="status initiative near-term  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-61775" rel="noreferrer noopener" target="_blank" title="Docker image support for ARM 64 running Java 8 and Java 11">
+Docker images for ARM 64
+</a>
+</div>
+<div class="status initiative near-term  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/JENKINS-52785" rel="noreferrer noopener" target="_blank" title="We intend to work on that in the short term, but there is no ongoing development">
+Multi-platform Docker images
+</a>
+</div>
+</td>
+<td class="status future" data-header="Future">
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/sigs/platform/#java-support" rel="noreferrer noopener" target="_blank" title="We would like to support future mainstream JVM versions (Java 15+). Right now Jenkins runs well on Java 11, but we may need to do some changes towards the next LTS baseline.
+">
+Java 15+ support
+</a>
+</div>
+<div class="status initiative future  initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/sigs/platform/#java-support" rel="noreferrer noopener" target="_blank" title="We are interested to run Jenkins in cloud native environments. To do so, we would like to introduce support for perspective virtual machines like GraalVM or Quarkus.
+">
+Cloud native Java support
+</a>
+</div>
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Jenkins developer tools and services
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+<div class="status initiative released  initiative-label-tools">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/doc/developer/plugin-development/dependency-management/#jenkins-core-bom" rel="noreferrer noopener" target="_blank" title="This Bill of Materials lists libraries and versions supplied by the Jenkins core. It can be used by plugin developers to prevent risk of binary conflicts between plugins.
+">
+Jenkins core BOM
+</a>
+</div>
+<div class="status initiative released  initiative-label-tools">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/plugin-pom/releases/tag/plugin-4.0" rel="noreferrer noopener" target="_blank" title="New Plugin POM release which enables best practices like Jenkins Core bill of materials by design.
+">
+Plugin POM 4.0
+</a>
+</div>
+</td>
+<td class="status preview" data-header="Preview">
+<div class="status initiative preview  initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/INFRA-910" rel="noreferrer noopener" target="_blank" title="This initiative is available to Jenkins users and contributors for preview. We would appreciate testing and any feedback!
+">
+Core release automation
+</a>
+</div>
+<div class="status initiative preview  initiative-label-tools">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/bom" rel="noreferrer noopener" target="_blank" title="This Bill of materials can be used by plugin developers to more easily manage dependencies on other common plugins. It includes a cross-verified set of plugins compatible with a particular Jenkins core baseline.
+">
+Jenkins plugin BOM
+</a>
+</div>
+<div class="status initiative preview  initiative-label-tools initiative-label-security">
+<a data-placement="top" data-toggle="tooltip" href="https://groups.google.com/forum/#!msg/jenkinsci-dev/exd3fc9NUAg/xn--6vNSBgAJ" rel="noreferrer noopener" target="_blank" title="Extending static analysis to discover potential security issues with help of the Find Security Bugs tools.
+">
+Static analysis for security issues
+</a>
+</div>
+<div class="status initiative preview  initiative-label-tools initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/.github/blob/master/.github/release-drafter.adoc" rel="noreferrer noopener" target="_blank" title="Jenkins project now offers changelog automation powered by Release Drafter GitHub Apps or GitHub Actions. We would like to update the flow and to support changelog generation within Jenkins pipelines.
+">
+Changelog automation
+</a>
+</div>
+<div class="status initiative preview  initiative-label-tools">
+<a data-placement="top" data-toggle="tooltip" href="https://groups.google.com/forum/#!searchin/jenkinsci-dev/dependabot%7Csort:date/jenkinsci-dev/XMllKuWLO_8/5hagrjApEgAJ" rel="noreferrer noopener" target="_blank" title="We want to widely adopt Dependabot in the project to simplify dependency management along with BOMs. In order to do so, additional Jenkins-specific guidelines and documentation are needed.
+">
+Automated Dependency management
+</a>
+</div>
+</td>
+<td class="status current" data-header="Current">
+</td>
+<td class="status near-term" data-header="Near Term">
+<div class="status initiative near-term  initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jep/blob/master/jep/217" rel="noreferrer noopener" target="_blank" title="Provide a storage for experimental Jenkins Docker images so that maintainers can build and deploy untrusted images from ci.jenkins.io and other services.
+">
+JEP-217: Infrastructure for Experimental Docker images
+</a>
+</div>
+</td>
+<td class="status future" data-header="Future">
+<div class="status initiative future  initiative-label-tools initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jep/blob/master/jep/221" rel="noreferrer noopener" target="_blank" title="Introduce a new system which would enable Jenkins plugin maintainers to add Continuous Delivery (CD) to their projects.
+">
+JEP-221: Continuous Delivery of Jenkins Plugins
+</a>
+</div>
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Contributing to Jenkins
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+<div class="status initiative released  initiative-label-documentation initiative-label-policies">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/doc/developer/plugin-governance/adopt-a-plugin/" rel="noreferrer noopener" target="_blank" title="The initiative is completed and available to users. There might be follow-up improvements to the initiative, and any contributions are welcome.
+">
+Plugin adoption process revamp
+</a>
+</div>
+<div class="status initiative released  initiative-label-community initiative-label-documentation">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/WEBSITE-662" rel="noreferrer noopener" target="_blank" title="The initiative is completed and available to users. There might be follow-up improvements to the initiative, and any contributions are welcome.
+">
+Contributor guidelines refresh
+</a>
+</div>
+<div class="status initiative released  initiative-label-outreach-program initiative-label-events initiative-label-feature">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/projects/gsoc/2020" rel="noreferrer noopener" target="_blank" title="The initiative is completed and available to users. There might be follow-up improvements to the initiative, and any contributions are welcome.
+">
+Google Summer of Code 2020
+</a>
+</div>
+<div class="status initiative released  initiative-label-outreach-program initiative-label-documentation initiative-label-events">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/sigs/docs/gsod/" rel="noreferrer noopener" target="_blank" title="The initiative is completed and available to users. There might be follow-up improvements to the initiative, and any contributions are welcome.
+">
+Google Season of Docs 2020
+</a>
+</div>
+<div class="status initiative released  initiative-label-outreach-program initiative-label-feature initiative-label-documentation initiative-label-community initiative-label-events">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/events/hacktoberfest/" rel="noreferrer noopener" target="_blank" title="The initiative is completed and available to users. There might be follow-up improvements to the initiative, and any contributions are welcome.
+">
+Hacktoberfest 2020
+</a>
+</div>
+</td>
+<td class="status preview" data-header="Preview">
+</td>
+<td class="status current" data-header="Current">
+</td>
+<td class="status near-term" data-header="Near Term">
+</td>
+<td class="status future" data-header="Future">
+<div class="status initiative future  initiative-label-outreach-program initiative-label-community initiative-label-events">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/sigs/advocacy-and-outreach/outreach-programs/#community-bridge" rel="noreferrer noopener" target="_blank" title="There is a consensus within the community that we would like this initiative to happen. We intend to work on that in the future, but there is no ongoing development.
+">
+Community Bridge Mentorship
+</a>
+</div>
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Community advocacy and marketing
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+<div class="status initiative released  initiative-label-outreach-program">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/blog/2020/04/30/jenkins-is-the-way/" rel="noreferrer noopener" target="_blank" title="Jenkins Is The Way is a collection of experiences from all around the world showcasing how users are building, deploying, and automating great stuff with Jenkins. 
+">
+Jenkins Is The Way program
+</a>
+</div>
+<div class="status initiative released  initiative-label-outreach-program initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/events/online-meetup/" rel="noreferrer noopener" target="_blank" title="Make it possible to regularly host Jenkins online meetups and webinars.
+">
+New online meetup platform
+</a>
+</div>
+<div class="status initiative released  initiative-label-outreach-program">
+<a data-placement="top" data-toggle="tooltip" href="https://www.linkedin.com/company/jenkins-project/" rel="noreferrer noopener" target="_blank" title="Extend and automate Jenkins presence in LinkedIn so that we could outreach to its users and facilitate adoption and contributions.
+">
+Jenkins on LinkedIn
+</a>
+</div>
+</td>
+<td class="status preview" data-header="Preview">
+</td>
+<td class="status current" data-header="Current">
+</td>
+<td class="status near-term" data-header="Near Term">
+</td>
+<td class="status future" data-header="Future">
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Jenkins Project Internals
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+</td>
+<td class="status preview" data-header="Preview">
+<div class="status initiative preview  initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" href="https://issues.jenkins.io/browse/INFRA-2525" rel="noreferrer noopener" target="_blank" title="Migration of agent workload from Azure to AWS in order to optimize the infrastructure costs for the project.
+">
+Migrate ci.jenkins.io agents to AWS
+</a>
+</div>
+</td>
+<td class="status current" data-header="Current">
+</td>
+<td class="status near-term" data-header="Near Term">
+<div class="status initiative near-term  initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" title="Define and maintain ci.jenkins.io configuration as code rather than through the user interface">
+ci.jenkins.io as code
+</a>
+</div>
+</td>
+<td class="status future" data-header="Future">
+</td>
+</tr>
+<tr class="status-category">
+<td class="cat-name" colspan="5">
+<span>
+Governance
+</span>
+</td>
+</tr>
+<tr class="category-initiatives">
+<td class="status released" data-header="Released">
+<div class="status initiative released  initiative-label-documentation initiative-label-policies">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jep/tree/master/jep/14" rel="noreferrer noopener" target="_blank" title="A new public community-driven roadmap which would list the key initiatives in the Jenkins project. It will help users, contributors and vendors to properly plan their work and to contribute to the projects they are interested in.
+">
+JEP-14: Public roadmap
+</a>
+</div>
+<div class="status initiative released  initiative-label-documentation initiative-label-policies initiative-label-security">
+<a data-placement="top" data-toggle="tooltip" href="https://groups.google.com/forum/#!msg/jenkinsci-dev/n1qH1K5_td0/pA_nUN_6BgAJ" rel="noreferrer noopener" target="_blank" title="Pass the Core Infrastructure Initiative (CII) compliance certification so that we are aligned with Linux Foundation quality and security standards. It unlocks targeted security projects funding and access to additional developer tools and services.
+">
+Core Infrastructure Initiative compliance
+</a>
+</div>
+<div class="status initiative released  initiative-label-events">
+<a data-placement="top" data-toggle="tooltip" href="https://jenkins.io/blog/2020/12/03/election-results/" rel="noreferrer noopener" target="_blank" title="In late 2020 we plan to hold new Jenkins Governance Board and officer elections. We will re-elect at least one Governance Board member and all officers.
+">
+2020 Governance Board and Officer elections
+</a>
+</div>
+<div class="status initiative released  initiative-label-documentation initiative-label-policies">
+<a data-placement="top" data-toggle="tooltip" href="https://www.jenkins.io/project/conduct/" rel="noreferrer noopener" target="_blank" title="Updating the Jenkins Code of Conduct to Contributor Covenant 2.0, alignment with the Continuous Delivery Foundation requirements.
+">
+Code of Conduct Update
+</a>
+</div>
+<div class="status initiative released  initiative-label-documentation initiative-label-policies">
+<a data-placement="top" data-toggle="tooltip" href="https://groups.google.com/forum/#!msg/jenkinsci-dev/I3sUP2SB2JI/LDS99sOtBQAJ" rel="noreferrer noopener" target="_blank" title="The Technical Oversight Committee (TOC) of CDF set out a project lifecycle for projects as part of the governance model. We are interested to align the Jenkins project with the defined criteria for graduated projects.
+">
+CDF Graduation
+</a>
+</div>
+</td>
+<td class="status preview" data-header="Preview">
+<div class="status initiative preview  initiative-label-policies initiative-label-infrastructure">
+<a data-placement="top" data-toggle="tooltip" href="https://github.com/jenkinsci/jep/tree/master/jep/15" rel="noreferrer noopener" target="_blank" title="We are interested to provide ways to donate to the Jenkins project. Donations help us to facilitate the project&#39;s roadmap and to run more community events and outreach programs.
+">
+JEP-15: Funding on Community Bridge
+</a>
+</div>
+</td>
+<td class="status current" data-header="Current">
+</td>
+<td class="status near-term" data-header="Near Term">
+</td>
+<td class="status future" data-header="Future">
+<div class="status initiative future  initiative-label-policies">
+<a data-placement="top" data-toggle="tooltip" href="/project" rel="noreferrer noopener" target="_blank" title="Introduce an official entity which would drive Jenkins architecture and the technical roadmap.
+">
+Technical Steering Committee
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+References
+</h2>
+<ul>
+<li>
+<a href="https://github.com/jenkinsci/jep/tree/master/jep/14">
+Roadmap process documentation (JEP-14)
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci/jep/tree/master/jep/14#submitting-roadmap-suggestions">
+HOWTO: Suggest a new roadmap item
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkins-infra/jenkins.io/blob/master/content/_data/roadmap/roadmap.yml">
+Open data (roadmap.yml)
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkins-infra/jenkins.io/blob/master/content/_data/roadmap/archive.yml">
+Archive (completed and withdrawn roadmap items)
+</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/anchor-js/anchor.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/js/tether.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/js/bootstrap.min.js"></script>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<p class="box">
+<a href="https://github.com/jenkins-infra/jenkins.io/edit/master/content//project/roadmap/index.html.haml" title="Edit /project/roadmap/index.html.haml on GitHub">Improve this page</a>
+|
+<a href="https://github.com/jenkins-infra/jenkins.io/issues/new?labels=bug&amp;template=4-bug.md&amp;title=Jenkins Roadmap page - TODO: Put a summary here&amp;body=Problem with the [Jenkins Roadmap](https://www.jenkins.io/project/roadmap/) page, [source file](https://github.com/jenkins-infra/jenkins.io/blob/master/content/project/roadmap/index.html.haml)%0A%0ATODO: Describe the expected and actual behavior here %0A%0A%23%23 Screenshots %0A%0A TODO: Add screenshots if possible %0A%0A%23%23 Possible Solution %0A%0A%3C!-- If you have suggestions on a fix for the bug, please describe it here. --%3E %0A%0AN/A" title="Report a problem with /project/roadmap/index.html.haml">Report a problem</a>
+</p>
+<div class="license-box">
+<div id="creativecommons">
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+<p>
+<img alt="Creative Commons Attribution-ShareAlike license" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+</p>
+</a>
+<p>
+The content driving this site is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 license.
+</p>
+</div>
+</div>
+</div>
+<div class="links col-md-8">
+<div class="container">
+<div class="row">
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Resources</h5>
+<ul class="resources">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Downloads
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc">
+Documentation
+</a>
+</li>
+<li>
+<a href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Contributing
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Project</h5>
+<ul class="project">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project">
+Structure and governance
+</a>
+</li>
+<li>
+<a href="https://issues.jenkins.io">
+Issue tracker
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://ci.jenkins.io">
+Jenkins on Jenkins
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Community</h5>
+<ul class="community">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists">
+Mailing lists
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/chat">
+Chats
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/sigs">
+Special Interest Groups
+</a>
+</li>
+<li>
+<a href="https://twitter.com/jenkinsci">
+Twitter
+</a>
+</li>
+<li>
+<a href="https://reddit.com/r/jenkinsci">
+Reddit
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Other</h5>
+<ul class="other">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/conduct">
+Code of Conduct
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press information
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/merchandise">
+Merchandise
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-000000-0', 'auto');
+ga('send', 'pageview');
+ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+  !function(d,s,id) {
+    var js, fjs=d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id=id;
+      js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,"script","twitter-wjs");
+  
+  $(function(){
+    var $body = $(document.body);
+    $(".nav-link.dropdown-toggle").on("mousedown", function(){
+      $body.addClass("no-outline");
+    })
+    $body.on("keydown", function(){
+      $body.removeClass("no-outline");
+    })
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+docsearch({
+  apiKey: '9df657b854f8c42d9887b34bc275db4d',
+  indexName: 'jenkins',
+  inputSelector: 'input.searchbox',
+  algoliaOptions: { 'facetFilters': ["tags:en"] },
+  debug: false
+});
+</script>
+</body>
+</html>

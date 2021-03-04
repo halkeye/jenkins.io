@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+Hands On: Beautify the user interface of Jenkins reporter plugins
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="description">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<!-- Favicons -->
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/site.webmanifest" rel="manifest">
+<link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon">
+<meta content="#2b5797" name="msapplication-TileColor">
+<meta content="#ffffff" name="theme-color">
+<meta content="Hands On: Beautify the user interface of Jenkins reporter plugins" name="apple-mobile-web-app-title">
+<!-- Twitter Card data -->
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@JenkinsCI" name="twitter:site">
+<meta content="Hands On: Beautify the user interface of Jenkins reporter plugins" name="twitter:title">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="twitter:description">
+<meta content="@JenkinsCI" name="twitter:creator">
+<!-- Twitter Summary card images must be at least 120x120px -->
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/post-images/2020/01-ui-plugins/summary.png" name="twitter:image">
+<!-- Open Graph data -->
+<meta content="Hands On: Beautify the user interface of Jenkins reporter plugins" property="og:title">
+<meta content="article" property="og:type">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/blog/2020/03/17/ui-plugins/index.html" property="og:url">
+<meta content="Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software" name="og:description">
+<meta content="Hands On: Beautify the user interface of Jenkins reporter plugins" property="og:site_name">
+<meta content="https://halkeye.github.io/jenkins.io/add-algolia/images/post-images/2020/01-ui-plugins/summary.png" name="og:image">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/css/tether.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-icons.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/jenkins.css" media="screen" rel="stylesheet">
+<!-- Non-obtrusive CSS styles -->
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/ionicons/css/ionicons.min.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/footer.css" media="screen" rel="stylesheet">
+<link href="https://halkeye.github.io/jenkins.io/add-algolia/css/font-awesome.min.css" media="screen" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/jquery/jquery.min.js"></script>
+<!-- starting partial toptoolbar.html.haml -->
+<nav class="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top" id="ji-toolbar">
+<a class="navbar-brand" href="https://halkeye.github.io/jenkins.io/add-algolia">
+Jenkins
+</a>
+<button class="navbar-toggler" data-target="#CollapsingNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="CollapsingNavbar">
+<ul class="nav navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+<!-- starting partial cdf_logo.html.haml -->
+<svg width="36" height="18" xmlns="http://www.w3.org/2000/svg" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.23 44.77 362.70 271.95"><defs><linearGradient id="a" x1="359.765" x2="104.082" y1="134.295" y2="124.577" gradientTransform="matrix(1 0 0 -1 0 439.068)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ed1c24"/><stop offset="1" stop-color="#f7941d"/></linearGradient><linearGradient id="b" x1="355.202" x2="99.519" y1="254.467" y2="244.749" xlink:href="#a"/><linearGradient id="c" x1="183.903" x2="10.612" y1="227.598" y2="221.023" xlink:href="#a"/><linearGradient id="d" x1="367.119" x2="157.995" y1="265.311" y2="257.091" xlink:href="#a"/></defs><path fill="#c49a6c" d="M231.52 309.278c2.483-.332 4.895-.77 7.255-1.329s4.649-1.206 6.991-1.957c13.494-4.58 25.187-12.952 36.374-24.593l-.14-.175c-14.944 15.486-30.693 25.344-50.48 28.054z"/><path fill="url(#a)" d="M224.232 309.96h.332c1.084 0 2.15-.14 3.216-.228a93.844 93.844 0 0 1-3.233.227z"/><path fill="url(#b)" d="M284.692 187.187l-.122.192.122-.192z"/><path fill="url(#c)" d="M146.145 231.847a150.844 150.844 0 0 1-12.97 15.862c-7.582 7.889-15.507 13.563-24.652 16.667a47.832 47.832 0 0 1-4.738 1.326 56.959 56.959 0 0 1-4.916.9 38.32 38.32 0 0 1-1.682.214l-.912.083c-.723.059-1.445.118-2.18.154h-3.068a42.325 42.325 0 0 1-9.192-1.043 49.977 49.977 0 0 1-6.764-2.002 43.097 43.097 0 0 1-4.525-1.954c-1.493-.77-2.961-1.516-4.407-2.37a59.5 59.5 0 0 1-17.105-15.399 59.714 59.714 0 0 1-2.914-4.311 53.09 53.09 0 0 1-1.291-2.263 51.985 51.985 0 0 1-2.263-4.738 46.72 46.72 0 0 1 0-36.426 51.986 51.986 0 0 1 2.263-4.738 54.14 54.14 0 0 1 1.291-2.263 59.742 59.742 0 0 1 2.914-4.311 59.714 59.714 0 0 1 17.105-15.4 60.828 60.828 0 0 1 4.407-2.369q2.217-1 4.525-1.777a49.976 49.976 0 0 1 6.906-2.073 42.325 42.325 0 0 1 9.192-1.042h3.128c.722 0 1.445.094 2.155.154l1.043.106 1.019.119c1.8.237 3.553.557 5.271.96.853.2 1.694.426 2.523.663a51.186 51.186 0 0 1 11.846 5.176 59.645 59.645 0 0 1 4.395 2.89 74.485 74.485 0 0 1 8.386 7.108q2.038 1.99 4.063 4.193l.083-.13a159.395 159.395 0 0 1 11.064 13.942c5.437-8.576 13.658-21.464 16.584-25.74 1.185-1.718 2.37-3.46 3.66-5.212-13.54-16.513-29.827-30.23-51.587-36.082h-.154a89.397 89.397 0 0 0-3.187-.794l-.45-.107a92.565 92.565 0 0 0-3.151-.627l-.628-.119a80.578 80.578 0 0 0-3.743-.569h-.142a58.29 58.29 0 0 0-2.073-.236h-.391l-1.872-.166h-.568l-1.754-.119h-.675l-1.777-.07h-3.115c-46.447-.25-87.125 40.476-87.125 86.911s40.725 87.173 87.172 87.173h3.14l1.729-.071h.734l1.67-.095h.676l1.706-.154h.568l1.813-.213.414-.06 1.967-.272h.213a125.91 125.91 0 0 0 3.553-.628l.652-.142c.96-.201 1.907-.415 2.855-.64l.58-.142a86.66 86.66 0 0 0 3.009-.817l.237-.071c20.73-6.077 36.425-19.392 49.55-35.277-2.037-3.068-3.4-5.366-4.039-6.48z"/><path fill="url(#d)" d="M318.05 51.733v94.66a85.514 85.514 0 0 0-52.595-18.729h-3.115l-1.777.072-.7.047-1.752.118h-.569l-1.871.166h-.391c-.7.071-1.386.142-2.073.237h-.154c-1.256.154-2.5.355-3.732.569l-.628.118c-1.066.19-2.108.403-3.15.628l-.45.107c-30.35 6.858-50.333 28.808-66.822 52.82-.7 1.018-1.35 2.049-2.038 3.068-2.25 3.423-5.46 8.422-8.635 13.397-4.17 6.527-8.292 13.03-9.939 15.66l20.624 32.137s21.997 40.465 61.68 51.482l.237.07c.995.297 2.002.558 3.009.818l.58.142c.936.237 1.896.439 2.855.64l.652.142c1.184.225 2.369.439 3.553.628h.214l1.966.273.415.059 1.812.213h.569l1.705.154h.676l1.67.095h.734l1.73.07h3.139c54.703 0 86.355-30.964 87.149-85.063V51.733zm-52.595 215.403h-3.068c-.734 0-1.457-.095-2.18-.154l-.912-.083c-.568-.06-1.125-.13-1.682-.213a49.077 49.077 0 0 1-9.571-2.275 49.612 49.612 0 0 1-6.634-2.83 55.792 55.792 0 0 1-6.254-3.768 63.068 63.068 0 0 1-3.009-2.215 82.399 82.399 0 0 1-8.683-7.925l-.095.119c-1.255-1.303-2.487-2.69-3.731-4.11-.154-.167-.296-.356-.45-.534-.628-.722-1.256-1.445-1.884-2.215s-1.125-1.398-1.682-2.097-.888-1.101-1.338-1.682a184.467 184.467 0 0 1-6.053-8.292c-.7-.995-1.398-2.025-2.109-3.056-.379-.569-.77-1.184-1.185-1.73-.675-1.018-1.362-2.013-2.049-3.056l-.355-.545c-1.185-1.812-2.37-3.684-3.649-5.603q2.95-4.608 5.817-8.86c1.907-2.831 3.79-5.556 5.662-8.138s3.72-5.046 5.591-7.38 3.72-4.525 5.603-6.586q2.026-2.203 4.063-4.194c1.374-1.338 2.748-2.594 4.158-3.778s2.807-2.287 4.252-3.329a57.594 57.594 0 0 1 7.748-4.62c.331-.166.663-.367 1.006-.533l.226-.118c1.41-.652 2.843-1.185 4.3-1.73l.485-.201c.273-.083.557-.142.83-.237a44.943 44.943 0 0 1 3.34-.948l1.374-.343a60.798 60.798 0 0 1 4.738-.841l1.019-.119 1.042-.106c.711 0 1.434-.119 2.156-.154h3.128a42.431 42.431 0 0 1 4.572.26 48.011 48.011 0 0 1 6.93 1.35c1.54.427 3.08.925 4.596 1.505a48.724 48.724 0 0 1 4.525 1.955c1.493.722 2.961 1.516 4.407 2.369s2.866 1.8 4.24 2.784 2.725 2.049 4.028 3.174a58.459 58.459 0 0 1 8.837 9.477 59.73 59.73 0 0 1 2.914 4.312 51.067 51.067 0 0 1 5.318 11.916 47.38 47.38 0 0 1 1.185 5.165 45.567 45.567 0 0 1 .71 8.09c.072 35.964-16.062 52.122-52.227 52.122z"/></svg>
+
+<!-- ending partial cdf_logo.html.haml -->
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://cd.foundation/">
+What is CDF?
+</a>
+<a class="dropdown-item feature" href="https://jenkins-x.io/">
+Jenkins X
+</a>
+<a class="dropdown-item feature" href="https://cloud.google.com/tekton/">
+Tekton
+</a>
+<a class="dropdown-item feature" href="https://www.spinnaker.io/">
+Spinnaker
+</a>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Documentation
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book">
+<strong>
+User Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/installing/">
+&nbsp;-&nbsp;Installing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/pipeline">
+&nbsp;-&nbsp;Jenkins Pipeline
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/managing/">
+&nbsp;-&nbsp;Managing Jenkins
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/system-administration">
+&nbsp;-&nbsp;System Administration
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/book/glossary/">
+&nbsp;-&nbsp;Terms and Definitions
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/solutions">
+<strong>
+Solution Pages
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+<strong>
+Tutorials
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/pipeline/tour/getting-started/">
+&nbsp;-&nbsp;Guided Tour
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/tutorials/">
+&nbsp;-&nbsp;More Tutorials
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/doc/developer">
+<strong>
+Developer Guide
+</strong>
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+<strong>
+Contributor Guide
+</strong>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Community
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/chat" title="Chat with the rest of the Jenkins community on IRC">
+Chat
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam">
+Meet
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+<a class="dropdown-item feature" href="https://issues.jenkins.io/">
+Issue Tracker
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists" title="Browse Jenkins mailing list archives and/or subscribe to lists">
+Mailing Lists
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item feature" href="https://accounts.jenkins.io/" title="Create/manage your account for accessing wiki, issue tracker, etc">
+Account Management
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/">
+<strong>
+Special Interest Groups
+</strong>
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/advocacy-and-outreach/">
+&nbsp;-&nbsp;Advocacy and Outreach
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/chinese-localization/">
+&nbsp;-&nbsp;Chinese Localization
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/cloud-native/">
+&nbsp;-&nbsp;Cloud Native
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/">
+&nbsp;-&nbsp;Documentation
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/gsoc/">
+&nbsp;-&nbsp;Google Summer of Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/hw-and-eda/">
+&nbsp;-&nbsp;Hardware and EDA
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/pipeline-authoring/">
+&nbsp;-&nbsp;Pipeline Authoring
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/platform/">
+&nbsp;-&nbsp;Platform
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/ux/">
+&nbsp;-&nbsp;User Experience
+</a>
+</div>
+</li>
+<li class="dropdown nav-item">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+Subprojects
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/evergreen/">
+Evergreen
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/gsoc/">
+Google Summer of Code in Jenkins
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/infrastructure/">
+Infrastructure
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jam/">
+CI/CD and Jenkins Area Meetups
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/jcasc/">
+Jenkins Configuration as Code
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/projects/remoting/">
+Jenkins Remoting
+</a>
+<a class="dropdown-item feature" href="https://halkeye.github.io/jenkins.io/add-algolia/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/">
+Document Jenkins on Kubernetes
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+About
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/project/conduct">
+Conduct
+</a>
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<!-- starting partial dropdown.html.haml -->
+<button aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown">
+English
+</button>
+
+<!-- ending partial dropdown.html.haml -->
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://halkeye.github.io/jenkins.io/add-algolia/zh">
+中文 Chinese
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link btn btn-outline-secondary" href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Download
+</a>
+</li>
+<li class="nav-item searchbox">
+<input aria-label="Search" class="form-control searchbox" placeholder="Search" type="search">
+</li>
+</ul>
+</div>
+</nav>
+<!-- Spacing to make the fixed-top sticky navbar not occlude any content below it -->
+<div class="pt-4">
+&nbsp;
+</div>
+
+<!-- ending partial toptoolbar.html.haml -->
+<!-- starting partial anchors.html.haml -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    for (var i = 1 ; i <= 6 ; i ++) {
+      anchors.add('.container .row.body h' + i);
+    }
+  })
+</script>
+
+<!-- ending partial anchors.html.haml -->
+<div class="container blog-post">
+<div class="row body">
+<div class="col-md-11 col-md-offset-1 main-content" id="content">
+<div id="content-top">
+<h1>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/blog/2020/03/17/ui-plugins/" title="Hands On: Beautify the user interface of Jenkins reporter plugins">
+Hands On: Beautify the user interface of Jenkins reporter plugins
+</a>
+</h1>
+<div style="float: right; clear: all;">
+<a class="twitter-share-button" data-lang="en" href="https://twitter.com/share">
+Tweet
+</a>
+</div>
+<div class="post-attrs">
+<span class="submitted">
+Published on
+2020-03-17
+by
+<a href="/blog/authors/uhafner">Ullrich Hafner</a>
+</span>
+<ul class="list-inline tags">
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/ui">
+ui
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/ux">
+ux
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/plugins">
+plugins
+</a>
+</li>
+<li>
+<a class="tag-link" href="https://halkeye.github.io/jenkins.io/add-algolia/node/tags/developer">
+developer
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="paragraph lead">
+<p>This article has been presented in an <a href="https://www.youtube.com/watch?v=GLLhi2UZlxI">recorded online session</a>
+during the <a href="https://www.jenkins.io/events/online-hackfest/2020-uiux/">Jenkins 2020 UI/UX Hackfest</a>.</p>
+</div>
+<div class="paragraph">
+<p>For Jenkins a large number of plugins are available that visualize the results of a wide variety of build steps. There
+are plugins available to render the test results, the code coverage, the static analysis and so on. All of these plugins
+typically pick up the build results of a given build step and show them in the user interface. In order to render these
+details most of the plugins use static HTML pages, since this type of user interface is the standard visualization in
+Jenkins since its inception in 2007.</p>
+</div>
+<div class="paragraph">
+<p>In order to improve the look and feel and the user experience of these plugins it makes sense to move forward and
+incorporate some modern Java Script libraries and components. Since development of Blue Ocean has been stopped (see
+<a href="https://groups.google.com/forum/?utm_medium=email&amp;utm_source=footer#!msg/jenkinsci-users/xngZrSsXIjc/btasuPpYCgAJ">Jenkins mailing list post</a>)
+plugin authors need to decide on their own, which UI technologies are helpful for that task. However, the universe of
+modern UI components is so overwhelming that it makes sense to pick up only a small set of components that are proven
+to be useful and compatible with Jenkins underlying web technologies. Moreover, the initial setup of
+incorporating such a new component is quite large so it would be helpful if that work needs to be done only once.</p>
+</div>
+<div class="paragraph">
+<p>This guide introduces a few UI components
+that make sense to be used by all plugin authors in the future to provide a rich user interface for reports in Jenkins.
+In order to simplify the usage of these libraries in the context of Jenkins as a Java based web application, these
+Java Script libraries and components have been packaged as ordinary Jenkins plugins.</p>
+</div>
+<div class="paragraph">
+<p>In the following sections, these new components will be introduced step by step. In order to see how these components
+can be used a plugin, I demonstrate the new features while enhancing the existing
+<a href="https://github.com/jenkinsci/forensics-api-plugin">Forensics Plugin</a> with a new user
+interface. Since the Warnings Next Generation Plugin also uses these new components, you can see additional examples
+in the <a href="https://github.com/jenkinsci/warnings-ng-plugin/blob/master/doc/Documentation.md">documentation of the warnings plugin</a>
+or in our public <a href="https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/master/pmd/">ci.jenkins.io instance</a>, that
+already is using these components in the detail views of the warnings plugin.</p>
+</div>
+<div class="sect1">
+<h2 id="new-user-interface-plugins"><a class="anchor" href="#new-user-interface-plugins"></a>1. New user interface plugins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following UI components are provided as new Jenkins plugins:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/jquery3-api-plugin">jquery3-api-plugin</a>:
+Provides <a href="https://jquery.com">jQuery 3</a> for Jenkins Plugins.
+jQuery is&#8201;&#8212;&#8201;as described on their home page&#8201;&#8212;&#8201;a fast, small, and feature-rich JavaScript library. It makes things
+like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API
+that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the
+way that millions of people write JavaScript.</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/bootstrap4-api-plugin">bootstrap4-api-plugin</a>:
+Provides <a href="https://getbootstrap.com/">Bootstrap 4</a> for Jenkins Plugins. Bootstrap is&#8201;&#8212;&#8201;according to their self-perception&#8201;&#8212;&#8201;the world’s most popular front-end component library to build responsive, mobile-first projects on the web. It is
+an open source toolkit for developing with HTML, CSS, and JS. Developers can quickly prototype their ideas or
+build entire apps with their Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins
+built on jQuery.</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/data-tables-api-plugin">data-tables-api-plugin</a>:
+Provides <a href="https://datatables.net">DataTables</a> for Jenkins Plugins.
+DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, built upon the foundations
+of progressive enhancement, that adds all of these advanced features to any HTML table:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Previous, next and page navigation</p>
+</li>
+<li>
+<p>Filter results by text search</p>
+</li>
+<li>
+<p>Sort data by multiple columns at once</p>
+</li>
+<li>
+<p>DOM, Javascript, Ajax and server-side processing</p>
+</li>
+<li>
+<p>Easily theme-able</p>
+</li>
+<li>
+<p>Mobile friendly</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/echarts-api-plugin">echarts-api-plugin</a>:
+Provides <a href="https://echarts.apache.org/en/index.html">ECharts</a> for Jenkins Plugins. ECharts is an open-sourced
+JavaScript visualization tool to create intuitive, interactive, and highly-customizable charts. It
+can run fluently on PC and mobile devices and it is compatible with most modern
+Web Browsers.</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/font-awesome-api-plugin">font-awesome-api-plugin</a>:
+Provides <a href="https://fontawesome.com">Font Awesome</a> for Jenkins Plugins. Font Awesome has vector icons and social logos,
+according to their self-perception it is the web&#8217;s most popular icon set and toolkit. Currently, it contains more than
+1,500 free icons.</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/popper-api-plugin">popper-api-plugin</a>
+Provides <a href="https://popper.js.org">Popper.js</a> for Jenkins Plugins. Popper can
+easily position tooltips, popovers or anything else with just a line of code.</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/plugin-util-api-plugin">plugin-util-api-plugin</a>: This small plugin provides
+some helper and base classes to simplify the creation of reporters in Jenkins. This plugin also
+provides a set of architecture rules that can be included in an architecture test suite of your plugin.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="required-changes-for-a-plugin-pom"><a class="anchor" href="#required-changes-for-a-plugin-pom"></a>2. Required changes for a plugin POM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to use these plugins you need to add them as dependencies in your plugin pom. You can use the following snippet
+to add them all:</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;project&gt;</span>
+
+ [...]
+
+  <span style="color:#070;font-weight:bold">&lt;properties&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;plugin-util-api.version&gt;</span>1.0.2<span style="color:#070;font-weight:bold">&lt;/plugin-util-api.version&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;font-awesome-api.version&gt;</span>5.12.0-7<span style="color:#070;font-weight:bold">&lt;/font-awesome-api.version&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;bootstrap4-api.version&gt;</span>4.4.1-10<span style="color:#070;font-weight:bold">&lt;/bootstrap4-api.version&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;echarts-api.version&gt;</span>4.6.0-8<span style="color:#070;font-weight:bold">&lt;/echarts-api.version&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;data-tables-api.version&gt;</span>1.10.20-13<span style="color:#070;font-weight:bold">&lt;/data-tables-api.version&gt;</span>
+    [...]
+  <span style="color:#070;font-weight:bold">&lt;/properties&gt;</span>
+
+  <span style="color:#070;font-weight:bold">&lt;dependencies&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>io.jenkins.plugins<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>plugin-util-api<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;version&gt;</span>${plugin-util-api.version}<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>io.jenkins.plugins<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>font-awesome-api<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;version&gt;</span>${font-awesome-api.version}<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>io.jenkins.plugins<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>bootstrap4-api<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;version&gt;</span>${bootstrap4-api.version}<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>io.jenkins.plugins<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>echarts-api<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;version&gt;</span>${echarts-api.version}<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>io.jenkins.plugins<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>data-tables-api<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;version&gt;</span>${data-tables-api.version}<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span>
+    [...]
+  <span style="color:#070;font-weight:bold">&lt;/dependencies&gt;</span>
+
+  [...]
+
+<span style="color:#070;font-weight:bold">&lt;/project&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, you have a look at the POM files of the
+<a href="https://github.com/jenkinsci/warnings-ng-plugin/blob/master/pom.xml#L249">Warnings Next Generation Plugin</a> or the
+<a href="https://github.com/jenkinsci/forensics-api-plugin/blob/master/pom.xml#L76">Forensics API Plugin</a> which already use these
+plugins.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="reporter-structure"><a class="anchor" href="#reporter-structure"></a>3. General structure of a reporter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section I will explain some fundamentals of the design of Jenkins, i.e. the Java model and the associated
+user interface elements. If you are already familiar on how to implement the corresponding extension points of a
+reporter plugin (see section <a href="https://jenkins.io/doc/developer/extensibility/">Extensibility</a> in Jenkins'
+developer guide), then you can skip this section and head directly to <a href="#extending-jenkins-model">Section 3.1</a>.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins organizes projects using the static object model structure shown in <a href="#jenkins-model">Figure 1</a>.</p>
+</div>
+<div id="jenkins-model" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/jenkins-design.png" alt="Jenkins design">
+</div>
+<div class="title">Figure 1. Jenkins design - high level view of the Java model</div>
+</div>
+<div class="paragraph">
+<p>The top level items in Jenkins user interface are jobs (at least the top level items
+we are interested in). Jenkins contains several jobs of different types (Freestyle jobs, Maven Jobs, Pipelines, etc.).</p>
+</div>
+<div class="paragraph">
+<p>Each of these jobs contains an arbitrary number of builds (or more technically, runs). Each build is identified by its
+unique build number. Jenkins plugins can attach results to these builds, e.g. build artifacts, test results,
+analysis reports, etc. In order to attach such a result, a plugin technically needs to implement and create an action
+that stores these results.</p>
+</div>
+<div class="paragraph">
+<p>These Java objects are visualized in several different views, which are described in more detail in the following
+sections. The top-level view that shows all available Jobs is shown in <a href="#img-jobs">Figure 2</a>.</p>
+</div>
+<div id="img-jobs" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/jobs.png" alt="Jobs">
+</div>
+<div class="title">Figure 2. Jenkins view showing all available jobs</div>
+</div>
+<div class="paragraph">
+<p>Plugins can also contribute UI elements in these views, but this is out of scope of this guide.</p>
+</div>
+<div class="paragraph">
+<p>Each job has a detail view, where plugins can extend corresponding extension points and provide summary boxes and
+trend charts. Typically, summary boxes for reporters are not required on the job level, so I describe only trend charts
+in more detail, see section <a href="#trend-charts">Section 5.5.2</a>.</p>
+</div>
+<div id="img-job" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/job.png" alt="Job details">
+</div>
+<div class="title">Figure 3. Jenkins view showing details about a job</div>
+</div>
+<div class="paragraph">
+<p>Each build has a detail view as well. Here plugins can provide summary boxes similar to the boxes for the job details
+view. Typically, plugins show here only a short summary and provide a link to detailed results, see <a href="#img-build">Figure 4</a> for
+an example.</p>
+</div>
+<div id="img-build" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/build.png" alt="Build details">
+</div>
+<div class="title">Figure 4. Jenkins view showing details about a build</div>
+</div>
+<div class="paragraph">
+<p>The last element in the view hierarchy actually is a dedicated view that shows the results of a specific plugin. E.g.,
+there are views to show the test results, the analysis results, and so on. It is totally up to a given plugin what
+elements should be shown there. In the next few sections I will introduce some new UI components that can be used
+to show the corresponding results in a pleasant way.</p>
+</div>
+<div class="sect2">
+<h3 id="extending-jenkins-model"><a class="anchor" href="#extending-jenkins-model"></a>3.1. Extending Jenkins object model</h3>
+<div class="paragraph">
+<p>Since reporters typically are composed in a similar way, I extended Jenkins' original object model
+(see <a href="#jenkins-model">Figure 1</a>) with some additional elements, so it will be much simpler to create or implement
+a new reporter plugin. This new model is shown in <a href="#jenkins-reporter-model">Figure 5</a>. The central element is a build action that
+will store the results of a plugin reporter. This action will be attached to each build and will hold (and persist) the
+results for a reporter. The detail data of each action will be automatically stored in an additional file, so the
+memory footprint of Jenkins can be kept small if the details are never requested by users. Additionally, this
+action is also used to simplify the creation of project actions and trend charts, see <a href="#trend-charts">Section 5.5.2</a>.</p>
+</div>
+<div id="jenkins-reporter-model" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/reporter-design.png" alt="Jenkins reporter design">
+</div>
+<div class="title">Figure 5. Jenkins reporter design - high level view of the model for reporter plugins</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="forensics-plugin"><a class="anchor" href="#forensics-plugin"></a>4. Git Forensics plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The elements in this tutorial will be all used in the new
+<a href="https://github.com/jenkinsci/forensics-api-plugin">Forensics API Plugin</a> (actually the plugin is not new, it is a dependency of the
+<a href="https://github.com/jenkinsci/warnings-ng-plugin">Warnings Next Generation Plugin</a>). You can download the plugin content
+and see in more detail how these new components can be used in practice. Or you can change this plugin just to see
+how these new components can be parametrized.</p>
+</div>
+<div class="paragraph">
+<p>If you are using Git as source code management system then this plugin will mine
+the repository in the style of
+<a href="https://www.adamtornhill.com/articles/crimescene/codeascrimescene.htm">Code as a Crime Scene</a>
+(Adam Tornhill, November 2013) to determine statistics of the contained source code files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>total number of commits</p>
+</li>
+<li>
+<p>total number of different authors</p>
+</li>
+<li>
+<p>creation time</p>
+</li>
+<li>
+<p>last modification time</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The plugin provides a new step (or post build publisher) that starts the repository mining and stores
+the collected information in a Jenkins action (see <a href="#jenkins-reporter-model">Figure 5</a>). Afterwards you get a new
+build summary that shows the total number of scanned files (as trend and as build result). From
+here you can navigate to the details view that shows the scanned files in a table that can be
+simply sorted and filtered. You also will get some pie charts that show important aspects of the
+commit history.</p>
+</div>
+<div class="paragraph">
+<p>Please note that this functionality of the plugin still is a proof of concept: the performance of this step heavily
+depends on the size and the number of commits of your Git repository. Currently it scans the whole repository in each
+build. In the near future I hope to find a volunteer who is interested in replacing this dumb algorithm with an incremental scanner.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="reporter-detail"><a class="anchor" href="#reporter-detail"></a>5. Introducing the new  UI components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As already mentioned in <a href="#reporter-structure">Section 3</a>, a details view is plugin specific. What is shown and how these
+elements are presented is up to the individual plugin author. So in the next sections I provide some examples
+and new concepts that plugins can use as building blocks for their own content.</p>
+</div>
+<div class="sect2">
+<h3 id="font-awesome"><a class="anchor" href="#font-awesome"></a>5.1. Modern icons</h3>
+<div class="paragraph">
+<p>Jenkins plugins typically do not use icons very frequently. Most plugins provide an icon for the actions and that&#8217;s it.
+If you intend to use icons in other places, plugin authors are left on their own: the recommended Tango icon set is more
+than 10 years old and too limited nowadays. There are several options available, but the most popular is the
+<a href="https://fontawesome.com">Font Awesome Icon Set</a>. It provides more than 1500 free icons that follow the same
+design guidelines:</p>
+</div>
+<div id="img-font-awesome" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/font-awesome.png" alt="Font Awesome icons">
+</div>
+<div class="title">Figure 6. Font Awesome icons in Jenkins plugins</div>
+</div>
+<div class="paragraph">
+<p>In order to use Font Awesome icons in a plugin you simply need a dependency to the corresponding
+<a href="https://github.com/jenkinsci/font-awesome-api-plugin">font-awesome-api-plugin</a>. Then you can use any of the solid icons
+by using the new tag <code>svg-icon</code> in your jelly view:</p>
+</div>
+<div class="listingblock">
+<div class="title">index.jelly</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="xml"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span style="color:#070;font-weight:bold">&lt;j:jelly</span> <span style="color:#b48">xmlns:j</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">jelly:core</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:st</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">jelly:stapler</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:l</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/lib/layout</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:fa</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/font-awesome</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+
+  [...]
+  <span style="color:#070;font-weight:bold">&lt;fa:svg-icon</span> <span style="color:#b48">name</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">check-double</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no-issues-banner</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">/&gt;</span>
+  [...]
+
+<span style="color:#070;font-weight:bold">&lt;/j:jelly&gt;</span></pre></td>
+</tr></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are generating views using Java code, then you also can use the class <code>SvgTag</code> to generate the
+HTML markup for such an icon.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="boostrap-grid"><a class="anchor" href="#boostrap-grid"></a>5.2. Grid layout</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title=":bulb:"></i>
+</td>
+<td class="content">
+Jenkins currently includes in all views an old and patched version of Boostrap&#8217;s grid system (with 24 columns). This version
+is not compatible with Boostrap 4 or any of the JS libraries that depend on Bootstrap4. In order to use Bootstrap 4
+features we need to replace the Jenkins provided <code>layout.jelly</code> file with a patched version, that does not load
+the broken grid system. I&#8217;m planning to create a PR that fixes the grid in Jenkins core, but that will take some time.
+Until then you will need to use the provided <code>layout.jelly</code> of the Boostrap4 plugin, see below.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The first thing to decide is, which elements should be shown on a plugin page and how much space each element
+should occupy. Typically, all visible components are mapped on the available space using a simple grid.
+In a Jenkins view we have a fixed header and footer and a navigation bar on the left
+(20 percent of the horizontal space). The rest of a screen can be used by
+a details view. In order to simplify the distribution of elements in that remaining space we use
+<a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap&#8217;s grid system</a>.</p>
+</div>
+<div id="img-grid" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/grid.png" alt="Grid layout in Jenkins">
+</div>
+<div class="title">Figure 7. Jenkins layout with a details view that contains a grid system</div>
+</div>
+<div class="paragraph">
+<p>That means, a view is split into 12 columns and and arbitrary number of rows. This grid system is simple to use
+(but complex enough to also support fancy screen layouts) - I won&#8217;t go into
+details here, please refer to the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap documentation</a>
+for details.</p>
+</div>
+<div class="paragraph">
+<p>For the forensics detail view we use a simple grid of two rows and two columns. Since the number of columns always is 12
+we need to create two "fat" columns that fill 6 of the standard columns.
+In order to create such a view in our
+plugin we need to create a view given as a jelly file and a corresponding Java view model object. A view with this layout
+is shown in the following snippet:</p>
+</div>
+<div class="listingblock">
+<div class="title">index.jelly</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="xml"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</pre></td>
+  <td class="code"><pre><span style="color:#777">&lt;?jelly escape-by-default='true'?&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;j:jelly</span> <span style="color:#b48">xmlns:j</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">jelly:core</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:st</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">jelly:stapler</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:l</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/lib/layout</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:bs</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/bootstrap</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+
+  <span style="color:#070;font-weight:bold">&lt;bs:layout</span> <span style="color:#b48">title</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">${it.displayName}</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">norefresh</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">true</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+    <span style="color:#070;font-weight:bold">&lt;st:include</span> <span style="color:#b48">it</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">${it.owner}</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">page</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">sidepanel.jelly</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">/&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;l:main-panel&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;st:adjunct</span> <span style="color:#b48">includes</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">io.jenkins.plugins.bootstrap4</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">/&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+      <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">fluid-container</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span> <i class="conum" data-value="3"></i><b>(3)</b>
+
+        <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">row py-3</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span> <i class="conum" data-value="4"></i><b>(4)</b>
+          <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">col-6</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span> <i class="conum" data-value="5"></i><b>(5)</b>
+            Content of column 1 in row 1
+          <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+          <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">col-6</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span> <i class="conum" data-value="6"></i><b>(6)</b>
+            Content of column 2 in row 1
+          <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+
+        <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">row py-3</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span> <i class="conum" data-value="7"></i><b>(7)</b>
+          <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">col</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span> <i class="conum" data-value="8"></i><b>(8)</b>
+            Content of row 2
+          <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+
+      <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/l:main-panel&gt;</span>
+  <span style="color:#070;font-weight:bold">&lt;/bs:layout&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;/j:jelly&gt;</span></pre></td>
+</tr></table></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use a custom layout based on Bootstrap: since Jenkins core contains an old version of Bootstrap,
+we need to replace the standard layout.jelly file.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Import Bootstrap 4: Importing of JS and CSS components is done using the adjunct concept,
+which is the preferred way of referencing static resources within Jenkins' Stapler Web framework.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The whole view will be placed into a fluid container that fills up the whole screen (100% width).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>A new row of the view is specified with class <code>row</code>. The additional class <code>py-3</code> defines the padding to use for
+this row, see <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/">Bootstrap Spacing</a> for more details.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Since Bootstrap automatically splits up a row into 12 equal sized columns we define here
+that the first column should occupy 6 of these 12 columns. You can also leave off the detailed numbers, then Bootstrap will
+automatically distribute the content in the available space. Just be aware that this not what you want in most of the times.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>The second column uses the remaining space, i.e. 6 of the 12 columns.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>The second row uses the same layout as row 1.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>There is only one column for row 1, it will fill the whole available space.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can also specify different column layouts for one row, based on the actual visible size of the screen.
+This helps to improve the layout for larger screens. In the warnings plugin you will find
+an example: on small devices, there is one card visible that shows one pie chart in a carousel. If you are
+opening the same page on a larger device, then two of the pie charts are shown side by side and the carousel is hidden.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cards"><a class="anchor" href="#cards"></a>5.3. Cards</h3>
+<div class="paragraph">
+<p>When presenting information of a plugin as a block, typically plain text elements are shown. This will normally result
+in some kind of boring web pages. In order to create a more appealing interface, it makes sense to present such information
+in a card, that has a border, a header, an icon, and so on. In order to create such a
+<a href="https://getbootstrap.com/docs/4.4/components/card/">Bootstrap card</a> a small jelly tag has been provided by the new
+<a href="https://github.com/jenkinsci/bootstrap4-api-plugin">Bootstrap plugin</a> that simplifies this task for a plugin.
+Such a card can be easily created in a jelly view in the following way:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="xml"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span style="color:#070;font-weight:bold">&lt;bs:card</span> <span style="color:#b48">title</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">${%Card Title}</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">fontAwesomeIcon</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">icon-name</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+  Content of the card
+<span style="color:#070;font-weight:bold">&lt;/bs:card&gt;</span></pre></td>
+</tr></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In <a href="#img-card">Figure 8</a> examples of such cards are shown. The cards in the upper row contain pie charts that show the
+distribution of the number of authors and commits in the whole repository. The card at the bottom shows the detail
+information in a DataTable. The visualization is not limited to charts or tables, you can
+show any kind of HTML content in there. You can show any icon of your
+plugin in these cards, but it is recommended to use one of the existing <a href="https://fontawesome.com">Font Awesome</a> icons
+to get a consistent look and feel in Jenkins' plugin ecosystem.</p>
+</div>
+<div id="img-card" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/card.png" alt="Card examples">
+</div>
+<div class="title">Figure 8. Bootstraps cards in Jenkins plugins</div>
+</div>
+<div class="paragraph">
+<p>Note that the size of the cards is determined by the grid configuration, see <a href="#boostrap-grid">Section 5.2</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tables"><a class="anchor" href="#tables"></a>5.4. Tables</h3>
+<div class="paragraph">
+<p>A common UI element to show plugin details is a table control. Most plugins (and Jenkins core) typically use
+plain HTML tables. However, if the table should show a large number of rows then using a more sophisticated control
+like  <a href="https://datatables.net">DataTables</a> makes more sense. Using this JS based table control provides additional
+features at no cost:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>filter results by text search</p>
+</li>
+<li>
+<p>provide pagination of the result set</p>
+</li>
+<li>
+<p>sort data by multiple columns at once</p>
+</li>
+<li>
+<p>obtain table rows using Ajax calls</p>
+</li>
+<li>
+<p>show and hide columns based on the screen resolution</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In order to use <a href="https://datatables.net">DataTables</a> in a view there are two options, you can either decorate existing
+static HTML tables (see <a href="#tables-static">Section 5.4.1</a>) or populate the table content using Ajax (see <a href="#tables-dynamic">Section 5.4.2</a>).</p>
+</div>
+<div class="sect3">
+<h4 id="tables-static"><a class="anchor" href="#tables-static"></a>5.4.1. Tables with static HTML content</h4>
+<div class="paragraph">
+<p>The easiest way of using DataTables is by creating a static HTML table that will be decorated by simply calling the
+constructor of the datatable. This approach involves no special handling on the Java and Jelly side, so I think it is
+sufficient to follow the <a href="https://datatables.net/examples/basic_init/zero_configuration.html">example</a> in the DataTables
+documentation. Just make sure that after building the table in your Jelly file you need to decorate the table
+with the following piece of code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;j:jelly</span> <span style="color:#b48">xmlns:j</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">jelly:core</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:st</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">jelly:stapler</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">&gt;</span>
+
+  <span style="color:#070;font-weight:bold">&lt;st:adjunct</span> <span style="color:#b48">includes</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">io.jenkins.plugins.jquery3</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">/&gt;</span>
+  <span style="color:#070;font-weight:bold">&lt;st:adjunct</span> <span style="color:#b48">includes</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">io.jenkins.plugins.data-tables</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">/&gt;</span>
+
+  [...]
+
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">table-responsive</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;table</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">table table-hover table-striped display</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">id</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">id</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+            [...]
+        <span style="color:#070;font-weight:bold">&lt;/table&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+
+  [...]
+  <span style="color:#070;font-weight:bold">&lt;script&gt;</span>
+<span style="background-color:hsla(0,0%,0%,0.07);color:black">     <span style="color:#369;font-weight:bold">$</span>(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">#id</span><span style="color:#710">'</span></span>).DataTable(); </span><i class="conum" data-value="1"></i><b>(1)</b>
+  <span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
+
+<span style="color:#070;font-weight:bold">&lt;/j:jelly&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>replace <code>id</code> with the ID of your HTML table element</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the Forensics plugin no such static table is used so far, but you can have a look at the
+<a href="https://github.com/jenkinsci/warnings-ng-plugin/blob/master/src/main/resources/io/jenkins/plugins/analysis/core/model/FixedWarningsDetail/index.jelly">table that shows fixed warnings</a>
+in the warnings plugin to see how such a table can be decorated.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="tables-dynamic"><a class="anchor" href="#tables-dynamic"></a>5.4.2. Tables with dynamic model based content</h4>
+<div class="paragraph">
+<p>While static HTML tables are easy to implement, they have several limitations. So it makes sense to follow a more
+sophisticated approach. Typically, tables in user interfaces are defined by using a corresponding table (and row) model.
+Java Swing successfully provides such a
+<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/table.html">table model</a> concept since the early days of Java.
+I adapted these concepts for Jenkins and DataTables as well. In order to create a table in a Jenkins view a plugin
+needs to provide a table model class, that provides the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the ID of the table (since there might be several tables in the view)</p>
+</li>
+<li>
+<p>the model of the columns (i.e., the number, type, and header labels of the columns)</p>
+</li>
+<li>
+<p>the content of the table (i.e. the individual row objects)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You will find an example of such a table in the Forensics plugin: here a table lists
+the files in your Git repository combined with the corresponding commit statistics (number of authors,
+number of commits, last modification, first commit). A screenshot of that table is shown in <a href="#img-table">Figure 9</a>.</p>
+</div>
+<div id="img-table" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/table.png" alt="Table example">
+</div>
+<div class="title">Figure 9. Dynamic Table in the Forensics plugin</div>
+</div>
+<div class="paragraph">
+<p>In order to create such a table in Jenkins, you need to create a table model class that derives from <code>TableModel</code>.
+In <a href="#forensics-table-model">Figure 10</a> a diagram of the corresponding classes in the Forensics plugin is shown.</p>
+</div>
+<div id="forensics-table-model" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/table-model.png" alt="Tabel model">
+</div>
+<div class="title">Figure 10. Table model of the Forensics plugin</div>
+</div>
+<div class="sect4">
+<h5 id="table-column-model"><a class="anchor" href="#table-column-model"></a>Table column model</h5>
+<div class="paragraph">
+<p>This first thing a table model class defines is a model of the available columns by creating corresponding
+ <code>TableColumn</code> instances. For each column you need to specify a header label and the name of the bean property that
+should be shown in the corresponding column (the row elements are actually Java beans: each column will
+show one distinct property of such a bean, see next section). You can
+use any of the <a href="https://datatables.net/reference/option/columns.type">supported column types</a> by simply providing a
+<code>String</code> or <code>Integer</code> based column.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="table-rows-content"><a class="anchor" href="#table-rows-content"></a>Table rows content</h5>
+<div class="paragraph">
+<p>Additionally, a table model class provides the content of the rows. This <code>getRows()</code> method
+will be invoked asynchronously using an Ajax call. Typically, this method simply returns a list of Java Bean instances,
+that provide the properties of each column (see previous section). These objects will be converted automatically
+to an array of JSON objects, the basic data structure required for the DataTables API.
+You will find a fully working example table model
+implementation in the Git repository of the forensics plugin in the class
+<a href="https://github.com/jenkinsci/forensics-api-plugin/blob/master/src/main/java/io/jenkins/plugins/forensics/miner/ForensicsTableModel.java">ForensicsTableModel</a>.</p>
+</div>
+<div class="paragraph">
+<p>In order to use such a table in your plugin view you need to create the table in the associated
+Jelly file using the new <code>table</code> tag:</p>
+</div>
+<div class="listingblock">
+<div class="title">index.jelly</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;j:jelly</span> <span style="color:#b48">xmlns:j</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">jelly:core</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:dt</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/data-tables</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">&gt;</span>
+    [...]
+    <span style="color:#070;font-weight:bold">&lt;st:adjunct</span> <span style="color:#b48">includes</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">io.jenkins.plugins.data-tables</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">/&gt;</span>
+
+    <span style="color:#070;font-weight:bold">&lt;dt:table</span> <span style="color:#b48">model</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">${it.getTableModel('id')}</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">/&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+    [...]
+<span style="color:#070;font-weight:bold">&lt;/j:jelly&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>replace <code>id</code> with the id of your table</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The only parameter you need to provide for the table is the model&#8201;&#8212;&#8201;it is typically part of the corresponding
+Jenkins view model class (this object is referenced with <code>${it}</code> in the view).
+In order to connect the corresponding Jenkins view model class with the table, the view model class needs to
+implement the <code>AsyncTableContentProvider</code> interface. Or even simpler, let your view model class derive from
+<code>DefaultAsyncTableContentProvider</code>. This relationship is required, so that Jenkins can automatically create
+and bind a proxy for the Ajax calls that will automatically fill the table content after the HTML page has been created.</p>
+</div>
+<div class="paragraph">
+<p>If we put all those pieces together, we are required to define a model similar to the model of the Forensics plugin,
+that is shown in <a href="#jenkins-view-model">Figure 11</a>.</p>
+</div>
+<div id="jenkins-view-model" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/forensics-view-model.png" alt="Forensics view model">
+</div>
+<div class="title">Figure 11. Jenkins reporter design - high level view of the model for reporter plugins</div>
+</div>
+<div class="paragraph">
+<p>As already described in <a href="#jenkins-reporter-model">Figure 5</a> the plugin needs to attach a <code>BuildAction</code> to each build. The
+Forensics plugin attaches a <code>ForensicBuildAction</code> to the build. This action stores a <code>RepositoryStatistics</code> instance,
+that contains the repository results for a given build. This action delegates all Stapler requests to a new
+<a href="https://stapler.kohsuke.org/apidocs/org/kohsuke/stapler/StaplerProxy.html">Stapler proxy instance</a> so we can keep the
+action clean of user interface code. This <code>ForensicsViewModel</code> class then acts as view model that provides the server
+side model for the corresponding Jelly view given by the file <code>index.jelly</code>.</p>
+</div>
+<div class="paragraph">
+<p>While this approach looks quite complex at a first view, you will see that the actual implementation part
+is quite small. Most of the boilerplate code is already provided by the base classes and you need to implement
+only a few methods. Using this concept also provides some additional features, that are part of the DataTables plugin:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ordering of columns is persisted automatically in the browser local storage.</p>
+</li>
+<li>
+<p>Paging size is persisted automatically in the browser local storage.</p>
+</li>
+<li>
+<p>The Ajax calls are actually invoked only if a table will become visible. So if you have
+several tables hidden in tabs then the content will be loaded on demand only, reducing the amount of data
+to be transferred.</p>
+</li>
+<li>
+<p>There is an option available to provide an additional details row that can be expanded with a + symbol,
+see <a href="https://github.com/jenkinsci/warnings-ng-plugin/blob/master/doc/images/details.png">warnings plugin table</a> for details.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="charts"><a class="anchor" href="#charts"></a>5.5. Charts</h3>
+<div class="paragraph">
+<p>A plugin reporter typically also reports some kind of trend from build to build. Up to now Jenkins core provides only a
+quite limited concept of rendering such trends as trend charts. The
+<a href="http://www.jfree.org/jfreechart/">JFreeChart framework</a> offered by Jenkins core is a server
+side rendering engine that creates charts as static PNG images that will be included on the job and details pages.
+Nowadays, several powerful JS based charting libraries are available, that do the same job
+(well actually an even better job) on the client side. That has the advantage that these charts can be customized
+on each client without affecting the server performance. Moreover, you get a lot of additional
+features (like zooming, animation, etc.) for free. Additionally, these charting libraries not only support the typical
+build trend charts but also a lot of additional charts types that can be used to improve the user experience of
+a plugin.
+One of those charting libraries is <a href="https://echarts.apache.org/en/index.html">ECharts</a>: this library has a powerful API
+and supports literally every chart type one can image of. You can get some impressions of the features on the
+<a href="https://echarts.apache.org/examples/en/">examples page</a> of the library.</p>
+</div>
+<div class="paragraph">
+<p>In order to use these charts one can embed charts that use this library by importing the corresponding JS files and by
+defining the chart in the corresponding Jelly file. While that already works quite well it
+will be still somewhat cumbersome to provide the corresponding model for these charts from Jenkins build results. So
+I added a powerful Java API that helps to create the model for these charts on the Java side. This API provides the
+following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create trend charts based on a collection of build results.</p>
+</li>
+<li>
+<p>Separate the chart type from the aggregation in order to simplify unit testing of the chart model.</p>
+</li>
+<li>
+<p>Toggle the type of the X-Axis between build number or build date (with automatic aggregation of results that
+have been recorded at the same day).</p>
+</li>
+<li>
+<p>Automatic conversion of the Java model to the required JSON model for the JS side.</p>
+</li>
+<li>
+<p>Support for pie and line charts (more to come soon).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Those charts can be used as trend chart in the project page (see <a href="#img-job">Figure 3</a>) or as information chart in the details
+view of a plugin (see <a href="#reporter-detail">Section 5</a>).</p>
+</div>
+<div class="sect3">
+<h4 id="pie-charts"><a class="anchor" href="#pie-charts"></a>5.5.1. Pie charts</h4>
+<div class="paragraph">
+<p>A simple but still informative chart is a pie chart that illustrates numerical proportions of plugin data. In the Forensics
+plugin I am using this chart to show the numerical proportions of the number of authors or commits for the
+source code files in the Git repository (see <a href="#img-card">Figure 8</a>). In the warnings plugin I use this chart to show the
+numerical proportions of the new, outstanding, or fixed warnings, see <a href="#img-pie">Figure 12</a>.</p>
+</div>
+<div id="img-pie" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/pie.png" alt="Pie chart example">
+</div>
+<div class="title">Figure 12. Pie chart in the Warnings plugin</div>
+</div>
+<div class="paragraph">
+<p>In order to include such a chart in your details view, you can use the provided <code>pie-chart</code> tag.
+In the following snippet you see this tag in action (embedded in a Bootstrap card, see <a href="#cards">Section 5.3</a>):</p>
+</div>
+<div class="listingblock">
+<div class="title">index.jelly</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="xml"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+  <td class="code"><pre><span style="color:#777">&lt;?jelly escape-by-default='true'?&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;j:jelly</span> <span style="color:#b48">xmlns:j</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">jelly:core</span><span style="color:#710">&quot;</span></span>  <span style="color:#b48">xmlns:c</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/charts</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:bs</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/bootstrap</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+
+    [...]
+    <span style="color:#070;font-weight:bold">&lt;bs:card</span> <span style="color:#b48">title</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">${%Number of authors}</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">fontAwesomeIcon</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">users</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;c:pie-chart</span> <span style="color:#b48">id</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">authors</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">model</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">${it.authorsModel}</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">height</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">256</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">/&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/bs:card&gt;</span>
+    [...]
+
+<span style="color:#070;font-weight:bold">&lt;/j:jelly&gt;</span></pre></td>
+</tr></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You need to provide a unique ID for this chart and the corresponding model value. The model must be the JSON
+representation of a corresponding <code>PieChartModel</code> instance. Such a model can be created with a couple of lines:</p>
+</div>
+<div class="listingblock">
+<div class="title">ViewModel.java</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="java"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+  <td class="code"><pre>    [...]
+    PieChartModel model = <span style="color:#080;font-weight:bold">new</span> PieChartModel(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Title</span><span style="color:#710">&quot;</span></span>);
+
+    model.add(<span style="color:#080;font-weight:bold">new</span> PieData(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Segment 1 name</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">10</span>), Palette.RED);
+    model.add(<span style="color:#080;font-weight:bold">new</span> PieData(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Segment 2 name</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">15</span>), Palette.GREEN);
+    model.add(<span style="color:#080;font-weight:bold">new</span> PieData(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Segment 3 name</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">20</span>), Palette.YELLOW);
+
+    <span style="color:#0a8;font-weight:bold">String</span> json = <span style="color:#080;font-weight:bold">new</span> JacksonFacade().toJson(model);
+    [...]</pre></td>
+</tr></table></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="trend-charts"><a class="anchor" href="#trend-charts"></a>5.5.2. Trend charts on the job level view</h4>
+<div class="paragraph">
+<p>In order to show a trend that renders a line chart on the job page (see <a href="#img-job">Figure 3</a>) you need to provide a so called
+floating box (stored in the file <code>floatingBox.jelly</code> of your job action (see <a href="#reporter-structure">Section 3</a>)).
+The content of this file is quite simple and contains just a <code>trend-chart</code> tag:</p>
+</div>
+<div class="listingblock">
+<div class="title">floatingBox.jelly</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="xml"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td>
+  <td class="code"><pre><span style="color:#777">&lt;?jelly escape-by-default='true'?&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;j:jelly</span> <span style="color:#b48">xmlns:j</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">jelly:core</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">xmlns:c</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/charts</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+
+  <span style="color:#070;font-weight:bold">&lt;c:trend-chart</span> <span style="color:#b48">it</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">${from}</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">title</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">${%SCM Files Count Trend}</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">enableLinks</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">true</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">/&gt;</span>
+
+<span style="color:#070;font-weight:bold">&lt;/j:jelly&gt;</span></pre></td>
+</tr></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On the Java side the model for the chart needs to be provided in the corresponding sub class of <code>JobAction</code> (which is
+the owner of the floating box). Since the computation of trend charts is quite expensive on the server side as well
+(several builds need to be read from disk and the interesting data points need to be computed) this process has been
+put into a separate background job. Once the computation is done the result is shown via an Ajax call. In order to
+hide these details for plugin authors you should simply derive your <code>JobAction</code> class from the corresponding
+<code>AsyncTrendJobAction</code> class, that already contains the boilerplate code. So your static plugin object model will actually
+become a little bit more complex:</p>
+</div>
+<div id="jenkins-chart-model" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/chart-model.png" alt="Jenkins chart model">
+</div>
+<div class="title">Figure 13. Jenkins chart model design</div>
+</div>
+<div class="paragraph">
+<p>Basically, you need to implement the method <code>LinesChartModel createChartModel()</code> to create the line
+chart. This method is quite simple to implement, since most of the hard work is provided by the library: you will
+invoke with an iterator of your build actions, starting with the latest build. The iterator advances from build to build
+until no more results are available (or the maximum number of builds to consider has been reached). The most important
+thing to implement in your plugin is the way how data points are computed for a given <code>BuildAction</code>. Here is an example of
+such a <code>SeriesBuilder</code> implementation in the Forensics Plugin:</p>
+</div>
+<div class="listingblock">
+<div class="title">FilesCountSeriesBuilder.java</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="java"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td>
+  <td class="code"><pre><span style="color:#080;font-weight:bold">package</span> <span style="color:#707;font-weight:bold">io.jenkins.plugins.forensics.miner</span>;
+
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util.HashMap</span>;
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util.Map</span>;
+
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">edu.hm.hafner.echarts.SeriesBuilder</span>;
+
+<span style="color:#777">/**
+ * Builds one x-axis point for the series of a line chart showing the number of files in the repository.
+ *
+ * @author Ullrich Hafner
+ */</span>
+<span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">FilesCountSeriesBuilder</span> <span style="color:#088;font-weight:bold">extends</span> SeriesBuilder&lt;ForensicsBuildAction&gt; {
+    <span style="color:#088;font-weight:bold">static</span> <span style="color:#088;font-weight:bold">final</span> <span style="color:#0a8;font-weight:bold">String</span> TOTALS_KEY = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">total</span><span style="color:#710">&quot;</span></span>;
+
+    <span style="color:#007">@Override</span>
+    <span style="color:#088;font-weight:bold">protected</span> <span style="color:#0a8;font-weight:bold">Map</span>&lt;<span style="color:#0a8;font-weight:bold">String</span>, <span style="color:#0a8;font-weight:bold">Integer</span>&gt; computeSeries(<span style="color:#088;font-weight:bold">final</span> ForensicsBuildAction current) {
+        <span style="color:#0a8;font-weight:bold">Map</span>&lt;<span style="color:#0a8;font-weight:bold">String</span>, <span style="color:#0a8;font-weight:bold">Integer</span>&gt; series = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">HashMap</span>&lt;&gt;();
+        series.put(TOTALS_KEY, current.getNumberOfFiles());
+        <span style="color:#080;font-weight:bold">return</span> series;
+    }
+}</pre></td>
+</tr></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You are not limited to a single line chart. You can show several lines in a single chart, you can show stacked values,
+or even the delta between some values. You can also have a look at the
+<a href="https://github.com/jenkinsci/warnings-ng-plugin/tree/master/src/main/java/io/jenkins/plugins/analysis/core/charts">charts of the warnings plugin</a>
+to see some of these features in detail.</p>
+</div>
+<div id="img-trend" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/trend-lines.png" alt="Trend with several lines example">
+</div>
+<div class="title">Figure 14. Trend chart with several lines in the Warnings plugin</div>
+</div>
+<div id="img-stacked" class="imageblock">
+<div class="content">
+<img src="/images/post-images/2020/01-ui-plugins/trend-stacked.png" alt="Trend chart with stacked lines example">
+</div>
+<div class="title">Figure 15. Trend chart with stacked lines in the Warnings plugin</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<b class="author about-header">
+About the Author
+</b>
+<!-- starting partial author.html.haml -->
+<div id="about-the-author">
+<table class="author box">
+<tr>
+<td>
+<!-- starting partial avatar.html.haml -->
+<img alt="Ullrich Hafner" class="author logo" src="https://halkeye.github.io/jenkins.io/add-algolia/images/avatars/uhafner.jpg" width="128px">
+
+<!-- ending partial avatar.html.haml -->
+</td>
+<td>
+<b class="author name">
+<a href="/blog/authors/uhafner">
+Ullrich Hafner
+</a>
+</b>
+<p>
+<div class="paragraph">
+<p>Ullrich Hafner is an active contributor in the Jenkins project since 2007, mostly in the acceptance test harness and
+the static code analysis suite (which is now replaced by the Warnings Next Generation Plugin).</p>
+</div>
+<div class="paragraph">
+<p>He is a professor for Software Engineering at the University of Applied Sciences Munich. In his role as professor
+he tries to win new Jenkins contributors by letting students develop new features and test cases in their student
+projects and theses.</p>
+</div>
+</p>
+<!-- starting partial social-media-buttons.html.haml -->
+<ul class="author social-media-buttons">
+<li class="author">
+<a href="https://github.com/uhafner" rel="noreferrer noopener" target="_blank">
+GitHub
+</a>
+</li>
+</ul>
+
+<!-- ending partial social-media-buttons.html.haml -->
+</td>
+</tr>
+</table>
+</div>
+
+<!-- ending partial author.html.haml -->
+</div>
+</div>
+</div>
+
+
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/anchor-js/anchor.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/tether/js/tether.min.js"></script>
+<script src="https://halkeye.github.io/jenkins.io/add-algolia/assets/bower/bootstrap/js/bootstrap.min.js"></script>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<p class="box">
+<a href="https://github.com/jenkins-infra/jenkins.io/edit/master/content//blog/2020/03/2020-03-17-ui-plugins.adoc" title="Edit /blog/2020/03/2020-03-17-ui-plugins.adoc on GitHub">Improve this page</a>
+|
+<a href="https://github.com/jenkins-infra/jenkins.io/issues/new?labels=bug&amp;template=4-bug.md&amp;title=Hands On: Beautify the user interface of Jenkins reporter plugins page - TODO: Put a summary here&amp;body=Problem with the [Hands On: Beautify the user interface of Jenkins reporter plugins](https://www.jenkins.io/blog/2020/03/17/ui-plugins/) page, [source file](https://github.com/jenkins-infra/jenkins.io/blob/master/content/blog/2020/03/2020-03-17-ui-plugins.adoc)%0A%0ATODO: Describe the expected and actual behavior here %0A%0A%23%23 Screenshots %0A%0A TODO: Add screenshots if possible %0A%0A%23%23 Possible Solution %0A%0A%3C!-- If you have suggestions on a fix for the bug, please describe it here. --%3E %0A%0AN/A" title="Report a problem with /blog/2020/03/2020-03-17-ui-plugins.adoc">Report a problem</a>
+</p>
+<div class="license-box">
+<div id="creativecommons">
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+<p>
+<img alt="Creative Commons Attribution-ShareAlike license" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+</p>
+</a>
+<p>
+The content driving this site is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 license.
+</p>
+</div>
+</div>
+</div>
+<div class="links col-md-8">
+<div class="container">
+<div class="row">
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Resources</h5>
+<ul class="resources">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/download">
+Downloads
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/node">
+Blog
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/doc">
+Documentation
+</a>
+</li>
+<li>
+<a href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/security">
+Security
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/participate">
+Contributing
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Project</h5>
+<ul class="project">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project">
+Structure and governance
+</a>
+</li>
+<li>
+<a href="https://issues.jenkins.io">
+Issue tracker
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/project/roadmap">
+Roadmap
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://ci.jenkins.io">
+Jenkins on Jenkins
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Community</h5>
+<ul class="community">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/events">
+Events
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/mailing-lists">
+Mailing lists
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/chat">
+Chats
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/sigs">
+Special Interest Groups
+</a>
+</li>
+<li>
+<a href="https://twitter.com/jenkinsci">
+Twitter
+</a>
+</li>
+<li>
+<a href="https://reddit.com/r/jenkinsci">
+Reddit
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Other</h5>
+<ul class="other">
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/conduct">
+Code of Conduct
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/press">
+Press information
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/merchandise">
+Merchandise
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/artwork">
+Artwork
+</a>
+</li>
+<li>
+<a href="https://halkeye.github.io/jenkins.io/add-algolia/awards">
+Awards
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-000000-0', 'auto');
+ga('send', 'pageview');
+ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+  !function(d,s,id) {
+    var js, fjs=d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id=id;
+      js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,"script","twitter-wjs");
+  
+  $(function(){
+    var $body = $(document.body);
+    $(".nav-link.dropdown-toggle").on("mousedown", function(){
+      $body.addClass("no-outline");
+    })
+    $body.on("keydown", function(){
+      $body.removeClass("no-outline");
+    })
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+docsearch({
+  apiKey: '9df657b854f8c42d9887b34bc275db4d',
+  indexName: 'jenkins',
+  inputSelector: 'input.searchbox',
+  algoliaOptions: { 'facetFilters': ["tags:en"] },
+  debug: false
+});
+</script>
+</body>
+</html>
